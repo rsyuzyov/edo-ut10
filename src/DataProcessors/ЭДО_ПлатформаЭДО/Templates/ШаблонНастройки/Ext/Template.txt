@@ -1,0 +1,563 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="Настройка">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ВызовОбщейФункции">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element minOccurs="0" name="ПараметрыВызова">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element minOccurs="0" maxOccurs="unbounded" name="Параметр">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute name="Порядок" type="xs:unsignedByte" use="optional" />
+														<xs:attribute name="ЗначениеЭлемента" type="xs:string" use="optional" />
+														<xs:attribute name="ТипОбъектаМетаданных" type="xs:string" use="optional" />
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="ТипОбъектаМетаданных" type="xs:string" use="optional" />
+						<xs:attribute name="Путь" type="xs:string" use="optional" />
+						<xs:attribute name="Наименование" type="xs:string" use="optional" />
+					</xs:complexType>
+				</xs:element>
+				<xs:element minOccurs="0" name="СпискиДокументов">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element minOccurs="0" maxOccurs="unbounded" name="СписокДокументов">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element minOccurs="0" name="ФорматыДляВыгрузки">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element minOccurs="0" maxOccurs="unbounded" name="Формат">
+														<xs:complexType>
+															<xs:attribute name="Представление" type="xs:string" use="optional" />
+															<xs:attribute name="Значение" type="xs:string" use="optional" />
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>						
+										<xs:element minOccurs="0" name="ЗапросСпискаДокументов" type="xs:string" />
+										<xs:element minOccurs="0" name="КолонкиСпискаДокументов">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element minOccurs="0" maxOccurs="unbounded" name="Колонка">
+														<xs:complexType>
+															<xs:attribute name="Имя" type="xs:string" use="optional" />
+															<xs:attribute name="ИсточникДанных" type="xs:string" use="optional" />
+															<xs:attribute name="Тип" type="xs:string" use="optional" />
+															<xs:attribute name="Вид" type="xs:string" use="optional" />
+															<xs:attribute name="Видимость" type="xs:string" use="optional" />
+															<xs:attribute name="КартинкаЗначений" type="xs:string" use="optional" />
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="Наименование" type="xs:string" use="optional" />
+									<xs:attribute name="Представление" type="xs:string" use="optional" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>		
+				<xs:element minOccurs="0" name="ХранениеИнформации1С">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element minOccurs="0" name="ОФД_ЭДО_СтатусДокумента">
+								<xs:sequence>
+									<xs:element minOccurs="0" name="НаборыСвойств">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element minOccurs="0" maxOccurs="unbounded" name="Набор">
+													<xs:complexType>
+														<xs:attribute name="Наименование" type="xs:string" use="optional" />
+													</xs:complexType>
+												</xs:element>
+											</xs:sequence>
+										</xs:complexType>			
+									</xs:element>
+								</xs:sequence>			  
+								<xs:complexType>
+									<xs:attribute name="ТипОбъектаМетаданных" type="xs:string" use="optional" />
+									<xs:attribute name="Путь" type="xs:string" use="optional" />
+									<xs:attribute name="Наименование" type="xs:string" use="optional" />
+									<xs:attribute name="Тип" type="xs:string" use="optional" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element minOccurs="0" name="ОФД_ЭДО_ИдентификаторДокумента">
+								<xs:sequence>
+									<xs:element minOccurs="0" name="НаборыСвойств">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element minOccurs="0" maxOccurs="unbounded" name="Набор">
+													<xs:complexType>
+														<xs:attribute name="Наименование" type="xs:string" use="optional" />
+													</xs:complexType>
+												</xs:element>
+											</xs:sequence>
+										</xs:complexType>			
+									</xs:element>
+								</xs:sequence>			  
+								<xs:complexType>
+									<xs:attribute name="ТипОбъектаМетаданных" type="xs:string" use="optional" />
+									<xs:attribute name="Путь" type="xs:string" use="optional" />
+									<xs:attribute name="Наименование" type="xs:string" use="optional" />
+									<xs:attribute name="Тип" type="xs:string" use="optional" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element minOccurs="0" name="ОФД_ЭДО_ИдентификаторУчастникаЭДО">
+								<xs:sequence>
+									<xs:element minOccurs="0" name="НаборыСвойств">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element minOccurs="0" maxOccurs="unbounded" name="Набор">
+													<xs:complexType>
+														<xs:attribute name="Наименование" type="xs:string" use="optional" />
+													</xs:complexType>
+												</xs:element>
+											</xs:sequence>
+										</xs:complexType>			
+									</xs:element>
+								</xs:sequence>			  
+								<xs:complexType>
+									<xs:attribute name="ТипОбъектаМетаданных" type="xs:string" use="optional" />
+									<xs:attribute name="Путь" type="xs:string" use="optional" />
+									<xs:attribute name="Наименование" type="xs:string" use="optional" />
+									<xs:attribute name="Тип" type="xs:string" use="optional" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="ТипОбъектаМетаданных" type="xs:string" use="optional" />
+						<xs:attribute name="Путь" type="xs:string" use="optional" />
+					</xs:complexType>
+				</xs:element>
+				<xs:element minOccurs="0" name="СписокДокументов">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element minOccurs="0" name="ЗапросСпискаДокументов" type="xs:string" />
+							<xs:element minOccurs="0" name="КолонкиСпискаДокументов">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element minOccurs="0" maxOccurs="unbounded" name="Колонка">
+											<xs:complexType>
+												<xs:attribute name="Имя" type="xs:string" use="optional" />
+												<xs:attribute name="ИсточникДанных" type="xs:string" use="optional" />
+												<xs:attribute name="Тип" type="xs:string" use="optional" />
+												<xs:attribute name="Вид" type="xs:string" use="optional" />
+												<xs:attribute name="Видимость" type="xs:string" use="optional" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element minOccurs="0" name="Документ">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element minOccurs="0" name="Валюта">
+								<xs:complexType>
+									<xs:attribute name="Путь" type="xs:string" use="optional" />
+									<xs:attribute name="ИмяМетаданных" type="xs:string" use="optional" />
+									<xs:attribute name="ТипОбъектаМетаданных" type="xs:string" use="optional" />
+									<xs:attribute name="Код" type="xs:string" use="optional" />
+									<xs:attribute name="Наименование" type="xs:string" use="optional" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element minOccurs="0" name="Отправитель">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element minOccurs="0" name="ВызовОбщейФункции">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element minOccurs="0" name="ПараметрыВызова">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element minOccurs="0" maxOccurs="unbounded" name="Параметр">
+																	<xs:complexType>
+																		<xs:attribute name="Порядок" type="xs:unsignedByte" use="optional" />
+																		<xs:attribute name="Значение" type="xs:string" use="optional" />
+																		<xs:attribute name="ТипОбъектаМетаданных" type="xs:string" use="optional" />
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="ТипОбъектаМетаданных" type="xs:string" use="optional" />
+												<xs:attribute name="Путь" type="xs:string" use="optional" />
+												<xs:attribute name="Наименование" type="xs:string" use="optional" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="Реквизиты">
+											<xs:complexType>
+												<xs:attribute name="ИНН" type="xs:string" use="optional" />
+												<xs:attribute name="КПП" type="xs:string" use="optional" />
+												<xs:attribute name="КодОКВЭД" type="xs:string" use="optional" />
+												<xs:attribute name="КодПоОКПО" type="xs:string" use="optional" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="Наименование">
+											<xs:complexType>
+												<xs:attribute name="СокращенноеНаименование" type="xs:string" use="optional" />
+												<xs:attribute name="ПолноеНаименование" type="xs:string" use="optional" />
+												<xs:attribute name="ОфициальноеНаименование" type="xs:string" use="optional" />
+												<xs:attribute name="НаименованиеДляПечатныхФорм" type="xs:string" use="optional" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="Адрес">
+											<xs:complexType>
+												<xs:attribute name="ЮридическийАдрес" type="xs:string" use="optional" />
+												<xs:attribute name="ФактическийАдрес" type="xs:string" use="optional" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="БанковскийСчет">
+											<xs:complexType>
+												<xs:attribute name="НомерСчета" type="xs:string" use="optional" />
+												<xs:attribute name="КоррСчет" type="xs:string" use="optional" />
+												<xs:attribute name="Банк" type="xs:string" use="optional" />
+												<xs:attribute name="БИК" type="xs:string" use="optional" />
+												<xs:attribute name="АдресБанка" type="xs:string" use="optional" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="КонтактныеДанные">
+											<xs:complexType>
+												<xs:attribute name="Телефон" type="xs:string" use="optional" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="Путь" type="xs:string" use="optional" />
+									<xs:attribute name="ИмяМетаданных" type="xs:string" use="optional" />
+									<xs:attribute name="ТипОбъектаМетаданных" type="xs:string" use="optional" />
+									<xs:attribute name="ЮрФизЛицо" type="xs:string" use="optional" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element minOccurs="0" name="Получатель">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element minOccurs="0" name="ВызовОбщейФункции">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element minOccurs="0" name="ПараметрыВызова">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element minOccurs="0" maxOccurs="unbounded" name="Параметр">
+																	<xs:complexType>
+																		<xs:attribute name="Порядок" type="xs:unsignedByte" use="optional" />
+																		<xs:attribute name="Значение" type="xs:string" use="optional" />
+																		<xs:attribute name="ТипОбъектаМетаданных" type="xs:string" use="optional" />
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="ТипОбъектаМетаданных" type="xs:string" use="optional" />
+												<xs:attribute name="Путь" type="xs:string" use="optional" />
+												<xs:attribute name="Наименование" type="xs:string" use="optional" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="Реквизиты">
+											<xs:complexType>
+												<xs:attribute name="ИНН" type="xs:string" use="optional" />
+												<xs:attribute name="КПП" type="xs:string" use="optional" />
+												<xs:attribute name="КодОКВЭД" type="xs:string" use="optional" />
+												<xs:attribute name="КодПоОКПО" type="xs:string" use="optional" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="Наименование">
+											<xs:complexType>
+												<xs:attribute name="СокращенноеНаименование" type="xs:string" use="optional" />
+												<xs:attribute name="ПолноеНаименование" type="xs:string" use="optional" />
+												<xs:attribute name="ОфициальноеНаименование" type="xs:string" use="optional" />
+												<xs:attribute name="НаименованиеДляПечатныхФорм" type="xs:string" use="optional" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="Адрес">
+											<xs:complexType>
+												<xs:attribute name="ЮридическийАдрес" type="xs:string" use="optional" />
+												<xs:attribute name="ФактическийАдрес" type="xs:string" use="optional" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="БанковскийСчет">
+											<xs:complexType>
+												<xs:attribute name="НомерСчета" type="xs:string" use="optional" />
+												<xs:attribute name="КоррСчет" type="xs:string" use="optional" />
+												<xs:attribute name="Банк" type="xs:string" use="optional" />
+												<xs:attribute name="БИК" type="xs:string" use="optional" />
+												<xs:attribute name="АдресБанка" type="xs:string" use="optional" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="КонтактныеДанные">
+											<xs:complexType>
+												<xs:attribute name="Телефон" type="xs:string" use="optional" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="Путь" type="xs:string" use="optional" />
+									<xs:attribute name="ИмяМетаданных" type="xs:string" use="optional" />
+									<xs:attribute name="ТипОбъектаМетаданных" type="xs:string" use="optional" />
+									<xs:attribute name="ЮрФизЛицо" type="xs:string" use="optional" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element minOccurs="0" name="Грузоотправитель">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element minOccurs="0" name="ВызовОбщейФункции">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element minOccurs="0" name="ПараметрыВызова">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element minOccurs="0" maxOccurs="unbounded" name="Параметр">
+																	<xs:complexType>
+																		<xs:attribute name="Порядок" type="xs:unsignedByte" use="optional" />
+																		<xs:attribute name="Значение" type="xs:string" use="optional" />
+																		<xs:attribute name="ТипОбъектаМетаданных" type="xs:string" use="optional" />
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="ТипОбъектаМетаданных" type="xs:string" use="optional" />
+												<xs:attribute name="Путь" type="xs:string" use="optional" />
+												<xs:attribute name="Наименование" type="xs:string" use="optional" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="Реквизиты">
+											<xs:complexType>
+												<xs:attribute name="ИНН" type="xs:string" use="optional" />
+												<xs:attribute name="КПП" type="xs:string" use="optional" />
+												<xs:attribute name="КодОКВЭД" type="xs:string" use="optional" />
+												<xs:attribute name="КодПоОКПО" type="xs:string" use="optional" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="Наименование">
+											<xs:complexType>
+												<xs:attribute name="СокращенноеНаименование" type="xs:string" use="optional" />
+												<xs:attribute name="ПолноеНаименование" type="xs:string" use="optional" />
+												<xs:attribute name="ОфициальноеНаименование" type="xs:string" use="optional" />
+												<xs:attribute name="НаименованиеДляПечатныхФорм" type="xs:string" use="optional" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="Адрес">
+											<xs:complexType>
+												<xs:attribute name="ЮридическийАдрес" type="xs:string" use="optional" />
+												<xs:attribute name="ФактическийАдрес" type="xs:string" use="optional" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="БанковскийСчет">
+											<xs:complexType>
+												<xs:attribute name="НомерСчета" type="xs:string" use="optional" />
+												<xs:attribute name="КоррСчет" type="xs:string" use="optional" />
+												<xs:attribute name="Банк" type="xs:string" use="optional" />
+												<xs:attribute name="БИК" type="xs:string" use="optional" />
+												<xs:attribute name="АдресБанка" type="xs:string" use="optional" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="КонтактныеДанные">
+											<xs:complexType>
+												<xs:attribute name="Телефон" type="xs:string" use="optional" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="Путь" type="xs:string" use="optional" />
+									<xs:attribute name="ИмяМетаданных" type="xs:string" use="optional" />
+									<xs:attribute name="ТипОбъектаМетаданных" type="xs:string" use="optional" />
+									<xs:attribute name="ЮрФизЛицо" type="xs:string" use="optional" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element minOccurs="0" name="Грузополучатель">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element minOccurs="0" name="ВызовОбщейФункции">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element minOccurs="0" name="ПараметрыВызова">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element minOccurs="0" maxOccurs="unbounded" name="Параметр">
+																	<xs:complexType>
+																		<xs:attribute name="Порядок" type="xs:unsignedByte" use="optional" />
+																		<xs:attribute name="Значение" type="xs:string" use="optional" />
+																		<xs:attribute name="ТипОбъектаМетаданных" type="xs:string" use="optional" />
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="ТипОбъектаМетаданных" type="xs:string" use="optional" />
+												<xs:attribute name="Путь" type="xs:string" use="optional" />
+												<xs:attribute name="Наименование" type="xs:string" use="optional" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="Реквизиты">
+											<xs:complexType>
+												<xs:attribute name="ИНН" type="xs:string" use="optional" />
+												<xs:attribute name="КПП" type="xs:string" use="optional" />
+												<xs:attribute name="КодОКВЭД" type="xs:string" use="optional" />
+												<xs:attribute name="КодПоОКПО" type="xs:string" use="optional" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="Наименование">
+											<xs:complexType>
+												<xs:attribute name="СокращенноеНаименование" type="xs:string" use="optional" />
+												<xs:attribute name="ПолноеНаименование" type="xs:string" use="optional" />
+												<xs:attribute name="ОфициальноеНаименование" type="xs:string" use="optional" />
+												<xs:attribute name="НаименованиеДляПечатныхФорм" type="xs:string" use="optional" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="Адрес">
+											<xs:complexType>
+												<xs:attribute name="ЮридическийАдрес" type="xs:string" use="optional" />
+												<xs:attribute name="ФактическийАдрес" type="xs:string" use="optional" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="БанковскийСчет">
+											<xs:complexType>
+												<xs:attribute name="НомерСчета" type="xs:string" use="optional" />
+												<xs:attribute name="КоррСчет" type="xs:string" use="optional" />
+												<xs:attribute name="Банк" type="xs:string" use="optional" />
+												<xs:attribute name="БИК" type="xs:string" use="optional" />
+												<xs:attribute name="АдресБанка" type="xs:string" use="optional" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="КонтактныеДанные">
+											<xs:complexType>
+												<xs:attribute name="Телефон" type="xs:string" use="optional" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="Путь" type="xs:string" use="optional" />
+									<xs:attribute name="ИмяМетаданных" type="xs:string" use="optional" />
+									<xs:attribute name="ТипОбъектаМетаданных" type="xs:string" use="optional" />
+									<xs:attribute name="ЮрФизЛицо" type="xs:string" use="optional" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element minOccurs="0" name="Договор">
+								<xs:complexType>
+									<xs:attribute name="Путь" type="xs:string" use="optional" />
+									<xs:attribute name="ИмяМетаданных" type="xs:string" use="optional" />
+									<xs:attribute name="ТипОбъектаМетаданных" type="xs:string" use="optional" />
+									<xs:attribute name="Наименование" type="xs:string" use="optional" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element minOccurs="0" name="Подписант">
+								<xs:complexType>
+									<xs:attribute name="Должность" type="xs:string" use="optional" />
+									<xs:attribute name="Доверенность" type="xs:string" use="optional" />
+									<xs:attribute name="Фамилия" type="xs:string" use="optional" />
+									<xs:attribute name="Имя" type="xs:string" use="optional" />
+									<xs:attribute name="Отчество" type="xs:string" use="optional" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element minOccurs="0" name="ТабличнаяЧасть">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element minOccurs="0" name="Номенклатура">
+											<xs:complexType>
+												<xs:attribute name="Путь" type="xs:string" use="optional" />
+												<xs:attribute name="ИмяМетаданных" type="xs:string" use="optional" />
+												<xs:attribute name="ТипОбъектаМетаданных" type="xs:string" use="optional" />
+												<xs:attribute name="Код" type="xs:string" use="optional" />
+												<xs:attribute name="Наименование" type="xs:string" use="optional" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="Количество">
+											<xs:complexType>
+												<xs:attribute name="Путь" type="xs:string" use="optional" />
+												<xs:attribute name="ТипОбъектаМетаданных" type="xs:string" use="optional" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="ЕдиницаИзмерения">
+											<xs:complexType>
+												<xs:attribute name="Путь" type="xs:string" use="optional" />
+												<xs:attribute name="ИмяМетаданных" type="xs:string" use="optional" />
+												<xs:attribute name="ТипОбъектаМетаданных" type="xs:string" use="optional" />
+												<xs:attribute name="Код" type="xs:string" use="optional" />
+												<xs:attribute name="Наименование" type="xs:string" use="optional" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="НомерГТД">
+											<xs:complexType>
+												<xs:attribute name="Путь" type="xs:string" use="optional" />
+												<xs:attribute name="ИмяМетаданных" type="xs:string" use="optional" />
+												<xs:attribute name="ТипОбъектаМетаданных" type="xs:string" use="optional" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="СтранаПроисхождения">
+											<xs:complexType>
+												<xs:attribute name="Путь" type="xs:string" use="optional" />
+												<xs:attribute name="ТипОбъектаМетаданных" type="xs:string" use="optional" />
+												<xs:attribute name="Код" type="xs:string" use="optional" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="СтавкаНДС">
+											<xs:complexType>
+												<xs:attribute name="Путь" type="xs:string" use="optional" />
+												<xs:attribute name="ИмяМетаданных" type="xs:string" use="optional" />
+												<xs:attribute name="ТипОбъектаМетаданных" type="xs:string" use="optional" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="СуммаНДС">
+											<xs:complexType>
+												<xs:attribute name="Путь" type="xs:string" use="optional" />
+												<xs:attribute name="ТипОбъектаМетаданных" type="xs:string" use="optional" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="СуммаБезНДС">
+											<xs:complexType>
+												<xs:attribute name="Путь" type="xs:string" use="optional" />
+												<xs:attribute name="ТипОбъектаМетаданных" type="xs:string" use="optional" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="СуммаСНДС">
+											<xs:complexType>
+												<xs:attribute name="Путь" type="xs:string" use="optional" />
+												<xs:attribute name="ТипОбъектаМетаданных" type="xs:string" use="optional" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="Цена">
+											<xs:complexType>
+												<xs:attribute name="Путь" type="xs:string" use="optional" />
+												<xs:attribute name="ТипОбъектаМетаданных" type="xs:string" use="optional" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="Путь" type="xs:string" use="optional" />
+									<xs:attribute name="ИмяМетаданных" type="xs:string" use="optional" />
+									<xs:attribute name="ТипОбъектаМетаданных" type="xs:string" use="optional" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element minOccurs="0" name="ЗапросДанныхДокументов" type="xs:string" />
+						</xs:sequence>
+						<xs:attribute name="Путь" type="xs:string" use="optional" />
+						<xs:attribute name="ИмяМетаданных" type="xs:string" use="optional" />
+						<xs:attribute name="ТипОбъектаМетаданных" type="xs:string" use="optional" />
+						<xs:attribute name="Дата" type="xs:string" use="optional" />
+						<xs:attribute name="Номер" type="xs:string" use="optional" />
+						<xs:attribute name="Комментарий" type="xs:string" use="optional" />
+						<xs:attribute name="СуммаВключаетНДС" type="xs:string" use="optional" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="ПрефиксКонфигурации" type="xs:string" use="optional" />
+			<xs:attribute name="ИмяОбъектаМетаданных" type="xs:string" use="optional" />
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
