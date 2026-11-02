@@ -1,0 +1,775 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Массовое заполнение идентификаторов абонентов</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаПредупреждение" id="197">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа предупреждение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа предупреждение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПредупреждениеРасширеннаяПодсказка" id="198"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияВнимание" id="194">
+					<TextColor>style:SpecialTextColor</TextColor>
+					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ВНИМАНИЕ:</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияВниманиеКонтекстноеМеню" id="195"/>
+					<ExtendedTooltip name="ДекорацияВниманиеРасширеннаяПодсказка" id="196"/>
+				</LabelDecoration>
+				<LabelDecoration name="ДекорацияТекстВнимание" id="199">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Массовое заполнение не рекомендуется, если обработка была запущена как внешний файл через "Файл/Открыть".</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияТекстВниманиеКонтекстноеМеню" id="200"/>
+					<ExtendedTooltip name="ДекорацияТекстВниманиеРасширеннаяПодсказка" id="201"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаОбщая" id="102">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа общая</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа общая</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОбщаяРасширеннаяПодсказка" id="103"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаСписокКонтрагентов" id="100">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа список контрагентов</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа список контрагентов</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСписокКонтрагентовРасширеннаяПодсказка" id="101"/>
+					<ChildItems>
+						<Table name="СписокКонтрагентов" id="106">
+							<ReadOnly>true</ReadOnly>
+							<SelectionMode>SingleRow</SelectionMode>
+							<RowSelectionMode>Row</RowSelectionMode>
+							<HorizontalLines>false</HorizontalLines>
+							<VerticalLines>false</VerticalLines>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>СписокКонтрагентов</DataPath>
+							<RowPictureDataPath>СписокКонтрагентов.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СписокКонтрагентовКонтекстноеМеню" id="107"/>
+							<AutoCommandBar name="СписокКонтрагентовКоманднаяПанель" id="108"/>
+							<ExtendedTooltip name="СписокКонтрагентовРасширеннаяПодсказка" id="109"/>
+							<SearchStringAddition name="СписокКонтрагентовСтрокаПоиска" id="110">
+								<AdditionSource>
+									<Item>СписокКонтрагентов</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокКонтрагентовСтрокаПоискаКонтекстноеМеню" id="111"/>
+								<ExtendedTooltip name="СписокКонтрагентовСтрокаПоискаРасширеннаяПодсказка" id="112"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокКонтрагентовСостояниеПросмотра" id="113">
+								<AdditionSource>
+									<Item>СписокКонтрагентов</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокКонтрагентовСостояниеПросмотраКонтекстноеМеню" id="114"/>
+								<ExtendedTooltip name="СписокКонтрагентовСостояниеПросмотраРасширеннаяПодсказка" id="115"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокКонтрагентовУправлениеПоиском" id="116">
+								<AdditionSource>
+									<Item>СписокКонтрагентов</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокКонтрагентовУправлениеПоискомКонтекстноеМеню" id="117"/>
+								<ExtendedTooltip name="СписокКонтрагентовУправлениеПоискомРасширеннаяПодсказка" id="118"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnActivateRow">КонтрагентПриИзменении</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="СписокКонтрагентовСсылка" id="155">
+									<DataPath>~СписокКонтрагентов.Ссылка</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Контрагент</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СписокКонтрагентовСсылкаКонтекстноеМеню" id="156"/>
+									<ExtendedTooltip name="СписокКонтрагентовСсылкаРасширеннаяПодсказка" id="157"/>
+								</InputField>
+								<LabelField name="СписокКонтрагентовИНН" id="134">
+									<DataPath>~СписокКонтрагентов.ИНН</DataPath>
+									<ContextMenu name="СписокКонтрагентовИННКонтекстноеМеню" id="135"/>
+									<ExtendedTooltip name="СписокКонтрагентовИННРасширеннаяПодсказка" id="136"/>
+								</LabelField>
+								<LabelField name="СписокКонтрагентовКПП" id="137">
+									<DataPath>~СписокКонтрагентов.КПП</DataPath>
+									<ContextMenu name="СписокКонтрагентовКППКонтекстноеМеню" id="138"/>
+									<ExtendedTooltip name="СписокКонтрагентовКППРасширеннаяПодсказка" id="139"/>
+								</LabelField>
+								<LabelField name="СписокКонтрагентовИдентификаторЭДО" id="131">
+									<DataPath>~СписокКонтрагентов.ИдентификаторЭДО</DataPath>
+									<ContextMenu name="СписокКонтрагентовИдентификаторЭДОКонтекстноеМеню" id="132"/>
+									<ExtendedTooltip name="СписокКонтрагентовИдентификаторЭДОРасширеннаяПодсказка" id="133"/>
+								</LabelField>
+								<LabelField name="СписокКонтрагентовНаименованиеПолное" id="140">
+									<DataPath>~СписокКонтрагентов.НаименованиеПолное</DataPath>
+									<ContextMenu name="СписокКонтрагентовНаименованиеПолноеКонтекстноеМеню" id="141"/>
+									<ExtendedTooltip name="СписокКонтрагентовНаименованиеПолноеРасширеннаяПодсказка" id="142"/>
+								</LabelField>
+								<CheckBoxField name="СписокКонтрагентовОбособленноеПодразделение" id="143">
+									<DataPath>~СписокКонтрагентов.ОбособленноеПодразделение</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СписокКонтрагентовОбособленноеПодразделениеКонтекстноеМеню" id="144"/>
+									<ExtendedTooltip name="СписокКонтрагентовОбособленноеПодразделениеРасширеннаяПодсказка" id="145"/>
+								</CheckBoxField>
+								<LabelField name="СписокКонтрагентовПартнер" id="146">
+									<DataPath>~СписокКонтрагентов.Партнер</DataPath>
+									<ContextMenu name="СписокКонтрагентовПартнерКонтекстноеМеню" id="147"/>
+									<ExtendedTooltip name="СписокКонтрагентовПартнерРасширеннаяПодсказка" id="148"/>
+								</LabelField>
+								<LabelField name="СписокКонтрагентовЮридическоеФизическоеЛицо" id="149">
+									<DataPath>~СписокКонтрагентов.ЮридическоеФизическоеЛицо</DataPath>
+									<ContextMenu name="СписокКонтрагентовЮридическоеФизическоеЛицоКонтекстноеМеню" id="150"/>
+									<ExtendedTooltip name="СписокКонтрагентовЮридическоеФизическоеЛицоРасширеннаяПодсказка" id="151"/>
+								</LabelField>
+								<LabelField name="СписокКонтрагентовЮрФизЛицо" id="152">
+									<DataPath>~СписокКонтрагентов.ЮрФизЛицо</DataPath>
+									<ContextMenu name="СписокКонтрагентовЮрФизЛицоКонтекстноеМеню" id="153"/>
+									<ExtendedTooltip name="СписокКонтрагентовЮрФизЛицоРасширеннаяПодсказка" id="154"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПриоритетИдентификаторов" id="158">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа приоритет идентификаторов</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа приоритет идентификаторов</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПриоритетИдентификаторовРасширеннаяПодсказка" id="159"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияПриоритет" id="184">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Приоритет операторов:</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияПриоритетКонтекстноеМеню" id="185"/>
+							<ExtendedTooltip name="ДекорацияПриоритетРасширеннаяПодсказка" id="186"/>
+						</LabelDecoration>
+						<Table name="ПриоритетИдентификаторов" id="160">
+							<Representation>List</Representation>
+							<Header>false</Header>
+							<HorizontalLines>false</HorizontalLines>
+							<VerticalLines>false</VerticalLines>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<DataPath>ПриоритетИдентификаторов</DataPath>
+							<RowPictureDataPath>ПриоритетИдентификаторов.Picture</RowPictureDataPath>
+							<CommandSet>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>Pickup</ExcludedCommand>
+							</CommandSet>
+							<ContextMenu name="ПриоритетИдентификаторовКонтекстноеМеню" id="161"/>
+							<AutoCommandBar name="ПриоритетИдентификаторовКоманднаяПанель" id="162">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="ПриоритетИдентификаторовВверх" id="180">
+										<Type>CommandBarButton</Type>
+										<Representation>Picture</Representation>
+										<CommandName>Form.Item.ПриоритетИдентификаторов.StandardCommand.MoveUp</CommandName>
+										<ExtendedTooltip name="ПриоритетИдентификаторовВверхРасширеннаяПодсказка" id="181"/>
+									</Button>
+									<Button name="ПриоритетИдентификаторовВниз" id="182">
+										<Type>CommandBarButton</Type>
+										<Representation>Picture</Representation>
+										<CommandName>Form.Item.ПриоритетИдентификаторов.StandardCommand.MoveDown</CommandName>
+										<ExtendedTooltip name="ПриоритетИдентификаторовВнизРасширеннаяПодсказка" id="183"/>
+									</Button>
+									<Button name="ПриоритетИдентификаторовДобавить" id="206">
+										<Type>CommandBarButton</Type>
+										<Representation>Picture</Representation>
+										<CommandName>Form.Item.ПриоритетИдентификаторов.StandardCommand.Add</CommandName>
+										<RepresentationInContextMenu>OnlyInContextMenu</RepresentationInContextMenu>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="ПриоритетИдентификаторовДобавитьРасширеннаяПодсказка" id="207"/>
+									</Button>
+									<Button name="ПриоритетИдентификаторовУдалить" id="204">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ПриоритетИдентификаторов.StandardCommand.Delete</CommandName>
+										<ExtendedTooltip name="ПриоритетИдентификаторовУдалитьРасширеннаяПодсказка" id="205"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ПриоритетИдентификаторовРасширеннаяПодсказка" id="163"/>
+							<SearchStringAddition name="ПриоритетИдентификаторовСтрокаПоиска" id="164">
+								<AdditionSource>
+									<Item>ПриоритетИдентификаторов</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПриоритетИдентификаторовСтрокаПоискаКонтекстноеМеню" id="165"/>
+								<ExtendedTooltip name="ПриоритетИдентификаторовСтрокаПоискаРасширеннаяПодсказка" id="166"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПриоритетИдентификаторовСостояниеПросмотра" id="167">
+								<AdditionSource>
+									<Item>ПриоритетИдентификаторов</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПриоритетИдентификаторовСостояниеПросмотраКонтекстноеМеню" id="168"/>
+								<ExtendedTooltip name="ПриоритетИдентификаторовСостояниеПросмотраРасширеннаяПодсказка" id="169"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПриоритетИдентификаторовУправлениеПоиском" id="170">
+								<AdditionSource>
+									<Item>ПриоритетИдентификаторов</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПриоритетИдентификаторовУправлениеПоискомКонтекстноеМеню" id="171"/>
+								<ExtendedTooltip name="ПриоритетИдентификаторовУправлениеПоискомРасширеннаяПодсказка" id="172"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeAddRow">ПриоритетИдентификаторовПередНачаломДобавления</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="ПриоритетИдентификаторовЗначение" id="173">
+									<DataPath>ПриоритетИдентификаторов.Value</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПриоритетИдентификаторовЗначениеКонтекстноеМеню" id="174"/>
+									<ExtendedTooltip name="ПриоритетИдентификаторовЗначениеРасширеннаяПодсказка" id="175"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПодвал" id="187">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подвал</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подвал</v8:content>
+				</v8:item>
+			</ToolTip>
+			<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПодвалРасширеннаяПодсказка" id="188"/>
+			<ChildItems>
+				<CheckBoxField name="ФиксироватьИнформациюОбОшибкахВЖурналеРегистрации" id="191">
+					<DataPath>ФиксироватьИнформациюОбОшибкахВЖурналеРегистрации</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ФиксироватьИнформациюОбОшибкахВЖурналеРегистрацииКонтекстноеМеню" id="192"/>
+					<ExtendedTooltip name="ФиксироватьИнформациюОбОшибкахВЖурналеРегистрацииРасширеннаяПодсказка" id="193"/>
+				</CheckBoxField>
+				<Button name="НачатьЗаполнениеИдентификаторов" id="189">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.НачатьЗаполнениеИдентификаторов</CommandName>
+					<BackColor>style:ImportantColor</BackColor>
+					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<ExtendedTooltip name="НачатьЗаполнениеИдентификаторовРасширеннаяПодсказка" id="190"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ЭДО_ПлатформаЭДО</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="АдресВременногоХранилищаКэш" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес временного хранилища кэш</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="Организация" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ИдентификаторОрганизацииВБД" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор организации ВБД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтпечатокСертификатаBase64" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отпечаток сертификата base64</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПарольДоступаКЗакрытомуКлючу" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пароль доступа к закрытому ключу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВерсияНастроекОбработки" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Версия настроек обработки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьПодписание" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать подписание</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокКонтрагентов" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список контрагентов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникКонтрагенты.Ссылка КАК Ссылка,
+	СправочникКонтрагенты.ПометкаУдаления КАК ПометкаУдаления,
+	СправочникКонтрагенты.Наименование КАК Наименование,
+	СправочникКонтрагенты.НаименованиеПолное КАК НаименованиеПолное,
+	СправочникКонтрагенты.ИНН КАК ИНН,
+	СправочникКонтрагенты.КПП КАК КПП,
+	ДополнительныеСведения.Значение КАК ИдентификаторЭДО
+ИЗ
+	Справочник.Контрагенты КАК СправочникКонтрагенты
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЗначенияСвойствОбъектов КАК ДополнительныеСведения
+		ПО СправочникКонтрагенты.Ссылка = ДополнительныеСведения.Объект
+			И (ДополнительныеСведения.Свойство = &amp;СвойствоИдентификаторАбонента)
+ГДЕ
+	СправочникКонтрагенты.ПометкаУдаления = ЛОЖЬ</QueryText>
+				<MainTable>Catalog.Контрагенты</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ИдентификаторЭДО</dcsset:left>
+									<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветФона</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">web:MistyRose</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ИдентификаторЭДО</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:string"/>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветФона</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">web:MistyRose</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ПриоритетИдентификаторов" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Приоритет идентификаторов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ИмяОбработки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя обработки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИдЗадания" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ид задания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:UUID</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Индикатор" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Индикатор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СтрокаСостояния" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строка состояния</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФиксироватьИнформациюОбОшибкахВЖурналеРегистрации" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фиксировать информацию об ошибках в журнале регистрации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="МчдGUIDПодписанта" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Мчд GUID подписанта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТипСубъектаПодписанта" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип субъекта подписанта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДолжностьФизлица" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Должность физлица</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаНачалаДействияМЧД" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата начала действия МЧД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="AccessToken" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Access token</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="RefreshToken" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Refresh token</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="realmФрагментАдресаKeycloak" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Realm фрагмент адреса keycloak</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВедущийФрагментАдресаKeycloak" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ведущий фрагмент адреса keycloak</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ИдентификаторыЭДОКПП</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ИдентификаторыЭДО.КПП</dcsset:left>
+						<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:Field">КППКонтрагента</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">auto</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="НачатьЗаполнениеИдентификаторов" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начать заполнение идентификаторов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начать заполнение идентификаторов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НачатьЗаполнениеИдентификаторов</Action>
+		</Command>
+	</Commands>
+</Form>

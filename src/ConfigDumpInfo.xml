@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.17">
+	<ConfigVersions>
+		<Metadata name="Catalog.Контрагенты" id="543b0dc6-3e04-5957-ba8a-64dd8b5698e7" configVersion="196ecb5b87cecede5b3cae21eab859054e3ca2e5">
+			<Metadata name="Catalog.Контрагенты.Attribute.КПП" id="97b34c54-be86-5da0-ab76-c959bb1e4897"/>
+			<Metadata name="Catalog.Контрагенты.Attribute.ИНН" id="da3b537f-0b84-5880-beb6-e3d2db9e3351"/>
+		</Metadata>
+		<Metadata name="Catalog.Организации" id="a285dbbe-4160-5728-a86c-59a1ffa4eefe" configVersion="4db294063b7d8d44fd30aa4614cce9be4246611c">
+			<Metadata name="Catalog.Организации.Attribute.ИНН" id="7ee0bc85-4387-5097-af26-b3d6b95d527d"/>
+			<Metadata name="Catalog.Организации.Attribute.КПП" id="b53152d6-3c8a-5a44-a808-915f92558b88"/>
+		</Metadata>
+		<Metadata name="CommonCommand.ЭДО_ОтправитьПоЭДО" id="7a025124-9f80-598b-a3fd-7ac43054f727" configVersion="5d5e77ba117cadff74b48fd830921fd3f7a436ed"/>
+		<Metadata name="CommonCommand.ЭДО_ОтправитьПоЭДО.CommandModule" id="7a025124-9f80-598b-a3fd-7ac43054f727.2" configVersion="b8c7cc62ad7409d35648735d9bda03632e57c98f"/>
+		<Metadata name="CommonModule.ЭДО_Клиент" id="4016eaea-7f04-54c5-b9d1-5f19f4e499c9" configVersion="1c208adccb4a0173c03c4b63bed0ea856a34af3f"/>
+		<Metadata name="CommonModule.ЭДО_Клиент.Module" id="4016eaea-7f04-54c5-b9d1-5f19f4e499c9.0" configVersion="0c00dfcba86c03f19b588eeb343be68d0048c49f"/>
+		<Metadata name="CommonModule.ЭДО_Сервер" id="704f70eb-b808-57ad-ae1d-e2d3005905ae" configVersion="4d760ccc001ed1dc93c12a8dfc5dca284bb9f8d0"/>
+		<Metadata name="CommonModule.ЭДО_Сервер.Module" id="704f70eb-b808-57ad-ae1d-e2d3005905ae.0" configVersion="af172326f31acedbdb7578c1d7ca1042f5d6298e"/>
+		<Metadata name="Configuration.ЦентрУправленияЭДО" id="a883472e-b8ee-5bac-b62d-a5941e5db2d5" configVersion="4bffe5a189fe1132841337307c54e7de402b13c7"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО" id="195e6753-bab3-5aa0-841a-e608ad552fba" configVersion="ef9311cacc89bc7ce3315bb2243333edb81877aa">
+			<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Attribute.ЭтоТестоваяОбработка" id="ce2cf926-4eb7-43c0-907e-eff2c8d127f7"/>
+		</Metadata>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Form.ГлавноеОкно" id="5ffd16b9-22cb-448b-b3a7-58fb18a199e5" configVersion="2d4c3ed2447d03e77b0854e56b6379a68e702811"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Form.ГлавноеОкно.Form" id="5ffd16b9-22cb-448b-b3a7-58fb18a199e5.0" configVersion="f09f79ec68605f9bfa10572c55960924ba702dc8"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Form.ФормаАвторизацииПользователя" id="c5c25972-2914-47b7-bfa2-cd2305698559" configVersion="18f5d159bd61012727298fe91a8bd9414c06a575"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Form.ФормаАвторизацииПользователя.Form" id="c5c25972-2914-47b7-bfa2-cd2305698559.0" configVersion="7e0d921782ad1de7201b5255b51c869535ce315f"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Form.ФормаВыбораДокументовДляМассовойОтправкиНеформализованныхДокументов" id="c4c216b6-8a8f-42a2-a3d5-9ef0196c9461" configVersion="5af0e3ac3f82e77438abaee393ac0c78c4c335b1"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Form.ФормаВыбораДокументовДляМассовойОтправкиНеформализованныхДокументов.Form" id="c4c216b6-8a8f-42a2-a3d5-9ef0196c9461.0" configVersion="101de14054ed714048d766a3d24022d496669156"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Form.ФормаВыбораПФДляНеформалки" id="9b6085c3-265b-4918-b88b-4dcdaede2842" configVersion="e21956d203d9232f586d838fa266d999ee420699"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Form.ФормаВыбораПФДляНеформалки.Form" id="9b6085c3-265b-4918-b88b-4dcdaede2842.0" configVersion="c3cd456ae592e52f48a40b0bfd176864957bbd9b"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Form.ФормаВыбораПоляСортировки" id="7cb36adb-751a-4ec8-9d6b-4805513acfa1" configVersion="177d72cb74cb91aa91ac09bae67a9766f32358d7"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Form.ФормаВыбораПоляСортировки.Form" id="7cb36adb-751a-4ec8-9d6b-4805513acfa1.0" configVersion="6993d6f5a912486dba88d5b9987bc16a5aa7dfc4"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Form.ФормаДобавленияОператора" id="b2f43c94-e228-4298-8268-2693b82c546c" configVersion="f7f5c7883027ffc3216301583b7c92055ed514a1"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Form.ФормаДобавленияОператора.Form" id="b2f43c94-e228-4298-8268-2693b82c546c.0" configVersion="38535d79932eb5b1e7deaf9570890908629958dc"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Form.ФормаЗагрузкиВходящихДокументов" id="de1f3f2d-f359-4981-9898-eab3848c8168" configVersion="11057707c4aeb7466af6170bb0bfaccb2aba78eb"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Form.ФормаЗагрузкиВходящихДокументов.Form" id="de1f3f2d-f359-4981-9898-eab3848c8168.0" configVersion="ca3f5b9dd99c6b3816f1f000a5cfa63d0ecebc49"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Form.ФормаМассовогоСопоставленияКонтрагентов" id="6f0d3bfc-72dc-426b-9869-0f1a846b97cf" configVersion="cdd95cdee9288b91ee25cdeb2b1b9fb5c6eda037"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Form.ФормаМассовогоСопоставленияКонтрагентов.Form" id="6f0d3bfc-72dc-426b-9869-0f1a846b97cf.0" configVersion="74c959e412e2144e04b7bae856d0a8d85c008312"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Form.ФормаМассовойРассылкиПриглашенийВЭДО" id="fcdd8532-fcbc-4871-bdee-21bb707ca75b" configVersion="64a30b97a193255e36d66336f9a166b801573056"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Form.ФормаМассовойРассылкиПриглашенийВЭДО.Form" id="fcdd8532-fcbc-4871-bdee-21bb707ca75b.0" configVersion="6cb4834e3fc48d673d9c7cbf8f00d0f40a63b878"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Form.ФормаНастройки" id="31c89304-d48f-4828-b98e-f0a520ab9fe1" configVersion="1ed8bb1b0c0d1177289aaadb0706998a4f14edeb"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Form.ФормаНастройки.Form" id="31c89304-d48f-4828-b98e-f0a520ab9fe1.0" configVersion="c6bc224822b00ae1a5b36d777f5f75bc417ad156"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Form.ФормаНастройкиПриоритетов" id="5e5b51f9-22a5-4936-b58b-b6d41a455fee" configVersion="891ea64a5e3771625cb0aa7648be5153d1d068f5"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Form.ФормаНастройкиПриоритетов.Form" id="5e5b51f9-22a5-4936-b58b-b6d41a455fee.0" configVersion="e5f88193b6a429472a4c00bf4977303b844b5fb8"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Form.ФормаОтбораВСписокЗначений" id="8c79f510-4ab6-4243-9317-2c88e5c26c52" configVersion="aa15c46a020b3ee3cb38530f38077c0ebc1e8526"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Form.ФормаОтбораВСписокЗначений.Form" id="8c79f510-4ab6-4243-9317-2c88e5c26c52.0" configVersion="12f1f2965d5549d5c90bcd08d35a2e7c83986c52"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Form.ФормаОтправкиНеформализованныхИзФайла" id="88b6beb0-2ad0-41cd-808c-50d79081285d" configVersion="217cec2fee1955fa153f7498aa7aadb2798d029b"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Form.ФормаОтправкиНеформализованныхИзФайла.Form" id="88b6beb0-2ad0-41cd-808c-50d79081285d.0" configVersion="08662d2f053e491c328864d4b87680d943164ff8"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Form.ФормаОтправкиЭлектронныхДокументов" id="6f310793-1cdd-4119-baf4-26b575a6b697" configVersion="338046fb5d2ef9dcc695f2025050ea168d550ef2"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Form.ФормаОтправкиЭлектронныхДокументов.Form" id="6f310793-1cdd-4119-baf4-26b575a6b697.0" configVersion="49dd3d4bda31d7352ba15cc682395bb34f39a847"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Form.ФормаПросмотраДокумента" id="73a7fc2b-e325-436b-af09-f21a5c3dee29" configVersion="7e136e94233caa33e9cbf117018cda58b65c640f"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Form.ФормаПросмотраДокумента.Form" id="73a7fc2b-e325-436b-af09-f21a5c3dee29.0" configVersion="4b7c3cc1306347996dceb61e446e4773824f220f"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Form.ФормаПросмотраЛицензий" id="53bc2aa2-05c2-4782-aa68-42402560a090" configVersion="85c6e812ce477eac979a5587bc2b5caade80a7a5"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Form.ФормаПросмотраЛицензий.Form" id="53bc2aa2-05c2-4782-aa68-42402560a090.0" configVersion="ce72354fafd94de536f018835f37e748dedf541f"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Form.ФормаРаботыСАбонентамиЭДО" id="4185dae1-b21c-4ee7-a547-858028b3eb4b" configVersion="e6f203f7cde51849c797a7742e8aeb4bdfcdf551"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Form.ФормаРаботыСАбонентамиЭДО.Form" id="4185dae1-b21c-4ee7-a547-858028b3eb4b.0" configVersion="780832a3fbe2460ba8b2c2f95fdc72956074ec16"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Form.ФормаРаботыСКлиентскимиФайламиНастроек" id="94cb8916-64b1-4379-b263-f6c46d54a707" configVersion="c6e2aaa7f992452e135b10bbcf6eeab629a16331"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Form.ФормаРаботыСКлиентскимиФайламиНастроек.Form" id="94cb8916-64b1-4379-b263-f6c46d54a707.0" configVersion="f52536a4d927383b6069e0c97ed2be71a1905b3c"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Form.ФормаРаботыСШаблонамиПакетов" id="7f6c33bd-1023-4889-aa3e-225fdf2d81d1" configVersion="264b981cf13e8666dbbe20f8335452e82cdb51ae"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Form.ФормаРаботыСШаблонамиПакетов.Form" id="7f6c33bd-1023-4889-aa3e-225fdf2d81d1.0" configVersion="81488be04c632616bc8f70816782867f2782f183"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Form.ФормаШаблонаПакета" id="e037bf1f-f3b4-4f13-a14b-ac269fcda45c" configVersion="e8e14204d3d690d0614c4c9842c4978ced5d3483"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Form.ФормаШаблонаПакета.Form" id="e037bf1f-f3b4-4f13-a14b-ac269fcda45c.0" configVersion="65bfa0fcb115cf82b12c54e61dfe58f96728ed8c"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.ObjectModule" id="195e6753-bab3-5aa0-841a-e608ad552fba.0" configVersion="eb31619fec1a112bab472cdc50062364ed3d10f3"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Template.XSLПреобразование" id="c19956b1-b923-434e-9273-706501d76e97" configVersion="6e5e2bbcb8126515da322e9d19d3cff5ff7fafd8"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Template.XSLПреобразование.Template" id="c19956b1-b923-434e-9273-706501d76e97.0" configVersion="7c27534795508e1b65afbf680f36ef2f52367777"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Template.Настройки" id="17faa35e-f318-4574-867f-407b437629ad" configVersion="e4ea56ea59613c3f2bfea6d5c871cefdf54a3633"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Template.Настройки.Template" id="17faa35e-f318-4574-867f-407b437629ad.0" configVersion="6e6157469eec5a4bcb0daf208bed94218bcda6cb"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Template.СкриптОтображенияФормыАвторизации" id="668571e2-b80a-4553-8003-5de8a204c18a" configVersion="025d95c97ba1b9c7270171aa4d388b3d3b4b3a8c"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Template.СкриптОтображенияФормыАвторизации.Template" id="668571e2-b80a-4553-8003-5de8a204c18a.0" configVersion="5805904f9e49e42b81a409ef7b3ee30756481411"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Template.СлужебныеДанные" id="b11ddc48-1c5b-4f55-acea-d3afb22014ee" configVersion="80fa79908400239c6346cc1f6b4fb9b96625ab28"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Template.СлужебныеДанные.Template" id="b11ddc48-1c5b-4f55-acea-d3afb22014ee.0" configVersion="b8a899ab89e1f0e2ff26d715b991336f21eb6932"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Template.ФормаНастройки" id="f5fc05b6-cf54-4a25-8c63-e733975ab46e" configVersion="091f2cf1313d307fb2531a8c259ee0a76edbbd9e"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Template.Форматы" id="3fe22be1-57c4-4e96-81bf-5a251dc45c43" configVersion="b30dcc1a3f9483542351f24ca0816aa9423b64d2"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Template.Форматы.Template" id="3fe22be1-57c4-4e96-81bf-5a251dc45c43.0" configVersion="a157eb74bb8132c9013429b985f53f109e53e590"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Template.ШаблонНастройки" id="defe6c69-1f56-4132-b518-e8e05b8c7262" configVersion="5e9c440469e6e670ef9bff7d355f79a3961586cb"/>
+		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Template.ШаблонНастройки.Template" id="defe6c69-1f56-4132-b518-e8e05b8c7262.0" configVersion="cb765248416c1416580d5dba6960a0578229638b"/>
+		<Metadata name="DataProcessor.ЭДО_Помощник" id="a51d5fd1-b231-52eb-9ea7-0eaa0de1a011" configVersion="788cec1179490628e1d6cdfdb3ac9b12b565fc04"/>
+		<Metadata name="DataProcessor.ЭДО_Помощник.Form.Форма" id="0533f7a1-f345-5a52-8a54-09a6a2a552e0" configVersion="beee58cb71bb9ebf77db1f96addfb886fba1e6b8"/>
+		<Metadata name="DataProcessor.ЭДО_Помощник.Form.Форма.Form" id="0533f7a1-f345-5a52-8a54-09a6a2a552e0.0" configVersion="9e99ebc5a05141f82716753102354cac192297cd"/>
+		<Metadata name="DataProcessor.ЭДО_Помощник.ObjectModule" id="a51d5fd1-b231-52eb-9ea7-0eaa0de1a011.0" configVersion="27f540cbe5099db2c3a630807917c8bfc15ca8c6"/>
+		<Metadata name="DataProcessor.ЭДО_Помощник.Template.НастройкаКонфигурация" id="a730e190-23bc-5ed0-9d9e-17a084d392d4" configVersion="3dd6ffb51a1987f6a5631217ceaf995f520dc8e0"/>
+		<Metadata name="DataProcessor.ЭДО_Помощник.Template.НастройкаКонфигурация.Template" id="a730e190-23bc-5ed0-9d9e-17a084d392d4.0" configVersion="6eb5c09c60fa83149f49cca6770d0e5e2b69be71"/>
+		<Metadata name="DataProcessor.ЭДО_Помощник.Template.НастройкаРеализация" id="f53e76fc-e275-56d4-9d9c-3dfa0819a03e" configVersion="301f053221d28229c07c436a3a5557cd7a651b4c"/>
+		<Metadata name="DataProcessor.ЭДО_Помощник.Template.НастройкаРеализация.Template" id="f53e76fc-e275-56d4-9d9c-3dfa0819a03e.0" configVersion="1507864fa6066ff40e7a5c77f49ca1e603e1c01a"/>
+		<Metadata name="DataProcessor.ЭДО_Помощник.Template.СхемаУПД" id="8f3b2d5f-a0e4-5edb-9280-20d72f29d359" configVersion="7be94232a7d8ec40318ca8e67e45837590c58b23"/>
+		<Metadata name="DataProcessor.ЭДО_Помощник.Template.СхемаУПД.Template" id="8f3b2d5f-a0e4-5edb-9280-20d72f29d359.0" configVersion="f9d41a177526adaf39b98584a14ac38a10b9fab1"/>
+		<Metadata name="Language.Русский" id="d3f0eb59-aaa5-5c4c-9e95-5a11efa86c8d" configVersion="2e03cdc55289ed71e00065875cf28678ddded935"/>
+	</ConfigVersions>
+</ConfigDumpInfo>

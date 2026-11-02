@@ -1,0 +1,635 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Помощник отправки ЭДО (Платформа ЭДО)</v8:content>
+		</v8:item>
+	</Title>
+	<Width>120</Width>
+	<Height>40</Height>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="КнопкаЗаполнить" id="1">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Заполнить</CommandName>
+				<ExtendedTooltip name="КнопкаЗаполнитьРасширеннаяПодсказка" id="2"/>
+			</Button>
+			<Button name="КнопкаОтправить" id="3">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Отправить</CommandName>
+				<ExtendedTooltip name="КнопкаОтправитьРасширеннаяПодсказка" id="4"/>
+			</Button>
+			<Button name="КнопкаДвойные" id="5">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ДвойныеОтправки</CommandName>
+				<ExtendedTooltip name="КнопкаДвойныеРасширеннаяПодсказка" id="6"/>
+			</Button>
+			<Button name="КнопкаНастройки" id="200">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОткрытьНастройки</CommandName>
+				<ExtendedTooltip name="КнопкаНастройкиРасширеннаяПодсказка" id="201"/>
+			</Button>
+			<Button name="КнопкаОткрыть" id="7">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОткрытьДокумент</CommandName>
+				<ExtendedTooltip name="КнопкаОткрытьРасширеннаяПодсказка" id="8"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОтбор" id="9">
+			<ExtendedTooltip name="ГруппаОтборРасширеннаяПодсказка" id="10"/>
+			<ChildItems>
+				<InputField name="ДатаНачала" id="11">
+					<DataPath>ДатаНачала</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>С</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДатаНачалаКонтекстноеМеню" id="12"/>
+					<ExtendedTooltip name="ДатаНачалаРасширеннаяПодсказка" id="13"/>
+				</InputField>
+				<InputField name="ДатаОкончания" id="14">
+					<DataPath>ДатаОкончания</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>по</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДатаОкончанияКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ДатаОкончанияРасширеннаяПодсказка" id="16"/>
+				</InputField>
+				<InputField name="Организация" id="17">
+					<DataPath>Организация</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+					</Title>
+					<ChoiceButton>true</ChoiceButton>
+					<ClearButton>true</ClearButton>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="19"/>
+				</InputField>
+				<InputField name="ЛимитОтправки" id="20">
+					<DataPath>ЛимитОтправки</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>За раз, док</v8:content>
+						</v8:item>
+					</Title>
+					<SpinButton>true</SpinButton>
+					<ContextMenu name="ЛимитОтправкиКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ЛимитОтправкиРасширеннаяПодсказка" id="22"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаИтоги" id="23">
+			<ExtendedTooltip name="ГруппаИтогиРасширеннаяПодсказка" id="24"/>
+			<ChildItems>
+				<LabelDecoration name="НадписьИтоги" id="25">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Нажмите «Заполнить»</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НадписьИтогиКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="НадписьИтогиРасширеннаяПодсказка" id="27"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Страницы" id="28">
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="29"/>
+			<ChildItems>
+				<Page name="СтраницаОчередь" id="30">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Очередь</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаОчередьРасширеннаяПодсказка" id="31"/>
+					<ChildItems>
+						<Table name="Очередь" id="32">
+							<CommandBarLocation>None</CommandBarLocation>
+							<Height>15</Height>
+							<HorizontalLines>false</HorizontalLines>
+							<VerticalLines>false</VerticalLines>
+							<DataPath>Очередь</DataPath>
+							<SearchStringLocation>Top</SearchStringLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ОчередьКонтекстноеМеню" id="33"/>
+							<AutoCommandBar name="ОчередьКоманднаяПанель" id="34"/>
+							<ExtendedTooltip name="ОчередьРасширеннаяПодсказка" id="35"/>
+							<SearchStringAddition name="ОчередьСтрокаПоиска" id="36">
+								<AdditionSource>
+									<Item>Очередь</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОчередьСтрокаПоискаКонтекстноеМеню" id="37"/>
+								<ExtendedTooltip name="ОчередьСтрокаПоискаРасширеннаяПодсказка" id="38"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ОчередьСостояниеПросмотра" id="39">
+								<AdditionSource>
+									<Item>Очередь</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОчередьСостояниеПросмотраКонтекстноеМеню" id="40"/>
+								<ExtendedTooltip name="ОчередьСостояниеПросмотраРасширеннаяПодсказка" id="41"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ОчередьУправлениеПоиском" id="42">
+								<AdditionSource>
+									<Item>Очередь</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ОчередьУправлениеПоискомКонтекстноеМеню" id="43"/>
+								<ExtendedTooltip name="ОчередьУправлениеПоискомРасширеннаяПодсказка" id="44"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ОчередьВыбор</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="ОчередьПричина" id="45">
+									<DataPath>Очередь.Причина</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Состояние</v8:content>
+										</v8:item>
+									</Title>
+									<Width>28</Width>
+									<ContextMenu name="ОчередьПричинаКонтекстноеМеню" id="46"/>
+									<ExtendedTooltip name="ОчередьПричинаРасширеннаяПодсказка" id="47"/>
+								</InputField>
+								<InputField name="ОчередьНомер" id="48">
+									<DataPath>Очередь.Номер</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Номер</v8:content>
+										</v8:item>
+									</Title>
+									<Width>16</Width>
+									<ContextMenu name="ОчередьНомерКонтекстноеМеню" id="49"/>
+									<ExtendedTooltip name="ОчередьНомерРасширеннаяПодсказка" id="50"/>
+								</InputField>
+								<InputField name="ОчередьДата" id="51">
+									<DataPath>Очередь.Дата</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата</v8:content>
+										</v8:item>
+									</Title>
+									<Width>12</Width>
+									<ContextMenu name="ОчередьДатаКонтекстноеМеню" id="52"/>
+									<ExtendedTooltip name="ОчередьДатаРасширеннаяПодсказка" id="53"/>
+								</InputField>
+								<InputField name="ОчередьКонтрагент" id="54">
+									<DataPath>Очередь.Контрагент</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Контрагент</v8:content>
+										</v8:item>
+									</Title>
+									<Width>40</Width>
+									<ContextMenu name="ОчередьКонтрагентКонтекстноеМеню" id="55"/>
+									<ExtendedTooltip name="ОчередьКонтрагентРасширеннаяПодсказка" id="56"/>
+								</InputField>
+								<InputField name="ОчередьСумма" id="57">
+									<DataPath>Очередь.Сумма</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сумма</v8:content>
+										</v8:item>
+									</Title>
+									<Width>14</Width>
+									<ContextMenu name="ОчередьСуммаКонтекстноеМеню" id="58"/>
+									<ExtendedTooltip name="ОчередьСуммаРасширеннаяПодсказка" id="59"/>
+								</InputField>
+								<InputField name="ОчередьСтатусЭДО" id="60">
+									<DataPath>Очередь.СтатусЭДО</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Статус ЭДО</v8:content>
+										</v8:item>
+									</Title>
+									<Width>18</Width>
+									<ContextMenu name="ОчередьСтатусЭДОКонтекстноеМеню" id="61"/>
+									<ExtendedTooltip name="ОчередьСтатусЭДОРасширеннаяПодсказка" id="62"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаДвойные" id="63">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Двойные отправки</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаДвойныеРасширеннаяПодсказка" id="64"/>
+					<ChildItems>
+						<Table name="Двойные" id="65">
+							<CommandBarLocation>None</CommandBarLocation>
+							<Height>15</Height>
+							<HorizontalLines>false</HorizontalLines>
+							<VerticalLines>false</VerticalLines>
+							<DataPath>Двойные</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ДвойныеКонтекстноеМеню" id="66"/>
+							<AutoCommandBar name="ДвойныеКоманднаяПанель" id="67"/>
+							<ExtendedTooltip name="ДвойныеРасширеннаяПодсказка" id="68"/>
+							<SearchStringAddition name="ДвойныеСтрокаПоиска" id="69">
+								<AdditionSource>
+									<Item>Двойные</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДвойныеСтрокаПоискаКонтекстноеМеню" id="70"/>
+								<ExtendedTooltip name="ДвойныеСтрокаПоискаРасширеннаяПодсказка" id="71"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДвойныеСостояниеПросмотра" id="72">
+								<AdditionSource>
+									<Item>Двойные</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДвойныеСостояниеПросмотраКонтекстноеМеню" id="73"/>
+								<ExtendedTooltip name="ДвойныеСостояниеПросмотраРасширеннаяПодсказка" id="74"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДвойныеУправлениеПоиском" id="75">
+								<AdditionSource>
+									<Item>Двойные</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДвойныеУправлениеПоискомКонтекстноеМеню" id="76"/>
+								<ExtendedTooltip name="ДвойныеУправлениеПоискомРасширеннаяПодсказка" id="77"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ДвойныеВыбор</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="ДвойныеНомер" id="78">
+									<DataPath>Двойные.Номер</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Номер</v8:content>
+										</v8:item>
+									</Title>
+									<Width>16</Width>
+									<ContextMenu name="ДвойныеНомерКонтекстноеМеню" id="79"/>
+									<ExtendedTooltip name="ДвойныеНомерРасширеннаяПодсказка" id="80"/>
+								</InputField>
+								<InputField name="ДвойныеДата" id="81">
+									<DataPath>Двойные.Дата</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата</v8:content>
+										</v8:item>
+									</Title>
+									<Width>12</Width>
+									<ContextMenu name="ДвойныеДатаКонтекстноеМеню" id="82"/>
+									<ExtendedTooltip name="ДвойныеДатаРасширеннаяПодсказка" id="83"/>
+								</InputField>
+								<InputField name="ДвойныеКонтрагент" id="84">
+									<DataPath>Двойные.Контрагент</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Контрагент</v8:content>
+										</v8:item>
+									</Title>
+									<Width>40</Width>
+									<ContextMenu name="ДвойныеКонтрагентКонтекстноеМеню" id="85"/>
+									<ExtendedTooltip name="ДвойныеКонтрагентРасширеннаяПодсказка" id="86"/>
+								</InputField>
+								<InputField name="ДвойныеИдСБИС" id="87">
+									<DataPath>Двойные.ИдСБИС</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ид СБИС</v8:content>
+										</v8:item>
+									</Title>
+									<Width>24</Width>
+									<ContextMenu name="ДвойныеИдСБИСКонтекстноеМеню" id="88"/>
+									<ExtendedTooltip name="ДвойныеИдСБИСРасширеннаяПодсказка" id="89"/>
+								</InputField>
+								<InputField name="ДвойныеИдПлатформа" id="90">
+									<DataPath>Двойные.ИдПлатформа</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ид Платформы</v8:content>
+										</v8:item>
+									</Title>
+									<Width>24</Width>
+									<ContextMenu name="ДвойныеИдПлатформаКонтекстноеМеню" id="91"/>
+									<ExtendedTooltip name="ДвойныеИдПлатформаРасширеннаяПодсказка" id="92"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаЛог" id="93">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Протокол</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаЛогРасширеннаяПодсказка" id="94"/>
+					<ChildItems>
+						<InputField name="Лог" id="95">
+							<DataPath>Лог</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Height>15</Height>
+							<HorizontalStretch>true</HorizontalStretch>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="ЛогКонтекстноеМеню" id="96"/>
+							<ExtendedTooltip name="ЛогРасширеннаяПодсказка" id="97"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="98">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ЭДО_Помощник</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ДатаНачала" id="99">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата начала</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаОкончания" id="100">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата окончания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Организация" id="101">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЛимитОтправки" id="102">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Лимит отправки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Лог" id="103">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Лог</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Очередь" id="104">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очередь</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Документ" id="105">
+					<Type>
+						<v8:TypeId>eddd79d8-809c-497f-9c4a-5943afddda98</v8:TypeId>
+					</Type>
+				</Column>
+				<Column name="Номер" id="106">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>20</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Дата" id="107">
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Контрагент" id="108">
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Сумма" id="109">
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Причина" id="110">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>60</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СтатусЭДО" id="111">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>40</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Двойные" id="112">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Двойные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Документ" id="113">
+					<Type>
+						<v8:TypeId>eddd79d8-809c-497f-9c4a-5943afddda98</v8:TypeId>
+					</Type>
+				</Column>
+				<Column name="Номер" id="114">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>20</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Дата" id="115">
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Контрагент" id="116">
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИдСБИС" id="117">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>60</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИдПлатформа" id="118">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>60</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Заполнить" id="119">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<Shortcut>F5</Shortcut>
+			<Action>ЗаполнитьКоманда</Action>
+		</Command>
+		<Command name="Отправить" id="120">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОтправитьКоманда</Action>
+		</Command>
+		<Command name="ДвойныеОтправки" id="121">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Двойные отправки</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ДвойныеОтправкиКоманда</Action>
+		</Command>
+		<Command name="ОткрытьДокумент" id="122">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть документ</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОткрытьДокументКоманда</Action>
+		</Command>
+		<Command name="ОткрытьНастройки" id="202">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки ЭДО: отпечаток подписанта, окно отбора, хост оператора</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьНастройкиКоманда</Action>
+		</Command>
+	</Commands>
+</Form>

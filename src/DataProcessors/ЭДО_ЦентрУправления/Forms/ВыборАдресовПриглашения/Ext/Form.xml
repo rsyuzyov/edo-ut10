@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Куда отправить приглашение</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="Пригласить" id="1">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Пригласить</CommandName>
+				<ExtendedTooltip name="ПригласитьРасширеннаяПодсказка" id="2"/>
+			</Button>
+			<Button name="Закрыть" id="3">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Отмена</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ЗакрытьРасширеннаяПодсказка" id="4"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelDecoration name="Пояснение" id="5">
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметьте ящики, в которые уйдет приглашение. Ящики из реестра ФНС; где связь уже есть или приглашение ждет ответа, звать нельзя.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ПояснениеКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ПояснениеРасширеннаяПодсказка" id="7"/>
+		</LabelDecoration>
+		<Table name="Ящики" id="8">
+			<CommandBarLocation>None</CommandBarLocation>
+			<HeightInTableRows>10</HeightInTableRows>
+			<DataPath>Ящики</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ЯщикиКонтекстноеМеню" id="9"/>
+			<AutoCommandBar name="ЯщикиКоманднаяПанель" id="10"/>
+			<ExtendedTooltip name="ЯщикиРасширеннаяПодсказка" id="11"/>
+			<SearchStringAddition name="ЯщикиСтрокаПоиска" id="12">
+				<AdditionSource>
+					<Item>Ящики</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЯщикиСтрокаПоискаКонтекстноеМеню" id="13"/>
+				<ExtendedTooltip name="ЯщикиСтрокаПоискаРасширеннаяПодсказка" id="14"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ЯщикиСостояниеПросмотра" id="15">
+				<AdditionSource>
+					<Item>Ящики</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЯщикиСостояниеПросмотраКонтекстноеМеню" id="16"/>
+				<ExtendedTooltip name="ЯщикиСостояниеПросмотраРасширеннаяПодсказка" id="17"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ЯщикиУправлениеПоиском" id="18">
+				<AdditionSource>
+					<Item>Ящики</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ЯщикиУправлениеПоискомКонтекстноеМеню" id="19"/>
+				<ExtendedTooltip name="ЯщикиУправлениеПоискомРасширеннаяПодсказка" id="20"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<CheckBoxField name="ЯщикиПометка" id="21">
+					<DataPath>Ящики.Пометка</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<ContextMenu name="ЯщикиПометкаКонтекстноеМеню" id="22"/>
+					<ExtendedTooltip name="ЯщикиПометкаРасширеннаяПодсказка" id="23"/>
+					<Events>
+						<Event name="OnChange">ЯщикиПометкаПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<LabelField name="ЯщикиКонтрагент" id="24">
+					<DataPath>Ящики.Контрагент</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЯщикиКонтрагентКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="ЯщикиКонтрагентРасширеннаяПодсказка" id="26"/>
+				</LabelField>
+				<LabelField name="ЯщикиОператор" id="27">
+					<DataPath>Ящики.Оператор</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оператор</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЯщикиОператорКонтекстноеМеню" id="28"/>
+					<ExtendedTooltip name="ЯщикиОператорРасширеннаяПодсказка" id="29"/>
+				</LabelField>
+				<LabelField name="ЯщикиАдрес" id="30">
+					<DataPath>Ящики.Адрес</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Адрес ЭДО</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЯщикиАдресКонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="ЯщикиАдресРасширеннаяПодсказка" id="32"/>
+				</LabelField>
+				<LabelField name="ЯщикиСостояние" id="33">
+					<DataPath>Ящики.Состояние</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состояние</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЯщикиСостояниеКонтекстноеМеню" id="34"/>
+					<ExtendedTooltip name="ЯщикиСостояниеРасширеннаяПодсказка" id="35"/>
+				</LabelField>
+				<LabelField name="ЯщикиДатаПриглашения" id="36">
+					<DataPath>Ящики.ДатаПриглашения</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Звали</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЯщикиДатаПриглашенияКонтекстноеМеню" id="37"/>
+					<ExtendedTooltip name="ЯщикиДатаПриглашенияРасширеннаяПодсказка" id="38"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+		<LabelField name="Итог" id="39">
+			<DataPath>Итог</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<ContextMenu name="ИтогКонтекстноеМеню" id="40"/>
+			<ExtendedTooltip name="ИтогРасширеннаяПодсказка" id="41"/>
+		</LabelField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Ящики" id="42">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ящики</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Пометка" id="43">
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Контрагент" id="44">
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Оператор" id="45">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Адрес" id="46">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Состояние" id="47">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДатаПриглашения" id="48">
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Можно" id="49">
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Итог" id="50">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Итог</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Пригласить" id="51">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пригласить</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПригласитьВыполнить</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Контрагенты">
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="Организация">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<DataProcessor uuid="195e6753-bab3-5aa0-841a-e608ad552fba">
+		<InternalInfo>
+			<xr:GeneratedType name="DataProcessorObject.ЭДО_ПлатформаЭДО" category="Object">
+				<xr:TypeId>ed3c807f-00b9-588e-94b4-b1153d271fd5</xr:TypeId>
+				<xr:ValueId>bb514942-61ff-5666-811a-8c723f6b4390</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DataProcessorManager.ЭДО_ПлатформаЭДО" category="Manager">
+				<xr:TypeId>50b3467b-15be-53e3-b87b-4ab2aa2a3417</xr:TypeId>
+				<xr:ValueId>473d0f32-1f1c-50e5-b7f0-31627effd4ee</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ЭДО_ПлатформаЭДО</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Платформа ЭДО (Эвотор ОФД)</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>true</UseStandardCommands>
+			<DefaultForm>DataProcessor.ЭДО_ПлатформаЭДО.Form.ГлавноеОкно</DefaultForm>
+			<AuxiliaryForm/>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<ExtendedPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects>
+			<Attribute uuid="ce2cf926-4eb7-43c0-907e-eff2c8d127f7">
+				<Properties>
+					<Name>ЭтоТестоваяОбработка</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Это тестовая обработка</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+					<PasswordMode>false</PasswordMode>
+					<Format/>
+					<EditFormat/>
+					<ToolTip/>
+					<MarkNegatives>false</MarkNegatives>
+					<Mask/>
+					<MultiLine>false</MultiLine>
+					<ExtendedEdit>false</ExtendedEdit>
+					<MinValue xsi:nil="true"/>
+					<MaxValue xsi:nil="true"/>
+					<FillChecking>DontCheck</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<ChoiceParameterLinks/>
+					<ChoiceParameters/>
+					<QuickChoice>Auto</QuickChoice>
+					<CreateOnInput>Auto</CreateOnInput>
+					<ChoiceForm/>
+					<LinkByType/>
+					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+				</Properties>
+			</Attribute>
+			<Form>ГлавноеОкно</Form>
+			<Form>ФормаПросмотраДокумента</Form>
+			<Form>ФормаРаботыСАбонентамиЭДО</Form>
+			<Form>ФормаМассовогоСопоставленияКонтрагентов</Form>
+			<Form>ФормаМассовойРассылкиПриглашенийВЭДО</Form>
+			<Form>ФормаЗагрузкиВходящихДокументов</Form>
+			<Form>ФормаПросмотраЛицензий</Form>
+			<Form>ФормаНастройки</Form>
+			<Form>ФормаВыбораДокументовДляМассовойОтправкиНеформализованныхДокументов</Form>
+			<Form>ФормаВыбораПФДляНеформалки</Form>
+			<Form>ФормаРаботыСКлиентскимиФайламиНастроек</Form>
+			<Form>ФормаОтбораВСписокЗначений</Form>
+			<Form>ФормаВыбораПоляСортировки</Form>
+			<Form>ФормаОтправкиНеформализованныхИзФайла</Form>
+			<Form>ФормаОтправкиЭлектронныхДокументов</Form>
+			<Form>ФормаНастройкиПриоритетов</Form>
+			<Form>ФормаДобавленияОператора</Form>
+			<Form>ФормаАвторизацииПользователя</Form>
+			<Form>ФормаРаботыСШаблонамиПакетов</Form>
+			<Form>ФормаШаблонаПакета</Form>
+			<Template>ШаблонНастройки</Template>
+			<Template>Настройки</Template>
+			<Template>Форматы</Template>
+			<Template>ФормаНастройки</Template>
+			<Template>XSLПреобразование</Template>
+			<Template>СлужебныеДанные</Template>
+			<Template>СкриптОтображенияФормыАвторизации</Template>
+		</ChildObjects>
+	</DataProcessor>
+</MetaDataObject>

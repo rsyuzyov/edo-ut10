@@ -1,0 +1,417 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаЭлементыУправления" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа элементы управления</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа элементы управления</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЭлементыУправленияРасширеннаяПодсказка" id="24"/>
+			<ChildItems>
+				<Button name="ЗагрузитьИзФайла" id="25">
+					<Type>UsualButton</Type>
+					<Width>23</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<CommandName>Form.Command.ЗагрузитьИзФайла</CommandName>
+					<ExtendedTooltip name="ЗагрузитьИзФайлаРасширеннаяПодсказка" id="26"/>
+				</Button>
+				<Button name="ВыгрузитьАрхивТиповыхНастроек" id="50">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ВыгрузитьАрхивТиповыхНастроек</CommandName>
+					<ExtendedTooltip name="ВыгрузитьАрхивТиповыхНастроекРасширеннаяПодсказка" id="51"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="КлиентскиеНастройки" id="1">
+			<Representation>List</Representation>
+			<HorizontalLines>false</HorizontalLines>
+			<VerticalLines>false</VerticalLines>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>КлиентскиеНастройки</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="КлиентскиеНастройкиКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="КлиентскиеНастройкиКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="КлиентскиеНастройкиРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="КлиентскиеНастройкиСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>КлиентскиеНастройки</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КлиентскиеНастройкиСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="КлиентскиеНастройкиСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="КлиентскиеНастройкиСостояниеПросмотра" id="8">
+				<AdditionSource>
+					<Item>КлиентскиеНастройки</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КлиентскиеНастройкиСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="КлиентскиеНастройкиСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="КлиентскиеНастройкиУправлениеПоиском" id="11">
+				<AdditionSource>
+					<Item>КлиентскиеНастройки</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="КлиентскиеНастройкиУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="КлиентскиеНастройкиУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeAddRow">КлиентскиеНастройкиПередНачаломДобавления</Event>
+			</Events>
+			<ChildItems>
+				<CheckBoxField name="КлиентскиеНастройкиПрименятьНастройку" id="29">
+					<DataPath>КлиентскиеНастройки.ПрименятьНастройку</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Применять</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="КлиентскиеНастройкиПрименятьНастройкуКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="КлиентскиеНастройкиПрименятьНастройкуРасширеннаяПодсказка" id="31"/>
+					<Events>
+						<Event name="OnChange">КлиентскиеНастройкиПрименятьНастройкуПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<InputField name="КлиентскиеНастройкиИмяНастройки" id="39">
+					<DataPath>КлиентскиеНастройки.ИмяНастройки</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КлиентскиеНастройкиИмяНастройкиКонтекстноеМеню" id="40"/>
+					<ExtendedTooltip name="КлиентскиеНастройкиИмяНастройкиРасширеннаяПодсказка" id="41"/>
+					<Events>
+						<Event name="OnChange">КлиентскиеНастройкиИмяНастройкиПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="КлиентскиеНастройкиИмяФайлаНастройки" id="14">
+					<DataPath>КлиентскиеНастройки.ИмяФайлаНастройки</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КлиентскиеНастройкиИмяФайлаНастройкиКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="КлиентскиеНастройкиИмяФайлаНастройкиРасширеннаяПодсказка" id="16"/>
+				</InputField>
+				<InputField name="КлиентскиеНастройкиОбъектНастройки" id="17">
+					<DataPath>КлиентскиеНастройки.ОбъектНастройки</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КлиентскиеНастройкиОбъектНастройкиКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="КлиентскиеНастройкиОбъектНастройкиРасширеннаяПодсказка" id="19"/>
+				</InputField>
+				<InputField name="КлиентскиеНастройкиФорматВыгрузки" id="20">
+					<DataPath>КлиентскиеНастройки.ФорматВыгрузки</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КлиентскиеНастройкиФорматВыгрузкиКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="КлиентскиеНастройкиФорматВыгрузкиРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<InputField name="КлиентскиеНастройкиТекстНастройки" id="32">
+					<DataPath>КлиентскиеНастройки.ТекстНастройки</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КлиентскиеНастройкиТекстНастройкиКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="КлиентскиеНастройкиТекстНастройкиРасширеннаяПодсказка" id="34"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<Button name="ВыгрузитьВФайл" id="27">
+			<Type>UsualButton</Type>
+			<Width>22</Width>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<CommandName>Form.Command.ВыгрузитьВФайл</CommandName>
+			<ExtendedTooltip name="ВыгрузитьВФайлРасширеннаяПодсказка" id="28"/>
+		</Button>
+		<UsualGroup name="ГруппаПредупреждения" id="45">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа предупреждения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа предупреждения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПредупрежденияРасширеннаяПодсказка" id="46"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияВнимание1" id="47">
+					<TextColor>style:SpecialTextColor</TextColor>
+					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Внимание:</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияВнимание1КонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="ДекорацияВнимание1РасширеннаяПодсказка" id="49"/>
+				</LabelDecoration>
+				<LabelDecoration name="ДекорацияПредупреждениеОПримененииНастройкиКонфигурации" id="42">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>При применении настроек типа "Конфигурация", для окончательного применения настройки, требуется перезапуск обработки.
+Для настроек другого типа перезапуск не требуется.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияПредупреждениеОПримененииНастройкиКонфигурацииКонтекстноеМеню" id="43"/>
+					<ExtendedTooltip name="ДекорацияПредупреждениеОПримененииНастройкиКонфигурацииРасширеннаяПодсказка" id="44"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПодвал" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подвал</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подвал</v8:content>
+				</v8:item>
+			</ToolTip>
+			<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПодвалРасширеннаяПодсказка" id="36"/>
+			<ChildItems>
+				<Button name="Подтвердить" id="37">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Подтвердить</CommandName>
+					<BackColor>style:ImportantColor</BackColor>
+					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<ExtendedTooltip name="ПодтвердитьРасширеннаяПодсказка" id="38"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ЭДО_ПлатформаЭДО</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="КлиентскиеНастройки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Клиентские настройки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ИмяФайлаНастройки" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя файла настройки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОбъектНастройки" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект настройки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ФорматВыгрузки" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Формат выгрузки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПрименятьНастройку" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Применять настройку</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ТекстНастройки" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текст настройки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИмяНастройки" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя настройки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПрефиксКонфигурации" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Префикс конфигурации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗагрузитьИзФайла" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить настройку из файла</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить из файла</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveUp</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗагрузитьИзФайла</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ВыгрузитьВФайл" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить настройку в файл</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить в файл</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveDown</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыгрузитьВФайл</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="Подтвердить" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подтвердить и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подтвердить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Подтвердить</Action>
+		</Command>
+		<Command name="ВыгрузитьАрхивТиповыхНастроек" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить архив типовых настроек</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить архив типовых настроек</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.LoadReportSettings</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыгрузитьАрхивТиповыхНастроек</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

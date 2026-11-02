@@ -1,0 +1,282 @@
+﻿window.onerror = function(message, source, lineno, colno, error) {
+    var errorText = 'Ошибка: ' + message + '\n' +
+                    'Файл: ' + source + '\n' +
+                    'Строка: ' + lineno + ', колонка: ' + colno + '\n' +
+                   'Стек: ' + (error && error.stack ? error.stack : 'нет данных');
+    alert(errorText);
+    return false;
+};
+
+// Функция для перемещения кнопки "Show password" внутрь поля ввода
+function movePasswordToggleInside() {
+    var passwordInput = document.getElementById('password');
+    var passwordToggle = document.querySelector('[data-password-toggle]');
+    var passwordContainer = document.querySelector('.password-container');
+    
+    if (!passwordInput || !passwordToggle) return;
+    
+    if (!passwordContainer) {
+        passwordContainer = document.createElement('div');
+        passwordContainer.className = 'password-container';
+        passwordContainer.style.position = 'relative';
+        passwordContainer.style.width = '100%';
+        passwordInput.parentNode.insertBefore(passwordContainer, passwordInput);
+        passwordContainer.appendChild(passwordInput);
+    }
+    
+    passwordContainer.appendChild(passwordToggle);
+    
+    passwordToggle.style.position = 'absolute';
+    passwordToggle.style.right = '8px';
+    passwordToggle.style.top = '50%';
+    passwordToggle.style.transform = 'translateY(-50%)';
+    passwordToggle.style.background = 'transparent';
+    passwordToggle.style.border = 'none';
+    passwordToggle.style.padding = '0';
+    passwordToggle.style.cursor = 'pointer';
+    
+    passwordInput.style.paddingRight = '30px';
+}
+
+// Функция для применения CSS стилей ко всему документу
+function applyGlobalStyles() {
+    var style = document.createElement('style');
+    style.type = 'text/css';
+    var css = `
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        input, button {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        #username {
+        	border: 1px solid #ddd;
+            border-top: 1px solid #ddd !important;
+            border-bottom: 1px solid #ddd;
+            border-left: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+        }
+        input:focus, button:focus {
+            outline: none;
+            border-color: #4a90e2;
+            box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+        }
+        button {
+            background-color: #4a90e2;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #3a7bc8;
+        }
+        button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        #kc-form-login {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        #username, #password {
+            width: 100%;
+            box-sizing: border-box;
+            border-top: 1px solid #ddd !important;
+            margin-bottom: 10px;
+        }
+        label[for="password"] {
+            display: none !important;
+        }
+        label[for="username"] {
+            visibility: hidden;
+        }
+        #kc-form-buttons {
+            text-align: center;
+            margin-top: 10px;
+        }
+        #kc-login {
+            display: block;
+            margin: 0 auto;
+            background-color: #fcdf3f;
+            color: #333;
+            width: 100px;
+        }
+        #password {
+            margin-bottom: 0;
+        }
+		[data-password-toggle] i {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 16px 16px;
+        }
+        
+        [data-icon-show] i {
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEyIDQuNWM1IDAgOS4yNyAzLjExIDExIDcuNS0xLjczIDQuMzktNiA3LjUtMTEgNy41cy05LjI3LTMuMTEtMTEtNy41YzEuNzMtNC4zOSA2LTcuNSAxMS03LjV6bTAgMTJjMi43NiAwIDUtMi4yNCA1LTUtLjAyLTIuNzYtMi4yNC01LTUtNXMtNSAyLjI0LTUgNWMwIDIuNzYgMi4yNCA1IDUgNXptMC04YzEuNjYgMCAzIDEuMzQgMyAzcy0xLjM0IDMtMyAzLTMtMS4zNC0zLTMgMS4zNC0zIDMtM3oiIGZpbGw9IiM2NjY2NjYiLz48L3N2Zz4=");
+        }
+        
+        [data-icon-hide] i {
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEyIDdjMi43NiAwIDUgMi4yNCA1IDUgMCAuNjUtLjEzIDEuMjYtLjM2IDEuODNsMi45MiAyLjkyYzEuNTEtMS4yNiAyLjctMi44OSAzLjQzLTQuNzUtMS43My00LjM5LTYtNy41LTExLTcuNS0xLjQgMC0yLjc0LjI1LTMuOTguN2wyLjE2IDIuMTZjMS4wMS0uMzkgMi4xMS0uNjYgMy4yNi0uNjZ6bTAgMTJjMS41NSAwIDMuMDMtLjMgNC4zOC0uODRsLjQyLjQyTDE5LjczIDIyIDIxIDIwLjczIDMuMjcgMyAyIDQuMjdsMy42NiAzLjY2QzMuMTEgOC4zIDEuNzggMTAuMDIgMSAxMmMxLjczIDQuMzkgNiA3LjUgMTEgNy41em0tNy41My05LjhsMS41NSAxLjU1Yy0uMDUuMjEtLjA4LjQzLS4wOC42NSAwIDEuNjYgMS4zNCAzIDMgMyAuMjIgMCAuNDQtLjAzLjY1LS4wOGwxLjU1IDEuNTVjLS42Ny4zMy0xLjQxLjUzLTIuMi41My0yLjc2IDAtNS0yLjI0LTUtNXMxLjM0LTMgMy0zYy43OSAwIDEuNTMuMiAyLjIuNTN6bTQuMzEtLjc4bDMuMTUgMy4xNS4wMi0uMTZjMC0xLjY2LTEuMzQtMy0zLTNsLS4xNy4wMXoiIGZpbGw9IiM2NjY2NjYiLz48L3N2Zz4=");        
+        }
+        #kc-header-wrapper {
+        	display: none;
+            height: 0 !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+        #kc-page-title {
+        	display: none;
+            height: 0 !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+    `;
+    
+    if (style.styleSheet) {
+        style.styleSheet.cssText = css;
+    } else {
+        style.appendChild(document.createTextNode(css));
+    }
+    
+    var usernameInput = document.getElementById('username');
+    if(usernameInput) {
+    	usernameInput.style.border = '1px solid #ddd';
+    	usernameInput.style.borderTop = '1px solid #ddd';
+    }
+    
+    document.head.appendChild(style);
+}
+
+// Функция для изменения текста кнопки на "Войти"
+function changeLoginButtonText() {
+    var loginButton = document.getElementById('kc-login');
+    if (loginButton && loginButton.value === 'Sign In') {
+        loginButton.value = 'Войти';
+    }
+}
+
+// Применяем стили и изменения при полной загрузке страницы
+if (window.addEventListener) {
+    window.addEventListener('load', function() {
+        applyGlobalStyles();
+        movePasswordToggleInside();
+        changeLoginButtonText();
+        
+        var passwordInput = document.getElementById('password');
+        if (passwordInput) {
+            passwordInput.placeholder = 'Пароль';
+        }
+    }, false);
+} else if (window.attachEvent) {
+    window.attachEvent('onload', function() {
+        applyGlobalStyles();
+        movePasswordToggleInside();
+        changeLoginButtonText();
+        
+        var passwordInput = document.getElementById('password');
+        if (passwordInput) {
+            passwordInput.placeholder = 'Пароль';
+        }
+    });
+}
+
+function PressButton() {
+    var button = document.getElementById('reset-login');
+    if (button) button.click();
+}
+PressButton();
+
+function StartFormat() {
+    var usernameInput = document.getElementById('username');
+    var loginForm = document.getElementById('kc-form-login');
+    var submitButton = document.getElementById('kc-login');
+    
+    if (!usernameInput || !loginForm || !submitButton) return;
+    
+    usernameInput.placeholder = 'Email или +7 (XXX) XXX-XX-XX';
+    
+    usernameInput.addEventListener('input', InputProcess);
+    loginForm.addEventListener('submit', FormSubmitProcess);
+}
+
+StartFormat();
+
+function FormSubmitProcess(e) {
+    var usernameInput = document.getElementById('username');
+    var submitButton = document.getElementById('kc-login');
+    
+    if (!usernameInput || !submitButton) return;
+    
+    if (usernameInput.dataset && usernameInput.dataset.rawValue) {
+        usernameInput.value = usernameInput.dataset.rawValue;
+    }
+    
+    submitButton.disabled = true;
+    
+}
+
+function InputProcess(e) {
+    var value = this.value;
+    var looksLikePhone = value.indexOf('+7') === 0 || /^[\d+()\- ]*$/.test(value);
+    var looksLikeEmail = value.indexOf('@') !== -1 || /^[^@]*@[^@]*$/.test(value);
+    
+    // Определяем, была ли нажата Backspace или Del
+    var isBackspacePressed = e.inputType === 'deleteContentBackward' || 
+                           e.inputType === 'deleteContentForward' || 
+                           e.key === 'Backspace' || 
+                           e.key === 'Delete';
+    
+    if (looksLikePhone && !looksLikeEmail) {
+        formatAsPhone(e.target, isBackspacePressed);
+    }
+}
+
+function formatAsPhone(input, isBackspacePressed = false) {
+    var cursorPosition = input.selectionStart;
+    var value = input.value;
+    
+    // Если пытаемся удалить +7 (Backspace или Del)
+    if (isBackspacePressed && (value === '+7' || value === '+7 ' || value === '+7 (')) {
+        input.value = '';
+        input.dataset.rawValue = '';
+        return;
+    }
+    
+    var cleaned = value.replace(/\D/g, '');
+    
+    // Если ничего не введено после +7
+    if (cleaned === '7' && (cursorPosition <= 2 || isBackspacePressed)) {
+        input.value = '';
+        input.dataset.rawValue = '';
+        return;
+    }
+    
+    // Стандартное форматирование
+    if (cleaned.length > 0 && !cleaned.startsWith('7')) {
+        cleaned = '7' + cleaned;
+    }
+    
+    var formatted = '+7';
+    if (cleaned.length > 1) formatted += ' (' + cleaned.substring(1, 4);
+    if (cleaned.length > 4) formatted += ') ' + cleaned.substring(4, 7);
+    if (cleaned.length > 7) formatted += '-' + cleaned.substring(7, 9);
+    if (cleaned.length > 9) formatted += '-' + cleaned.substring(9, 11);
+    
+    input.value = formatted;
+    input.dataset.rawValue = cleaned;
+    
+
+}

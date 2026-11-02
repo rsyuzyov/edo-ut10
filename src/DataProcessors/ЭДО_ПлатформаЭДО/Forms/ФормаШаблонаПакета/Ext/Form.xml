@@ -1,0 +1,1434 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаСохранитьИЗакрыть" id="36">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.СохранитьИЗакрыть</CommandName>
+				<ExtendedTooltip name="ФормаСохранитьИЗакрытьРасширеннаяПодсказка" id="37"/>
+			</Button>
+			<Button name="СохранитьИзменения" id="38">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.СохранитьИзменения</CommandName>
+				<ExtendedTooltip name="СохранитьИзмененияРасширеннаяПодсказка" id="39"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОсновноеОкно" id="48">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основное окно</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основное окно</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОсновноеОкноРасширеннаяПодсказка" id="49"/>
+			<ChildItems>
+				<InputField name="Наименование" id="45" DisplayImportance="High">
+					<DataPath>Наименование</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Произвольное название шаблона. Обязательно к заполнению, не может повторяться</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="47"/>
+				</InputField>
+				<UsualGroup name="ГруппаРеквизитыШапки" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа реквизиты шапки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа реквизиты шапки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаРеквизитыШапкиРасширеннаяПодсказка" id="8"/>
+					<ChildItems>
+						<InputField name="Контрагент" id="4">
+							<DataPath>Контрагент</DataPath>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="КонтрагентКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<InputField name="Организация" id="1">
+							<DataPath>Организация</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="3"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаРеквизитыНастройки" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа реквизиты настройки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа реквизиты настройки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаРеквизитыНастройкиРасширеннаяПодсказка" id="10"/>
+					<ChildItems>
+						<Table name="ТаблицаТиповДокументов" id="11">
+							<Representation>List</Representation>
+							<HorizontalLines>false</HorizontalLines>
+							<VerticalLines>false</VerticalLines>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ТаблицаТиповДокументов</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТаблицаТиповДокументовКонтекстноеМеню" id="12"/>
+							<AutoCommandBar name="ТаблицаТиповДокументовКоманднаяПанель" id="13">
+								<ChildItems>
+									<Button name="ФормаЗаполнитьПоУмолчанию" id="40">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ЗаполнитьПоУмолчанию</CommandName>
+										<ExtendedTooltip name="ФормаЗаполнитьПоУмолчаниюРасширеннаяПодсказка" id="41"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ТаблицаТиповДокументовРасширеннаяПодсказка" id="14"/>
+							<SearchStringAddition name="ТаблицаТиповДокументовСтрокаПоиска" id="15">
+								<AdditionSource>
+									<Item>ТаблицаТиповДокументов</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаТиповДокументовСтрокаПоискаКонтекстноеМеню" id="16"/>
+								<ExtendedTooltip name="ТаблицаТиповДокументовСтрокаПоискаРасширеннаяПодсказка" id="17"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТаблицаТиповДокументовСостояниеПросмотра" id="18">
+								<AdditionSource>
+									<Item>ТаблицаТиповДокументов</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаТиповДокументовСостояниеПросмотраКонтекстноеМеню" id="19"/>
+								<ExtendedTooltip name="ТаблицаТиповДокументовСостояниеПросмотраРасширеннаяПодсказка" id="20"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТаблицаТиповДокументовУправлениеПоиском" id="21">
+								<AdditionSource>
+									<Item>ТаблицаТиповДокументов</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаТиповДокументовУправлениеПоискомКонтекстноеМеню" id="22"/>
+								<ExtendedTooltip name="ТаблицаТиповДокументовУправлениеПоискомРасширеннаяПодсказка" id="23"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnActivateRow">ТаблицаТиповДокументовПриАктивизацииСтроки</Event>
+							</Events>
+							<ChildItems>
+								<ColumnGroup name="ТаблицаТиповДокументовГруппаФормализованный" id="172">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Таблица типов документов группа формализованный</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Таблица типов документов группа формализованный</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ТаблицаТиповДокументовГруппаФормализованныйРасширеннаяПодсказка" id="173"/>
+									<ChildItems>
+										<InputField name="ТаблицаТиповДокументовТипДокументаПредставление" id="155">
+											<DataPath>ТаблицаТиповДокументов.ТипДокументаПредставление</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Тип документа</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ТаблицаТиповДокументовТипДокументаПредставлениеКонтекстноеМеню" id="156"/>
+											<ExtendedTooltip name="ТаблицаТиповДокументовТипДокументаПредставлениеРасширеннаяПодсказка" id="157"/>
+											<Events>
+												<Event name="OnChange">ТаблицаТиповДокументовТипДокументаПредставлениеПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ТаблицаТиповДокументовФорматДокумента" id="30">
+											<DataPath>ТаблицаТиповДокументов.ФорматДокумента</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ListChoiceMode>true</ListChoiceMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ChooseType>false</ChooseType>
+											<ContextMenu name="ТаблицаТиповДокументовФорматДокументаКонтекстноеМеню" id="31"/>
+											<ExtendedTooltip name="ТаблицаТиповДокументовФорматДокументаРасширеннаяПодсказка" id="32"/>
+											<Events>
+												<Event name="StartChoice">ТаблицаТиповДокументовФорматДокументаНачалоВыбора</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="ТаблицаТиповДокументовТипДокумента" id="24">
+									<DataPath>ТаблицаТиповДокументов.ТипДокумента</DataPath>
+									<Visible>false</Visible>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Основной документ</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ChooseType>false</ChooseType>
+									<TextEdit>false</TextEdit>
+									<ContextMenu name="ТаблицаТиповДокументовТипДокументаКонтекстноеМеню" id="25"/>
+									<ExtendedTooltip name="ТаблицаТиповДокументовТипДокументаРасширеннаяПодсказка" id="26"/>
+									<Events>
+										<Event name="StartChoice">ТаблицаТиповДокументовТипДокументаНачалоВыбора</Event>
+										<Event name="MultipleValuesAdd">ТаблицаТиповДокументовТипДокументаДобавлениеМножественныхЗначений</Event>
+										<Event name="StartListChoice">ТаблицаТиповДокументовТипДокументаНачалоВыбораИзСписка</Event>
+										<Event name="ChoiceProcessing">ТаблицаТиповДокументовТипДокументаОбработкаВыбора</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТаблицаТиповДокументовТипСвязанногоДокумента" id="27">
+									<DataPath>ТаблицаТиповДокументов.ТипСвязанногоДокумента</DataPath>
+									<Visible>false</Visible>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Тип связанного документа</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТаблицаТиповДокументовТипСвязанногоДокументаКонтекстноеМеню" id="28"/>
+									<ExtendedTooltip name="ТаблицаТиповДокументовТипСвязанногоДокументаРасширеннаяПодсказка" id="29"/>
+								</InputField>
+								<InputField name="ТаблицаТиповДокументовТипСвязанногоДокументаПредставление" id="161">
+									<DataPath>ТаблицаТиповДокументов.ТипСвязанногоДокументаПредставление</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Тип связанного документа</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ChooseType>false</ChooseType>
+									<ContextMenu name="ТаблицаТиповДокументовТипСвязанногоДокументаПредставлениеКонтекстноеМеню" id="162"/>
+									<ExtendedTooltip name="ТаблицаТиповДокументовТипСвязанногоДокументаПредставлениеРасширеннаяПодсказка" id="163"/>
+									<Events>
+										<Event name="OnChange">ТаблицаТиповДокументовТипСвязанногоДокументаПредставлениеПриИзменении</Event>
+										<Event name="StartChoice">ТаблицаТиповДокументовТипСвязанногоДокументаПредставлениеНачалоВыбора</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТаблицаТиповДокументовПечатнаяФормаПредставление" id="158">
+									<DataPath>ТаблицаТиповДокументов.ПечатнаяФормаПредставление</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Печатная форма</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ChooseType>false</ChooseType>
+									<ContextMenu name="ТаблицаТиповДокументовПечатнаяФормаПредставлениеКонтекстноеМеню" id="159"/>
+									<ExtendedTooltip name="ТаблицаТиповДокументовПечатнаяФормаПредставлениеРасширеннаяПодсказка" id="160"/>
+									<Events>
+										<Event name="OnChange">ТаблицаТиповДокументовПечатнаяФормаПредставлениеПриИзменении</Event>
+										<Event name="StartChoice">ТаблицаТиповДокументовПечатнаяФормаПредставлениеНачалоВыбора</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТаблицаТиповДокументовПечатнаяФорма" id="33">
+									<DataPath>ТаблицаТиповДокументов.ПечатнаяФорма</DataPath>
+									<Visible>false</Visible>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТаблицаТиповДокументовПечатнаяФормаКонтекстноеМеню" id="34"/>
+									<ExtendedTooltip name="ТаблицаТиповДокументовПечатнаяФормаРасширеннаяПодсказка" id="35"/>
+								</InputField>
+								<InputField name="ТаблицаТиповДокументовУсловиеПоиска" id="42">
+									<DataPath>ТаблицаТиповДокументов.УсловиеПоиска</DataPath>
+									<Visible>false</Visible>
+									<EditMode>EnterOnInput</EditMode>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ChooseType>false</ChooseType>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Пользовательская настройка</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">ИзНастройки</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>По связанным документам</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">ПоУмолчанию</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ТаблицаТиповДокументовУсловиеПоискаКонтекстноеМеню" id="43"/>
+									<ExtendedTooltip name="ТаблицаТиповДокументовУсловиеПоискаРасширеннаяПодсказка" id="44"/>
+								</InputField>
+								<ColumnGroup name="ТаблицаТиповДокументовГруппаНеформалка" id="167">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Таблица типов документов группа неформалка</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Таблица типов документов группа неформалка</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ТаблицаТиповДокументовГруппаНеформалкаРасширеннаяПодсказка" id="168"/>
+									<ChildItems>
+										<InputField name="ТаблицаТиповДокументовФорматФайла" id="164">
+											<DataPath>ТаблицаТиповДокументов.ФорматФайла</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ListChoiceMode>true</ListChoiceMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ChooseType>false</ChooseType>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>pdf</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">pdf</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>xlsx</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">xlsx</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>doc</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">doc</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="ТаблицаТиповДокументовФорматФайлаКонтекстноеМеню" id="165"/>
+											<ExtendedTooltip name="ТаблицаТиповДокументовФорматФайлаРасширеннаяПодсказка" id="166"/>
+										</InputField>
+										<InputField name="ТаблицаТиповДокументовВидНеформализованного" id="169">
+											<DataPath>ТаблицаТиповДокументов.ВидНеформализованного</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Вид неформализованного</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ListChoiceMode>true</ListChoiceMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ChooseType>false</ChooseType>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Неформализованный</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Неформализованный</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Счет</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Счет</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="ТаблицаТиповДокументовВидНеформализованногоКонтекстноеМеню" id="170"/>
+											<ExtendedTooltip name="ТаблицаТиповДокументовВидНеформализованногоРасширеннаяПодсказка" id="171"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаМассовоеСоздание" id="50">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа массовое создание</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа массовое создание</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаМассовоеСозданиеРасширеннаяПодсказка" id="51"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаПодсказка" id="116">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа подсказка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа подсказка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПодсказкаРасширеннаяПодсказка" id="117"/>
+					<ChildItems>
+						<LabelDecoration name="Описание" id="118">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>В левом поле формы укажите контрагентов, при обмене документами с которыми, будет использован шаблон. В правой части формы - укажите содержание шаблона. После нажатия кнопки "записать" или "Записать и закрыть" будет создан шаблон для каждого из указанных контрагентов.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ОписаниеКонтекстноеМеню" id="119"/>
+							<ExtendedTooltip name="ОписаниеРасширеннаяПодсказка" id="120"/>
+							<Events>
+								<Event name="Click">ОписаниеНажатие</Event>
+							</Events>
+						</LabelDecoration>
+						<LabelDecoration name="СвернутоеОписание" id="121">
+							<Visible>false</Visible>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;colorstyle -46&gt;&lt;u&gt;Инструкция&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="СвернутоеОписаниеКонтекстноеМеню" id="122"/>
+							<ExtendedTooltip name="СвернутоеОписаниеРасширеннаяПодсказка" id="123"/>
+							<Events>
+								<Event name="Click">СвернутоеОписаниеНажатие</Event>
+							</Events>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСтраницыФормы" id="114">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа страницы формы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа страницы формы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСтраницыФормыРасширеннаяПодсказка" id="115"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаЛево" id="127">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выбор организаций</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа лево</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ExtendedTooltip name="ГруппаЛевоРасширеннаяПодсказка" id="128"/>
+							<ChildItems>
+								<Table name="ВыбранныеОрганизации" id="129">
+									<Representation>List</Representation>
+									<HorizontalLines>false</HorizontalLines>
+									<VerticalLines>false</VerticalLines>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>ВыбранныеОрганизации</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ВыбранныеОрганизацииКонтекстноеМеню" id="130"/>
+									<AutoCommandBar name="ВыбранныеОрганизацииКоманднаяПанель" id="131">
+										<Autofill>false</Autofill>
+										<ChildItems>
+											<Button name="ВыбранныеОрганизацииДобавить" id="151">
+												<Type>CommandBarButton</Type>
+												<Representation>Picture</Representation>
+												<CommandName>Form.Item.ВыбранныеОрганизации.StandardCommand.Add</CommandName>
+												<ExtendedTooltip name="ВыбранныеОрганизацииДобавитьРасширеннаяПодсказка" id="152"/>
+											</Button>
+											<Button name="ВыбранныеОрганизацииУдалить" id="153">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.ВыбранныеОрганизации.StandardCommand.Delete</CommandName>
+												<ExtendedTooltip name="ВыбранныеОрганизацииУдалитьРасширеннаяПодсказка" id="154"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ВыбранныеОрганизацииРасширеннаяПодсказка" id="132"/>
+									<SearchStringAddition name="ВыбранныеОрганизацииСтрокаПоиска" id="133">
+										<AdditionSource>
+											<Item>ВыбранныеОрганизации</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ВыбранныеОрганизацииСтрокаПоискаКонтекстноеМеню" id="134"/>
+										<ExtendedTooltip name="ВыбранныеОрганизацииСтрокаПоискаРасширеннаяПодсказка" id="135"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ВыбранныеОрганизацииСостояниеПросмотра" id="136">
+										<AdditionSource>
+											<Item>ВыбранныеОрганизации</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ВыбранныеОрганизацииСостояниеПросмотраКонтекстноеМеню" id="137"/>
+										<ExtendedTooltip name="ВыбранныеОрганизацииСостояниеПросмотраРасширеннаяПодсказка" id="138"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ВыбранныеОрганизацииУправлениеПоиском" id="139">
+										<AdditionSource>
+											<Item>ВыбранныеОрганизации</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ВыбранныеОрганизацииУправлениеПоискомКонтекстноеМеню" id="140"/>
+										<ExtendedTooltip name="ВыбранныеОрганизацииУправлениеПоискомРасширеннаяПодсказка" id="141"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<InputField name="ВыбранныеОрганизацииОрганизация" id="142">
+											<DataPath>ВыбранныеОрганизации.Организация</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ВыбранныеОрганизацииОрганизацияКонтекстноеМеню" id="143"/>
+											<ExtendedTooltip name="ВыбранныеОрганизацииОрганизацияРасширеннаяПодсказка" id="144"/>
+											<Events>
+												<Event name="OnChange">ВыбранныеОрганизацииОрганизацияПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ВыбранныеОрганизацииИНН" id="145">
+											<DataPath>ВыбранныеОрганизации.ИНН</DataPath>
+											<Enabled>false</Enabled>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ВыбранныеОрганизацииИННКонтекстноеМеню" id="146"/>
+											<ExtendedTooltip name="ВыбранныеОрганизацииИННРасширеннаяПодсказка" id="147"/>
+										</InputField>
+										<InputField name="ВыбранныеОрганизацииКПП" id="148">
+											<DataPath>ВыбранныеОрганизации.КПП</DataPath>
+											<Enabled>false</Enabled>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ВыбранныеОрганизацииКППКонтекстноеМеню" id="149"/>
+											<ExtendedTooltip name="ВыбранныеОрганизацииКППРасширеннаяПодсказка" id="150"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаЦентр" id="74">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выбор контрагентов</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа центр</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ExtendedTooltip name="ГруппаЦентрРасширеннаяПодсказка" id="75"/>
+							<ChildItems>
+								<Table name="ВыбранныеКонтрагенты" id="52">
+									<Representation>List</Representation>
+									<HorizontalLines>false</HorizontalLines>
+									<VerticalLines>false</VerticalLines>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>ВыбранныеКонтрагенты</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ВыбранныеКонтрагентыКонтекстноеМеню" id="53"/>
+									<AutoCommandBar name="ВыбранныеКонтрагентыКоманднаяПанель" id="54">
+										<Autofill>false</Autofill>
+										<ChildItems>
+											<Button name="ВыбранныеКонтрагентыДобавитьКонтрагентовПодбором" id="106">
+												<Type>CommandBarButton</Type>
+												<Representation>PictureAndText</Representation>
+												<CommandName>Form.Command.ДобавитьКонтрагентовПодбором</CommandName>
+												<Picture>
+													<xr:Ref>StdPicture.RestoreValues</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+												</Picture>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Подбор</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ВыбранныеКонтрагентыДобавитьКонтрагентовПодборомРасширеннаяПодсказка" id="107"/>
+											</Button>
+											<Button name="ВыбранныеКонтрагентыСкопировать" id="110">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.ВыбранныеКонтрагенты.StandardCommand.Copy</CommandName>
+												<ExtendedTooltip name="ВыбранныеКонтрагентыСкопироватьРасширеннаяПодсказка" id="111"/>
+											</Button>
+											<Button name="ВыбранныеКонтрагентыДобавить" id="108">
+												<Type>CommandBarButton</Type>
+												<Representation>Picture</Representation>
+												<CommandName>Form.Item.ВыбранныеКонтрагенты.StandardCommand.Add</CommandName>
+												<ExtendedTooltip name="ВыбранныеКонтрагентыДобавитьРасширеннаяПодсказка" id="109"/>
+											</Button>
+											<Button name="ВыбранныеКонтрагентыУдалить" id="112">
+												<Type>CommandBarButton</Type>
+												<Representation>Picture</Representation>
+												<CommandName>Form.Item.ВыбранныеКонтрагенты.StandardCommand.Delete</CommandName>
+												<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+												<ExtendedTooltip name="ВыбранныеКонтрагентыУдалитьРасширеннаяПодсказка" id="113"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ВыбранныеКонтрагентыРасширеннаяПодсказка" id="55"/>
+									<SearchStringAddition name="ВыбранныеКонтрагентыСтрокаПоиска" id="56">
+										<AdditionSource>
+											<Item>ВыбранныеКонтрагенты</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ВыбранныеКонтрагентыСтрокаПоискаКонтекстноеМеню" id="57"/>
+										<ExtendedTooltip name="ВыбранныеКонтрагентыСтрокаПоискаРасширеннаяПодсказка" id="58"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ВыбранныеКонтрагентыСостояниеПросмотра" id="59">
+										<AdditionSource>
+											<Item>ВыбранныеКонтрагенты</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ВыбранныеКонтрагентыСостояниеПросмотраКонтекстноеМеню" id="60"/>
+										<ExtendedTooltip name="ВыбранныеКонтрагентыСостояниеПросмотраРасширеннаяПодсказка" id="61"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ВыбранныеКонтрагентыУправлениеПоиском" id="62">
+										<AdditionSource>
+											<Item>ВыбранныеКонтрагенты</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ВыбранныеКонтрагентыУправлениеПоискомКонтекстноеМеню" id="63"/>
+										<ExtendedTooltip name="ВыбранныеКонтрагентыУправлениеПоискомРасширеннаяПодсказка" id="64"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<InputField name="ВыбранныеКонтрагентыКонтрагент" id="65">
+											<DataPath>ВыбранныеКонтрагенты.Контрагент</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ВыбранныеКонтрагентыКонтрагентКонтекстноеМеню" id="66"/>
+											<ExtendedTooltip name="ВыбранныеКонтрагентыКонтрагентРасширеннаяПодсказка" id="67"/>
+											<Events>
+												<Event name="OnChange">ВыбранныеКонтрагентыКонтрагентПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ВыбранныеКонтрагентыИНН" id="68">
+											<DataPath>ВыбранныеКонтрагенты.ИНН</DataPath>
+											<Enabled>false</Enabled>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ВыбранныеКонтрагентыИННКонтекстноеМеню" id="69"/>
+											<ExtendedTooltip name="ВыбранныеКонтрагентыИННРасширеннаяПодсказка" id="70"/>
+										</InputField>
+										<InputField name="ВыбранныеКонтрагентыКПП" id="71">
+											<DataPath>ВыбранныеКонтрагенты.КПП</DataPath>
+											<Enabled>false</Enabled>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ВыбранныеКонтрагентыКППКонтекстноеМеню" id="72"/>
+											<ExtendedTooltip name="ВыбранныеКонтрагентыКППРасширеннаяПодсказка" id="73"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПраво" id="76">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Содержание настройки</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа право</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ExtendedTooltip name="ГруппаПравоРасширеннаяПодсказка" id="77"/>
+							<ChildItems>
+								<Table name="ТаблицаТиповДокументовМассовоеСоздание" id="78">
+									<Representation>List</Representation>
+									<HorizontalLines>false</HorizontalLines>
+									<VerticalLines>false</VerticalLines>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>ТаблицаТиповДокументов</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ТаблицаТиповДокументовМассовоеСозданиеКонтекстноеМеню" id="79"/>
+									<AutoCommandBar name="ТаблицаТиповДокументовМассовоеСозданиеКоманднаяПанель" id="80"/>
+									<ExtendedTooltip name="ТаблицаТиповДокументовМассовоеСозданиеРасширеннаяПодсказка" id="81"/>
+									<SearchStringAddition name="ТаблицаТиповДокументовМассовоеСозданиеСтрокаПоиска" id="82">
+										<AdditionSource>
+											<Item>ТаблицаТиповДокументовМассовоеСоздание</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаТиповДокументовМассовоеСозданиеСтрокаПоискаКонтекстноеМеню" id="83"/>
+										<ExtendedTooltip name="ТаблицаТиповДокументовМассовоеСозданиеСтрокаПоискаРасширеннаяПодсказка" id="84"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ТаблицаТиповДокументовМассовоеСозданиеСостояниеПросмотра" id="85">
+										<AdditionSource>
+											<Item>ТаблицаТиповДокументовМассовоеСоздание</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаТиповДокументовМассовоеСозданиеСостояниеПросмотраКонтекстноеМеню" id="86"/>
+										<ExtendedTooltip name="ТаблицаТиповДокументовМассовоеСозданиеСостояниеПросмотраРасширеннаяПодсказка" id="87"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ТаблицаТиповДокументовМассовоеСозданиеУправлениеПоиском" id="88">
+										<AdditionSource>
+											<Item>ТаблицаТиповДокументовМассовоеСоздание</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаТиповДокументовМассовоеСозданиеУправлениеПоискомКонтекстноеМеню" id="89"/>
+										<ExtendedTooltip name="ТаблицаТиповДокументовМассовоеСозданиеУправлениеПоискомРасширеннаяПодсказка" id="90"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<ColumnGroup name="Формализованные" id="189">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Формализованные</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Формализованные</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="ФормализованныеРасширеннаяПодсказка" id="190"/>
+											<ChildItems>
+												<InputField name="ТаблицаТиповДокументовМассовоеСозданиеТипДокументаПредставление" id="174">
+													<DataPath>ТаблицаТиповДокументов.ТипДокументаПредставление</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Тип документа</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<ListChoiceMode>true</ListChoiceMode>
+													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+													<ChooseType>false</ChooseType>
+													<ContextMenu name="ТаблицаТиповДокументовМассовоеСозданиеТипДокументаПредставлениеКонтекстноеМеню" id="175"/>
+													<ExtendedTooltip name="ТаблицаТиповДокументовМассовоеСозданиеТипДокументаПредставлениеРасширеннаяПодсказка" id="176"/>
+													<Events>
+														<Event name="OnChange">ТаблицаТиповДокументовМассовоеСозданиеТипДокументаПредставлениеПриИзменении</Event>
+														<Event name="StartChoice">ТаблицаТиповДокументовМассовоеСозданиеТипДокументаПредставлениеНачалоВыбора</Event>
+													</Events>
+												</InputField>
+												<InputField name="ТаблицаТиповДокументовМассовоеСозданиеФорматДокумента" id="97">
+													<DataPath>ТаблицаТиповДокументов.ФорматДокумента</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ListChoiceMode>true</ListChoiceMode>
+													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+													<ChooseType>false</ChooseType>
+													<ContextMenu name="ТаблицаТиповДокументовМассовоеСозданиеФорматДокументаКонтекстноеМеню" id="98"/>
+													<ExtendedTooltip name="ТаблицаТиповДокументовМассовоеСозданиеФорматДокументаРасширеннаяПодсказка" id="99"/>
+													<Events>
+														<Event name="StartChoice">ТаблицаТиповДокументовМассовоеСозданиеФорматДокументаНачалоВыбора</Event>
+													</Events>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+										<InputField name="ТаблицаТиповДокументовМассовоеСозданиеТипДокумента" id="91">
+											<DataPath>ТаблицаТиповДокументов.ТипДокумента</DataPath>
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ТаблицаТиповДокументовМассовоеСозданиеТипДокументаКонтекстноеМеню" id="92"/>
+											<ExtendedTooltip name="ТаблицаТиповДокументовМассовоеСозданиеТипДокументаРасширеннаяПодсказка" id="93"/>
+										</InputField>
+										<InputField name="ТаблицаТиповДокументовМассовоеСозданиеТипСвязанногоДокументаПредставление" id="177">
+											<DataPath>ТаблицаТиповДокументов.ТипСвязанногоДокументаПредставление</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Тип связанного документа</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ListChoiceMode>true</ListChoiceMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ChooseType>false</ChooseType>
+											<ContextMenu name="ТаблицаТиповДокументовМассовоеСозданиеТипСвязанногоДокументаПредставлениеКонтекстноеМеню" id="178"/>
+											<ExtendedTooltip name="ТаблицаТиповДокументовМассовоеСозданиеТипСвязанногоДокументаПредставлениеРасширеннаяПодсказка" id="179"/>
+											<Events>
+												<Event name="OnChange">ТаблицаТиповДокументовМассовоеСозданиеТипСвязанногоДокументаПредставлениеПриИзменении</Event>
+												<Event name="StartChoice">ТаблицаТиповДокументовМассовоеСозданиеТипСвязанногоДокументаПредставлениеНачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<InputField name="ТаблицаТиповДокументовМассовоеСозданиеТипСвязанногоДокумента" id="94">
+											<DataPath>ТаблицаТиповДокументов.ТипСвязанногоДокумента</DataPath>
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ТаблицаТиповДокументовМассовоеСозданиеТипСвязанногоДокументаКонтекстноеМеню" id="95"/>
+											<ExtendedTooltip name="ТаблицаТиповДокументовМассовоеСозданиеТипСвязанногоДокументаРасширеннаяПодсказка" id="96"/>
+										</InputField>
+										<InputField name="ТаблицаТиповДокументовМассовоеСозданиеПечатнаяФормаПредставление" id="186">
+											<DataPath>ТаблицаТиповДокументов.ПечатнаяФормаПредставление</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Печатная форма</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ListChoiceMode>true</ListChoiceMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ChooseType>false</ChooseType>
+											<ContextMenu name="ТаблицаТиповДокументовМассовоеСозданиеПечатнаяФормаПредставлениеКонтекстноеМеню" id="187"/>
+											<ExtendedTooltip name="ТаблицаТиповДокументовМассовоеСозданиеПечатнаяФормаПредставлениеРасширеннаяПодсказка" id="188"/>
+											<Events>
+												<Event name="OnChange">ТаблицаТиповДокументовМассовоеСозданиеПечатнаяФормаПредставлениеПриИзменении</Event>
+												<Event name="StartChoice">ТаблицаТиповДокументовМассовоеСозданиеПечатнаяФормаПредставлениеНачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<InputField name="ТаблицаТиповДокументовМассовоеСозданиеПечатнаяФорма" id="100">
+											<DataPath>ТаблицаТиповДокументов.ПечатнаяФорма</DataPath>
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ТаблицаТиповДокументовМассовоеСозданиеПечатнаяФормаКонтекстноеМеню" id="101"/>
+											<ExtendedTooltip name="ТаблицаТиповДокументовМассовоеСозданиеПечатнаяФормаРасширеннаяПодсказка" id="102"/>
+										</InputField>
+										<InputField name="ТаблицаТиповДокументовМассовоеСозданиеУсловиеПоиска" id="103">
+											<DataPath>ТаблицаТиповДокументов.УсловиеПоиска</DataPath>
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ТаблицаТиповДокументовМассовоеСозданиеУсловиеПоискаКонтекстноеМеню" id="104"/>
+											<ExtendedTooltip name="ТаблицаТиповДокументовМассовоеСозданиеУсловиеПоискаРасширеннаяПодсказка" id="105"/>
+										</InputField>
+										<ColumnGroup name="Неформалка" id="191">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Неформалка</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Неформалка</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="НеформалкаРасширеннаяПодсказка" id="192"/>
+											<ChildItems>
+												<InputField name="ТаблицаТиповДокументовМассовоеСозданиеФорматФайла" id="180">
+													<DataPath>ТаблицаТиповДокументов.ФорматФайла</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ListChoiceMode>true</ListChoiceMode>
+													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+													<ChooseType>false</ChooseType>
+													<ContextMenu name="ТаблицаТиповДокументовМассовоеСозданиеФорматФайлаКонтекстноеМеню" id="181"/>
+													<ExtendedTooltip name="ТаблицаТиповДокументовМассовоеСозданиеФорматФайлаРасширеннаяПодсказка" id="182"/>
+												</InputField>
+												<InputField name="ТаблицаТиповДокументовМассовоеСозданиеВидНеформализованного" id="183">
+													<DataPath>ТаблицаТиповДокументов.ВидНеформализованного</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ListChoiceMode>true</ListChoiceMode>
+													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+													<ChooseType>false</ChooseType>
+													<ContextMenu name="ТаблицаТиповДокументовМассовоеСозданиеВидНеформализованногоКонтекстноеМеню" id="184"/>
+													<ExtendedTooltip name="ТаблицаТиповДокументовМассовоеСозданиеВидНеформализованногоРасширеннаяПодсказка" id="185"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ЭДО_ПлатформаЭДО</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Организация" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="Контрагент" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ТаблицаТиповДокументов" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица типов документов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ТипДокумента" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип документа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТипСвязанногоДокумента" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип связанного документа</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+				<Column name="ФорматДокумента" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Формат документа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПечатнаяФорма" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Печатная форма</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="УсловиеПоиска" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Условие поиска</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТипДокументаПредставление" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип документа представление</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+				<Column name="ПечатнаяФормаПредставление" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Печатная форма представление</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТипСвязанногоДокументаПредставление" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип связанного документа представление</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ФорматФайла" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Формат файла</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВидНеформализованного" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид неформализованного</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ДанныеНастройки" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные настройки</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="АдресВременногоХранилищаКэш" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес временного хранилища кэш</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ЭтоНовый" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это новый</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Наименование" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ВыбранныеКонтрагенты" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбранные контрагенты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Контрагент" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИНН" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ИНН</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КПП" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>КПП</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ВыбранныеОрганизации" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбранные организации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Организация" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИНН" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ИНН</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КПП" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>КПП</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ЭтоМассовоеСоздание" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это массовое создание</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДоступныеТипыДокументов" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доступные типы документов</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="СписокОбъектовДляВыбораПФ" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список объектов для выбора ПФ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтоКопирование" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это копирование</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СохранитьИЗакрыть" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить и закрыть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СохранитьИЗакрыть</Action>
+		</Command>
+		<Command name="СохранитьИзменения" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить изменения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СохранитьИзменения</Action>
+		</Command>
+		<Command name="ЗаполнитьПоУмолчанию" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по умолчанию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по умолчанию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьПоУмолчанию</Action>
+		</Command>
+		<Command name="ДобавитьКонтрагентовПодбором" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить контрагентов подбором</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить контрагентов подбором</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьКонтрагентовПодбором</Action>
+		</Command>
+		<Command name="ДобавитьКонтрагента" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить контрагента</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить контрагента</v8:content>
+				</v8:item>
+			</ToolTip>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Контрагент">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="Организация">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ЭтоНовый">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

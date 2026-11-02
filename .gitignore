@@ -1,0 +1,4 @@
+*.cfe
+*.log
+dist/
+.bsl-language-server/

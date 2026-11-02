@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Организация" id="45">
+			<DataPath>Организация</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбранная организация</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="46"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="47"/>
+			<Events>
+				<Event name="OnChange">ОрганизацияПриИзменении</Event>
+			</Events>
+		</InputField>
+		<Table name="СписокШаблонов" id="48">
+			<Representation>List</Representation>
+			<HorizontalLines>false</HorizontalLines>
+			<VerticalLines>false</VerticalLines>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>СписокШаблонов</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="СписокШаблоновКонтекстноеМеню" id="49"/>
+			<AutoCommandBar name="СписокШаблоновКоманднаяПанель" id="50">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="СписокШаблоновПереместитьВверх" id="75">
+						<Type>CommandBarButton</Type>
+						<Visible>false</Visible>
+						<CommandName>Form.Item.СписокШаблонов.StandardCommand.MoveUp</CommandName>
+						<ExtendedTooltip name="СписокШаблоновПереместитьВверхРасширеннаяПодсказка" id="76"/>
+					</Button>
+					<Button name="СписокШаблоновПереместитьВниз" id="73">
+						<Type>CommandBarButton</Type>
+						<Visible>false</Visible>
+						<CommandName>Form.Item.СписокШаблонов.StandardCommand.MoveDown</CommandName>
+						<ExtendedTooltip name="СписокШаблоновПереместитьВнизРасширеннаяПодсказка" id="74"/>
+					</Button>
+					<Button name="СписокШаблоновИзменить" id="77">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.СписокШаблонов.StandardCommand.Change</CommandName>
+						<ExtendedTooltip name="СписокШаблоновИзменитьРасширеннаяПодсказка" id="78"/>
+					</Button>
+					<Button name="СписокШаблоновНайти" id="79">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.СписокШаблонов.StandardCommand.Find</CommandName>
+						<ExtendedTooltip name="СписокШаблоновНайтиРасширеннаяПодсказка" id="80"/>
+					</Button>
+					<Button name="СписокШаблоновОтменитьПоиск" id="81">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.СписокШаблонов.StandardCommand.CancelSearch</CommandName>
+						<ExtendedTooltip name="СписокШаблоновОтменитьПоискРасширеннаяПодсказка" id="82"/>
+					</Button>
+					<Button name="СписокШаблоновПоказатьМножественноеВыделение" id="83">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.СписокШаблонов.StandardCommand.ShowMultipleSelection</CommandName>
+						<ExtendedTooltip name="СписокШаблоновПоказатьМножественноеВыделениеРасширеннаяПодсказка" id="84"/>
+					</Button>
+					<Button name="СписокШаблоновВывестиСписок" id="85">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.СписокШаблонов.StandardCommand.OutputList</CommandName>
+						<ExtendedTooltip name="СписокШаблоновВывестиСписокРасширеннаяПодсказка" id="86"/>
+					</Button>
+					<Button name="СписокШаблоновПоискПоТекущемуЗначению" id="89">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.СписокШаблонов.StandardCommand.FindByCurrentValue</CommandName>
+						<ExtendedTooltip name="СписокШаблоновПоискПоТекущемуЗначениюРасширеннаяПодсказка" id="90"/>
+					</Button>
+					<Button name="СписокШаблоновКопироватьВБуферОбмена" id="87">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.СписокШаблонов.StandardCommand.CopyToClipboard</CommandName>
+						<ExtendedTooltip name="СписокШаблоновКопироватьВБуферОбменаРасширеннаяПодсказка" id="88"/>
+					</Button>
+					<Button name="СписокШаблоновСоздатьНовыйШаблон" id="91">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.СоздатьНовыйШаблон</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Создать</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="СписокШаблоновСоздатьНовыйШаблонРасширеннаяПодсказка" id="92"/>
+					</Button>
+					<Button name="СписокШаблоновСозданиеШаблонаКопированием" id="95">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.СозданиеШаблонаКопированием</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.CloneListItem</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Создать копированием</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="СписокШаблоновСозданиеШаблонаКопированиемРасширеннаяПодсказка" id="96"/>
+					</Button>
+					<Button name="СписокШаблоновГрупповоеСозданиеШаблоновНаОсновании" id="93">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<Enabled>false</Enabled>
+						<CommandName>Form.Command.ГрупповоеСозданиеШаблоновНаОсновании</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.RestoreValues</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Групповое создание</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="СписокШаблоновГрупповоеСозданиеШаблоновНаОснованииРасширеннаяПодсказка" id="94"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокШаблоновРасширеннаяПодсказка" id="51"/>
+			<SearchStringAddition name="СписокШаблоновСтрокаПоиска" id="52">
+				<AdditionSource>
+					<Item>СписокШаблонов</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокШаблоновСтрокаПоискаКонтекстноеМеню" id="53"/>
+				<ExtendedTooltip name="СписокШаблоновСтрокаПоискаРасширеннаяПодсказка" id="54"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокШаблоновСостояниеПросмотра" id="55">
+				<AdditionSource>
+					<Item>СписокШаблонов</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокШаблоновСостояниеПросмотраКонтекстноеМеню" id="56"/>
+				<ExtendedTooltip name="СписокШаблоновСостояниеПросмотраРасширеннаяПодсказка" id="57"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокШаблоновУправлениеПоиском" id="58">
+				<AdditionSource>
+					<Item>СписокШаблонов</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокШаблоновУправлениеПоискомКонтекстноеМеню" id="59"/>
+				<ExtendedTooltip name="СписокШаблоновУправлениеПоискомРасширеннаяПодсказка" id="60"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">СписокШаблоновВыбор</Event>
+				<Event name="BeforeAddRow">СписокШаблоновПередНачаломДобавления</Event>
+				<Event name="BeforeDeleteRow">СписокШаблоновПередУдалением</Event>
+				<Event name="OnActivateRow">СписокШаблоновПриАктивизацииСтроки</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="СписокШаблоновКонтрагент" id="61">
+					<DataPath>СписокШаблонов.Контрагент</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="СписокШаблоновКонтрагентКонтекстноеМеню" id="62"/>
+					<ExtendedTooltip name="СписокШаблоновКонтрагентРасширеннаяПодсказка" id="63"/>
+				</InputField>
+				<InputField name="СписокШаблоновИНН" id="64">
+					<DataPath>СписокШаблонов.ИНН</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="СписокШаблоновИННКонтекстноеМеню" id="65"/>
+					<ExtendedTooltip name="СписокШаблоновИННРасширеннаяПодсказка" id="66"/>
+				</InputField>
+				<InputField name="СписокШаблоновКПП" id="67">
+					<DataPath>СписокШаблонов.КПП</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="СписокШаблоновКППКонтекстноеМеню" id="68"/>
+					<ExtendedTooltip name="СписокШаблоновКППРасширеннаяПодсказка" id="69"/>
+				</InputField>
+				<InputField name="СписокШаблоновНаименование" id="70">
+					<DataPath>СписокШаблонов.Наименование</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>НаименованиеШаблона</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="СписокШаблоновНаименованиеКонтекстноеМеню" id="71"/>
+					<ExtendedTooltip name="СписокШаблоновНаименованиеРасширеннаяПодсказка" id="72"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ЭДО_ПлатформаЭДО</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Организация" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Контрагент" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокШаблонов" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список шаблонов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Контрагент" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИНН" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ИНН</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КПП" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>КПП</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Наименование" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование шаблона</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ИмяОбработки" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя обработки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущаяСтрокаТаблицы" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущая строка таблицы</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СоздатьНовыйШаблон" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать новый шаблон</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать новый шаблон</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьНовыйШаблон</Action>
+		</Command>
+		<Command name="ГрупповоеСозданиеШаблоновНаОсновании" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Групповое создание на основании</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Групповое создание шаблонов на основании</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ГрупповоеСозданиеШаблоновНаОсновании</Action>
+		</Command>
+		<Command name="СозданиеШаблонаКопированием" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создание шаблона копированием</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создание шаблона копированием</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СозданиеШаблонаКопированием</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Организация">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

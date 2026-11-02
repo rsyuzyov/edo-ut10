@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<DataProcessor uuid="b3dcf9b0-a917-49f3-a0d5-61db18a9aa70">
+		<InternalInfo>
+			<xr:GeneratedType name="DataProcessorObject.ЭДО_ЦентрУправления" category="Object">
+				<xr:TypeId>2201761a-812c-4d86-b5f2-d23fa0955b0d</xr:TypeId>
+				<xr:ValueId>d1eb957d-faae-463a-a133-8c86595ed2d2</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DataProcessorManager.ЭДО_ЦентрУправления" category="Manager">
+				<xr:TypeId>6ef722e3-d724-4cf0-a99c-454a355045c3</xr:TypeId>
+				<xr:ValueId>016fdcfa-50a0-463a-ba52-f462dee63dfb</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ЭДО_ЦентрУправления</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Центр управления ЭДО</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment />
+			<UseStandardCommands>true</UseStandardCommands>
+			<DefaultForm>DataProcessor.ЭДО_ЦентрУправления.Form.Форма</DefaultForm>
+			<AuxiliaryForm />
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<ExtendedPresentation />
+			<Explanation />
+		</Properties>
+		<ChildObjects>
+			<Form>Форма</Form>
+			<Form>ВыборАдресовПриглашения</Form>
+			<Form>ОтправкаФайлов</Form>
+		</ChildObjects>
+	</DataProcessor>
+</MetaDataObject>

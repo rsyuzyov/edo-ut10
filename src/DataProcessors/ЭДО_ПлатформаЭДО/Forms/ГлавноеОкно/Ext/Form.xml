@@ -1,0 +1,1514 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Электронный документооборот Платформа ЭДО</v8:content>
+		</v8:item>
+	</Title>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<ShowTitle>false</ShowTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Шапка" id="101">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+			<Group>AlwaysHorizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ШапкаРасширеннаяПодсказка" id="102"/>
+			<ChildItems>
+				<UsualGroup name="ШапкаЛоготип" id="213">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шапка логотип</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шапка логотип</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ШапкаЛоготипРасширеннаяПодсказка" id="214"/>
+					<ChildItems>
+						<PictureDecoration name="ДекорацияЛоготип" id="215">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Декорация логотип</v8:content>
+								</v8:item>
+							</Title>
+							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<Picture>
+								<xr:Abs>Picture.png</xr:Abs>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="ДекорацияЛоготипКонтекстноеМеню" id="216"/>
+							<ExtendedTooltip name="ДекорацияЛоготипРасширеннаяПодсказка" id="217"/>
+						</PictureDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаШапкаКнопки" id="268">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка кнопки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка кнопки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШапкаКнопкиРасширеннаяПодсказка" id="269"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаШапкаВерх" id="264">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа шапка верх</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа шапка верх</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаШапкаВерхРасширеннаяПодсказка" id="265"/>
+							<ChildItems>
+								<LabelDecoration name="ОрганизацияГиперссылка" id="270">
+									<TextColor>style:AccentColor</TextColor>
+									<Font ref="style:NormalTextFont" height="12" kind="StyleItem" scale="100"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выбрать организацию</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<ContextMenu name="ОрганизацияГиперссылкаКонтекстноеМеню" id="271"/>
+									<ExtendedTooltip name="ОрганизацияГиперссылкаРасширеннаяПодсказка" id="272"/>
+									<Events>
+										<Event name="Click">ОрганизацияГиперссылкаНажатие</Event>
+									</Events>
+								</LabelDecoration>
+								<Button name="ОткрытьНастройки" id="218">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьНастройки</CommandName>
+									<TextColor>style:AccentColor</TextColor>
+									<Font ref="style:NormalTextFont" height="12" kind="StyleItem"/>
+									<ExtendedTooltip name="ОткрытьНастройкиРасширеннаяПодсказка" id="219"/>
+								</Button>
+								<Button name="ОткрытьФормуРаботыСАбонентами" id="235">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьФормуРаботыСАбонентамиВЭДО</CommandName>
+									<TextColor>style:AccentColor</TextColor>
+									<Font ref="style:NormalTextFont" height="12" kind="StyleItem"/>
+									<ExtendedTooltip name="ОткрытьФормуРаботыСАбонентамиРасширеннаяПодсказка" id="236"/>
+								</Button>
+								<Button name="ОткрытьФормуПросмотраЛицензийПоТокену" id="211">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьФормуПросмотраЛицензийПоТокену</CommandName>
+									<TextColor>style:AccentColor</TextColor>
+									<Font ref="style:NormalTextFont" height="12" kind="StyleItem"/>
+									<ExtendedTooltip name="ОткрытьФормуПросмотраЛицензийПоТокенуРасширеннаяПодсказка" id="212"/>
+								</Button>
+								<Button name="ОткатитсяКСтандартнымНастройкам" id="54">
+									<Type>Hyperlink</Type>
+									<Visible>false</Visible>
+									<Width>20</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<CommandName>Form.Command.ОткатитсяКСтандартнымНастройкам</CommandName>
+									<TextColor>style:AccentColor</TextColor>
+									<Font ref="style:NormalTextFont" height="12" kind="StyleItem"/>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>К стандартным настройкам</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ОткатитсяКСтандартнымНастройкамРасширеннаяПодсказка" id="55"/>
+								</Button>
+								<LabelField name="ВерсияОбработкиСтрокой" id="283">
+									<DataPath>ВерсияОбработкиСтрокой</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Hiperlink>true</Hiperlink>
+									<TextColor>style:AccentColor</TextColor>
+									<ContextMenu name="ВерсияОбработкиСтрокойКонтекстноеМеню" id="284"/>
+									<ExtendedTooltip name="ВерсияОбработкиСтрокойРасширеннаяПодсказка" id="285"/>
+									<Events>
+										<Event name="URLProcessing">ВерсияОбработкиСтрокойОбработкаНавигационнойСсылки</Event>
+										<Event name="Click">ВерсияОбработкиСтрокойНажатие</Event>
+									</Events>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаШапкаНиз" id="266">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа шапка низ</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа шапка низ</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаШапкаНизРасширеннаяПодсказка" id="267"/>
+							<ChildItems>
+								<LabelDecoration name="ФорматВыгрузкиГиперссылка" id="273">
+									<TextColor>style:AccentColor</TextColor>
+									<Font ref="style:NormalTextFont" height="12" kind="StyleItem" scale="100"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Формат выгрузки</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<ContextMenu name="ФорматВыгрузкиГиперссылкаКонтекстноеМеню" id="274"/>
+									<ExtendedTooltip name="ФорматВыгрузкиГиперссылкаРасширеннаяПодсказка" id="275"/>
+									<Events>
+										<Event name="Click">ФорматГиперссылкаНажатие</Event>
+									</Events>
+								</LabelDecoration>
+								<LabelDecoration name="ВерсияФорматаВыгрузкиГиперссылка" id="278">
+									<Visible>false</Visible>
+									<TextColor>style:AccentColor</TextColor>
+									<Font ref="style:NormalTextFont" height="12" kind="StyleItem" scale="100"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Версия формата</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<ContextMenu name="ВерсияФорматаВыгрузкиГиперссылкаКонтекстноеМеню" id="279"/>
+									<ExtendedTooltip name="ВерсияФорматаВыгрузкиГиперссылкаРасширеннаяПодсказка" id="280"/>
+									<Events>
+										<Event name="Click">ВерсияФорматаГиперссылкаНажатие</Event>
+									</Events>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаДействий" id="141">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа действий</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа действий</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalStretch>false</HorizontalStretch>
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<Group>Vertical</Group>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаДействийРасширеннаяПодсказка" id="142"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаКнопкиНаОтправку" id="179">
+											<Visible>false</Visible>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа кнопки на отправку</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа кнопки на отправку</v8:content>
+												</v8:item>
+											</ToolTip>
+											<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+											<Group>AlwaysHorizontal</Group>
+											<HorizontalAlign>Right</HorizontalAlign>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаКнопкиНаОтправкуРасширеннаяПодсказка" id="180"/>
+											<ChildItems>
+												<Button name="ВыгрузитьНеформализованныйОбъект" id="276">
+													<Type>UsualButton</Type>
+													<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+													<CommandName>Form.Command.ВыгрузитьНеформализованныйОбъект</CommandName>
+													<ToolTipRepresentation>Balloon</ToolTipRepresentation>
+													<ExtendedTooltip name="ВыгрузитьНеформализованныйОбъектРасширеннаяПодсказка" id="277"/>
+												</Button>
+												<Button name="ОткрытьФормуМассовойОтправкиНеформалки" id="250">
+													<Type>UsualButton</Type>
+													<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+													<CommandName>Form.Command.ОткрытьФормуМассовойОтправкиНеформалки</CommandName>
+													<TextColor>style:FormTextColor</TextColor>
+													<ExtendedTooltip name="ОткрытьФормуМассовойОтправкиНеформалкиРасширеннаяПодсказка" id="251"/>
+												</Button>
+												<Button name="ВыгрузитьПакетом" id="281">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ВыгрузитьВСоставеПакета</CommandName>
+													<ExtendedTooltip name="ВыгрузитьПакетомРасширеннаяПодсказка" id="282"/>
+												</Button>
+												<Button name="Выгрузить" id="151">
+													<Type>UsualButton</Type>
+													<DefaultButton>true</DefaultButton>
+													<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+													<CommandName>Form.Command.Выгрузить</CommandName>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Отправить выделенные</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="ВыгрузитьРасширеннаяПодсказка" id="152"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаКнопкиИсходящих" id="193">
+											<Visible>false</Visible>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа кнопки исходящих</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа кнопки исходящих</v8:content>
+												</v8:item>
+											</ToolTip>
+											<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+											<Group>AlwaysHorizontal</Group>
+											<HorizontalAlign>Right</HorizontalAlign>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаКнопкиИсходящихРасширеннаяПодсказка" id="194"/>
+											<ChildItems>
+												<Button name="ПодписатьИзвещение" id="262">
+													<Type>UsualButton</Type>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+													<CommandName>Form.Command.ПодписатьИзвещение</CommandName>
+													<ExtendedTooltip name="ПодписатьИзвещениеРасширеннаяПодсказка" id="263"/>
+												</Button>
+												<Button name="АннулироватьИсходящий" id="225">
+													<Type>UsualButton</Type>
+													<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+													<CommandName>Form.Command.АннулироватьДокумент</CommandName>
+													<BackColor>web:LemonChiffon</BackColor>
+													<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+													<ExtendedTooltip name="АннулироватьИсходящийРасширеннаяПодсказка" id="226"/>
+												</Button>
+												<Button name="ОтклонитьВходящееАннулированиеИсходящего" id="229">
+													<Type>UsualButton</Type>
+													<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+													<CommandName>Form.Command.ОтклонитьАннулирование</CommandName>
+													<ExtendedTooltip name="ОтклонитьВходящееАннулированиеИсходящегоРасширеннаяПодсказка" id="230"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаКнопкиВходящих" id="181">
+											<Visible>false</Visible>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа кнопки входящих</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа кнопки входящих</v8:content>
+												</v8:item>
+											</ToolTip>
+											<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+											<Group>Vertical</Group>
+											<HorizontalAlign>Right</HorizontalAlign>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаКнопкиВходящихРасширеннаяПодсказка" id="182"/>
+											<ChildItems>
+												<UsualGroup name="ГруппаКнопкиВходящихЛиния1" id="289">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа кнопки входящих линия1</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа кнопки входящих линия1</v8:content>
+														</v8:item>
+													</ToolTip>
+													<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+													<Group>AlwaysHorizontal</Group>
+													<HorizontalAlign>Right</HorizontalAlign>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаКнопкиВходящихЛиния1РасширеннаяПодсказка" id="290"/>
+													<ChildItems>
+														<Button name="КнопкаЗагрузить" id="207">
+															<Type>UsualButton</Type>
+															<CommandName>Form.Command.ЗагрузитьВходящийДокумент</CommandName>
+															<ExtendedTooltip name="КнопкаЗагрузитьРасширеннаяПодсказка" id="208"/>
+														</Button>
+														<Button name="АннулироватьВходящий" id="223">
+															<Type>UsualButton</Type>
+															<CommandName>Form.Command.АннулироватьДокумент</CommandName>
+															<BackColor>web:LemonChiffon</BackColor>
+															<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+															<ExtendedTooltip name="АннулироватьВходящийРасширеннаяПодсказка" id="224"/>
+														</Button>
+														<Button name="ОтклонитьВходящееАннулированиеВходящего" id="233">
+															<Type>UsualButton</Type>
+															<CommandName>Form.Command.ОтклонитьАннулирование</CommandName>
+															<ExtendedTooltip name="ОтклонитьВходящееАннулированиеВходящегоРасширеннаяПодсказка" id="234"/>
+														</Button>
+														<Button name="КнопкаПодписать" id="183">
+															<Type>UsualButton</Type>
+															<Width>19</Width>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<CommandName>Form.Command.ПодписатьВыделенные</CommandName>
+															<BackColor>#DBFFCE</BackColor>
+															<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+															<ExtendedTooltip name="КнопкаПодписатьРасширеннаяПодсказка" id="184"/>
+														</Button>
+														<Button name="КнопкаОтклонить" id="185">
+															<Type>UsualButton</Type>
+															<Width>19</Width>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<CommandName>Form.Command.ОтклонитьВыделенные</CommandName>
+															<BackColor>#FFD6C2</BackColor>
+															<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+															<ExtendedTooltip name="КнопкаОтклонитьРасширеннаяПодсказка" id="186"/>
+														</Button>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаКнопкиВходящихЛиния2" id="291">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа кнопки входящих линия2</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа кнопки входящих линия2</v8:content>
+														</v8:item>
+													</ToolTip>
+													<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+													<Group>AlwaysHorizontal</Group>
+													<HorizontalAlign>Right</HorizontalAlign>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаКнопкиВходящихЛиния2РасширеннаяПодсказка" id="292"/>
+													<ChildItems>
+														<Button name="ПодтвердитьПолучениеВыделенных" id="293">
+															<Type>UsualButton</Type>
+															<Width>19</Width>
+															<CommandName>Form.Command.ПодтвердитьПолучениеВыделенных</CommandName>
+															<BackColor>#E7FFFC</BackColor>
+															<Font ref="style:NormalTextFont" kind="StyleItem" scale="100"/>
+															<ExtendedTooltip name="ПодтвердитьПолучениеВыделенныхРасширеннаяПодсказка" id="294"/>
+														</Button>
+														<Button name="ЗапроситьУточнениеВыделенных" id="295">
+															<Type>UsualButton</Type>
+															<Width>19</Width>
+															<CommandName>Form.Command.ЗапроситьУточнениеВыделенных</CommandName>
+															<BackColor>#FFF6F6</BackColor>
+															<Font ref="style:NormalTextFont" kind="StyleItem" scale="100"/>
+															<ExtendedTooltip name="ЗапроситьУточнениеВыделенныхРасширеннаяПодсказка" id="296"/>
+														</Button>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<LabelDecoration name="ДекорацияНадписьРаботаПоУС" id="297">
+			<Visible>false</Visible>
+			<Enabled>false</Enabled>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обмен информацией производится в режиме универсальных сообщений</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияНадписьРаботаПоУСКонтекстноеМеню" id="298"/>
+			<ExtendedTooltip name="ДекорацияНадписьРаботаПоУСРасширеннаяПодсказка" id="299"/>
+		</LabelDecoration>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ЭДО_ПлатформаЭДО</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресВременногоХранилищаКэш" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес временного хранилища кэш</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ФорматВыгрузки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Формат выгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="КаталогОбмена" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Каталог обмена</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="СпособИнтеграции" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Способ интеграции</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВерсияНастроекОбработки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Версия настроек обработки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьПодписание" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать подписание</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="МенеджерКриптографииСтрока" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Менеджер криптографии строка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтпечатокСертификатаBase64" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отпечаток сертификата base64</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПарольДоступаКЗакрытомуКлючу" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пароль доступа к закрытому ключу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОбъемЕдиничнойВыгрузки" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объем единичной выгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПотоковаяОтправка" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Потоковая отправка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоследняяДатаОбновления" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Последняя дата обновления</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИмяОбработки" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя обработки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Организация" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Save>
+				<Field>Организация</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ИдентификаторОрганизации" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор организации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредставлениеТекущейКонфигурации" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Представление текущей конфигурации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПрефиксКонфигурации" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Префикс конфигурации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИдентификаторКоманды" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор команды</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОбъектСсылка" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект ссылка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ХранениеФайлаОбработки" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Хранение файла обработки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИмяФайлаОбработки" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя файла обработки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИнтерактивноОбновлятьСтатусыДО" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Интерактивно обновлять статусы ДО</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТипСубъектаПодписанта" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип субъекта подписанта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="МчдGUIDПодписанта" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Мчд GUID подписанта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВерсияФорматаВыгрузки" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Версия формата выгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредставлениеФорматаВыгрузки" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Представление формата выгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДолжностьФизлица" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Должность физлица</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаНачалаДействияМЧД" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата начала действия МЧД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СкачиватьВАрхив" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скачивать в архив</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВерсияОбработкиСтрокой" id="32">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗапускатьМастерНастроек" id="33">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запускать мастер настроек</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="AccessToken" id="34">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Access token</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="RefreshToken" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Refresh token</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ВедущийФрагментАдресаKeycloak" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ведущий фрагмент адреса keycloak</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="realmФрагментАдресаKeycloak" id="36">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Realm фрагмент адреса keycloak</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоказыватьНастройкиРазработчика" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать настройки разработчика</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СчетчикНажатийВерсии" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Счетчик нажатий версии</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РаботаемПоУС" id="39">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обмен информацией в режиме универсальных сообщений</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РаботаПоУС_ДатаНачала" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Работа по УС дата начала</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Выгрузить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Выгрузить</Action>
+		</Command>
+		<Command name="ОткатитсяКСтандартнымНастройкам" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Откатится к стандартным настройкам</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Откатится к стандартным настройкам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткатитсяКСтандартнымНастройкам</Action>
+		</Command>
+		<Command name="ВыгрузитьВсе" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузитьВсе</Action>
+		</Command>
+		<Command name="УдалитьОтправленныеДокументы" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить черновики</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить отправленные документы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УдалитьОтправленныеДокументы</Action>
+		</Command>
+		<Command name="ОбновитьСтатусыВсехДокументов" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновляет статусы всех документов с момента последнего запроса статусов. При выборе одного или нескольких документов в списке, произойдёт обновление только их статусов.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбновитьВсе</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ОбновитьСтатусыВыделенныхДокументов" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить выделенные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить статусы выделенных документов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбновитьСтатусыВыделенныхДокументов</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="СброситьДатуАктуальностиСтатусов" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сбросить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сброс даты актуальности приведёт к проверке и обновлению всех статусов с момента начала работы с ЭДО.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СброситьДатуАктуальностиСтатусов</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ПодписатьВыделенные" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подписать выделенные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подписать выделенные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодписатьВходящиеДокументы</Action>
+		</Command>
+		<Command name="ОтклонитьВыделенные" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отклонить выделенные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отклонить выделенные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтклонитьВходящиеДокументы</Action>
+		</Command>
+		<Command name="УдалитьИсходящиеДокументы" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить исходящие документы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удаляет черновики среди выделенных документов.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УдалитьИсходящиеДокументы</Action>
+		</Command>
+		<Command name="СкачатьДокументы" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скачать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скачать документы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveDown</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СкачатьДокументы</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ЗагрузитьВходящийДокумент" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить в 1С</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить входящий документ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Document</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗагрузитьВходящийДокумент</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ОткрытьФормуПросмотраЛицензийПоТокену" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доступные лицензии</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть форму просмотра лицензий по токену</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьФормуПросмотраЛицензийПоТокену</Action>
+		</Command>
+		<Command name="АвторизоватьсяПоПодписи" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Авторизоваться по подписи</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Авторизоваться по подписи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CollaborationSystemUser</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>АвторизоватьсяПоПодписи</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ОткрытьНастройки" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Setting</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОткрытьНастройки</Action>
+		</Command>
+		<Command name="АннулироватьДокумент" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аннулировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аннулировать документ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>АннулироватьДокументы</Action>
+		</Command>
+		<Command name="ОтклонитьАннулирование" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отклонить аннулирование</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отклонить аннулирование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтклонитьАннулирование</Action>
+		</Command>
+		<Command name="ОткрытьФормуМассовойОтправкиНеформалки" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать неформализованный документ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть форму массовой отправки неформалки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьФормуМассовойОтправкиНеформалки</Action>
+		</Command>
+		<Command name="ОткрытьФормуПредпросмотраДокумента" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предпросмотр документа</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть форму предпросмотра документа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.SyncContents</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОткрытьФормуПредпросмотраДокумента</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ОткрытьФормуРаботыСАбонентамиВЭДО" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагенты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть форму работы с абонентами ВЭДО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CollaborationSystemIntegrationUser</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОткрытьФормуРаботыСАбонентамиВЭДО</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ПодписатьИзвещение" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подписать извещение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подписать извещение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодписатьИзвещения</Action>
+		</Command>
+		<Command name="ВыгрузитьНеформализованныйОбъект" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить документ файлом</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файл будет отправлен от имени выбранной на этой форме организации.
+1. Выберите отправляемый файл.
+2. Выберите, кому будет отправлен файл.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузитьНеформализованныйОбъект</Action>
+		</Command>
+		<Command name="ВыгрузитьВСоставеПакета" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать пакет</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить в составе пакета</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыгрузитьВСоставеПакета</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="СкачатьPDFДокументов" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скачать PDFДокументов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скачать PDFДокументов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СкачатьPDFДокументов</Action>
+		</Command>
+		<Command name="СкачатьXMLТитулы" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скачать XMLТитулы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скачать XMLТитулы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СкачатьXMLТитулы</Action>
+		</Command>
+		<Command name="ПодтвердитьПолучениеВыделенных" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подтвердить получение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подтвердить получение выделенных</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодтвердитьПолучениеВходящихДокументов</Action>
+		</Command>
+		<Command name="ЗапроситьУточнениеВыделенных" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запросить уточнение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запросить уточнение выделенных</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗапроситьУточненияПоВходящимДокументам</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ДополнительнаяОбработкаСсылка">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="ИдентификаторКоманды">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

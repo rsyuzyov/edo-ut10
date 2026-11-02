@@ -1,0 +1,694 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Настройки ЭДО</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="КнопкаЗаписать" id="1">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Записать</CommandName>
+				<ExtendedTooltip name="КнопкаЗаписатьРасширеннаяПодсказка" id="2"/>
+			</Button>
+			<Button name="КнопкаОбновить" id="3">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Обновить</CommandName>
+				<ExtendedTooltip name="КнопкаОбновитьРасширеннаяПодсказка" id="4"/>
+			</Button>
+			<Button name="КнопкаИзменитьВыделенные" id="5">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ИзменитьВыделенные</CommandName>
+				<ExtendedTooltip name="КнопкаИзменитьВыделенныеРасширеннаяПодсказка" id="6"/>
+			</Button>
+			<Button name="КнопкаСостояниеЭДО" id="7">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОткрытьСостояниеЭДО</CommandName>
+				<ExtendedTooltip name="КнопкаСостояниеЭДОРасширеннаяПодсказка" id="8"/>
+			</Button>
+			<Button name="КнопкаЗакрыть" id="9">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ExtendedTooltip name="КнопкаЗакрытьРасширеннаяПодсказка" id="10"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelDecoration name="НадписьТолькоПросмотр" id="11">
+			<Visible>false</Visible>
+			<TextColor>style:SpecialTextColor</TextColor>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Только просмотр: менять настройки может администратор или пользователь с ролью «Настройка параметров ЭД».</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="НадписьТолькоПросмотрКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="НадписьТолькоПросмотрРасширеннаяПодсказка" id="13"/>
+		</LabelDecoration>
+		<UsualGroup name="ГруппаОтбор" id="14">
+			<ExtendedTooltip name="ГруппаОтборРасширеннаяПодсказка" id="15"/>
+			<ChildItems>
+				<InputField name="Поиск" id="16">
+					<DataPath>Поиск</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поиск</v8:content>
+						</v8:item>
+					</Title>
+					<Width>25</Width>
+					<ClearButton>true</ClearButton>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование или ИНН</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="ПоискКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ПоискРасширеннаяПодсказка" id="18"/>
+					<Events>
+						<Event name="OnChange">ОтборПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="МесяцевОтгрузок" id="19">
+					<DataPath>МесяцевОтгрузок</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>С отгрузками за, мес.</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Показывать контрагентов с реализациями за этот период. 0 - без учета отгрузок.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Width>4</Width>
+					<ContextMenu name="МесяцевОтгрузокКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="МесяцевОтгрузокРасширеннаяПодсказка" id="21"/>
+					<Events>
+						<Event name="OnChange">ОтборПриИзменении</Event>
+					</Events>
+				</InputField>
+				<CheckBoxField name="ТолькоСНастройками" id="22">
+					<DataPath>ТолькоСНастройками</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Только с настройками ЭДО</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<ContextMenu name="ТолькоСНастройкамиКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ТолькоСНастройкамиРасширеннаяПодсказка" id="24"/>
+					<Events>
+						<Event name="OnChange">ОтборПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Контрагенты" id="25">
+			<CommandBarLocation>None</CommandBarLocation>
+			<DataPath>Контрагенты</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="КонтрагентыКонтекстноеМеню" id="26"/>
+			<AutoCommandBar name="КонтрагентыКоманднаяПанель" id="27"/>
+			<ExtendedTooltip name="КонтрагентыРасширеннаяПодсказка" id="28"/>
+			<SearchStringAddition name="КонтрагентыСтрокаПоиска" id="29">
+				<AdditionSource>
+					<Item>Контрагенты</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КонтрагентыСтрокаПоискаКонтекстноеМеню" id="30"/>
+				<ExtendedTooltip name="КонтрагентыСтрокаПоискаРасширеннаяПодсказка" id="31"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="КонтрагентыСостояниеПросмотра" id="32">
+				<AdditionSource>
+					<Item>Контрагенты</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КонтрагентыСостояниеПросмотраКонтекстноеМеню" id="33"/>
+				<ExtendedTooltip name="КонтрагентыСостояниеПросмотраРасширеннаяПодсказка" id="34"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="КонтрагентыУправлениеПоиском" id="35">
+				<AdditionSource>
+					<Item>Контрагенты</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="КонтрагентыУправлениеПоискомКонтекстноеМеню" id="36"/>
+				<ExtendedTooltip name="КонтрагентыУправлениеПоискомРасширеннаяПодсказка" id="37"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">КонтрагентыВыбор</Event>
+				<Event name="OnActivateRow">КонтрагентыПриАктивизацииСтроки</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="КонтрагентыКонтрагент" id="38">
+					<DataPath>Контрагенты.Контрагент</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент</v8:content>
+						</v8:item>
+					</Title>
+					<Width>28</Width>
+					<ContextMenu name="КонтрагентыКонтрагентКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="КонтрагентыКонтрагентРасширеннаяПодсказка" id="40"/>
+				</InputField>
+				<InputField name="КонтрагентыИНН" id="41">
+					<DataPath>Контрагенты.ИНН</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ИНН</v8:content>
+						</v8:item>
+					</Title>
+					<Width>11</Width>
+					<ContextMenu name="КонтрагентыИННКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="КонтрагентыИННРасширеннаяПодсказка" id="43"/>
+				</InputField>
+				<InputField name="КонтрагентыАдресЭДО" id="44">
+					<DataPath>Контрагенты.АдресЭДО</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Адрес ЭДО</v8:content>
+						</v8:item>
+					</Title>
+					<Width>18</Width>
+					<ContextMenu name="КонтрагентыАдресЭДОКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="КонтрагентыАдресЭДОРасширеннаяПодсказка" id="46"/>
+				</InputField>
+				<CheckBoxField name="КонтрагентыАдресЗакреплен" id="47">
+					<DataPath>Контрагенты.АдресЗакреплен</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Закреплен</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Адрес выбран явно и регламентом не пересматривается. Менять - в карточке «Состояние ЭДО», вкладка «Операторы».</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ContextMenu name="КонтрагентыАдресЗакрепленКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="КонтрагентыАдресЗакрепленРасширеннаяПодсказка" id="49"/>
+				</CheckBoxField>
+				<CheckBoxField name="КонтрагентыАвтоотправка" id="50">
+					<DataPath>Контрагенты.Автоотправка</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Автоотправка</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документы контрагенту уходят автоматически (действует, если включена настройка «Автоотправка только отмеченным контрагентам»).</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ContextMenu name="КонтрагентыАвтоотправкаКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="КонтрагентыАвтоотправкаРасширеннаяПодсказка" id="52"/>
+					<Events>
+						<Event name="OnChange">ФлагПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<CheckBoxField name="КонтрагентыПриемУПД" id="53">
+					<DataPath>Контрагенты.ПриемУПД</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прием УПД</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Входящие УПД этого поставщика подписываются автоматически. Он же считается доверенным для согласия на аннулирование.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ContextMenu name="КонтрагентыПриемУПДКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="КонтрагентыПриемУПДРасширеннаяПодсказка" id="55"/>
+					<Events>
+						<Event name="OnChange">ФлагПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<CheckBoxField name="КонтрагентыПриемУКД" id="56">
+					<DataPath>Контрагенты.ПриемУКД</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прием УКД</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Входящие корректировки (УКД) этого поставщика подписываются автоматически.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ContextMenu name="КонтрагентыПриемУКДКонтекстноеМеню" id="57"/>
+					<ExtendedTooltip name="КонтрагентыПриемУКДРасширеннаяПодсказка" id="58"/>
+					<Events>
+						<Event name="OnChange">ФлагПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<CheckBoxField name="КонтрагентыСверкаУПД" id="59">
+					<DataPath>Контрагенты.СверкаУПД</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сверка УПД</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Перед автоприемкой УПД сверяется с поступлением в базе.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ContextMenu name="КонтрагентыСверкаУПДКонтекстноеМеню" id="60"/>
+					<ExtendedTooltip name="КонтрагентыСверкаУПДРасширеннаяПодсказка" id="61"/>
+					<Events>
+						<Event name="OnChange">ФлагПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<CheckBoxField name="КонтрагентыПауза" id="62">
+					<DataPath>Контрагенты.Пауза</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пауза</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отправка документов контрагенту приостановлена.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ContextMenu name="КонтрагентыПаузаКонтекстноеМеню" id="63"/>
+					<ExtendedTooltip name="КонтрагентыПаузаРасширеннаяПодсказка" id="64"/>
+					<Events>
+						<Event name="OnChange">ПаузаПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<InputField name="КонтрагентыПричинаПаузы" id="65">
+					<DataPath>Контрагенты.ПричинаПаузы</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Причина паузы</v8:content>
+						</v8:item>
+					</Title>
+					<Width>22</Width>
+					<ContextMenu name="КонтрагентыПричинаПаузыКонтекстноеМеню" id="66"/>
+					<ExtendedTooltip name="КонтрагентыПричинаПаузыРасширеннаяПодсказка" id="67"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<UsualGroup name="ГруппаИстория" id="68">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>История изменений в этой базе</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<ExtendedTooltip name="ГруппаИсторияРасширеннаяПодсказка" id="69"/>
+			<ChildItems>
+				<Table name="История" id="70">
+					<CommandBarLocation>None</CommandBarLocation>
+					<ReadOnly>true</ReadOnly>
+					<HeightInTableRows>5</HeightInTableRows>
+					<DataPath>История</DataPath>
+					<SearchStringLocation>None</SearchStringLocation>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ИсторияКонтекстноеМеню" id="71"/>
+					<AutoCommandBar name="ИсторияКоманднаяПанель" id="72"/>
+					<ExtendedTooltip name="ИсторияРасширеннаяПодсказка" id="73"/>
+					<SearchStringAddition name="ИсторияСтрокаПоиска" id="74">
+						<AdditionSource>
+							<Item>История</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ИсторияСтрокаПоискаКонтекстноеМеню" id="75"/>
+						<ExtendedTooltip name="ИсторияСтрокаПоискаРасширеннаяПодсказка" id="76"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ИсторияСостояниеПросмотра" id="77">
+						<AdditionSource>
+							<Item>История</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ИсторияСостояниеПросмотраКонтекстноеМеню" id="78"/>
+						<ExtendedTooltip name="ИсторияСостояниеПросмотраРасширеннаяПодсказка" id="79"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ИсторияУправлениеПоиском" id="80">
+						<AdditionSource>
+							<Item>История</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ИсторияУправлениеПоискомКонтекстноеМеню" id="81"/>
+						<ExtendedTooltip name="ИсторияУправлениеПоискомРасширеннаяПодсказка" id="82"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<InputField name="ИсторияДата" id="83">
+							<DataPath>История.Дата</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дата</v8:content>
+								</v8:item>
+							</Title>
+							<Width>14</Width>
+							<ContextMenu name="ИсторияДатаКонтекстноеМеню" id="84"/>
+							<ExtendedTooltip name="ИсторияДатаРасширеннаяПодсказка" id="85"/>
+						</InputField>
+						<InputField name="ИсторияПользователь" id="86">
+							<DataPath>История.Пользователь</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Пользователь</v8:content>
+								</v8:item>
+							</Title>
+							<Width>20</Width>
+							<ContextMenu name="ИсторияПользовательКонтекстноеМеню" id="87"/>
+							<ExtendedTooltip name="ИсторияПользовательРасширеннаяПодсказка" id="88"/>
+						</InputField>
+						<InputField name="ИсторияНастройка" id="89">
+							<DataPath>История.Настройка</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройка</v8:content>
+								</v8:item>
+							</Title>
+							<Width>16</Width>
+							<ContextMenu name="ИсторияНастройкаКонтекстноеМеню" id="90"/>
+							<ExtendedTooltip name="ИсторияНастройкаРасширеннаяПодсказка" id="91"/>
+						</InputField>
+						<InputField name="ИсторияБыло" id="92">
+							<DataPath>История.Было</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Было</v8:content>
+								</v8:item>
+							</Title>
+							<Width>18</Width>
+							<ContextMenu name="ИсторияБылоКонтекстноеМеню" id="93"/>
+							<ExtendedTooltip name="ИсторияБылоРасширеннаяПодсказка" id="94"/>
+						</InputField>
+						<InputField name="ИсторияСтало" id="95">
+							<DataPath>История.Стало</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Стало</v8:content>
+								</v8:item>
+							</Title>
+							<Width>18</Width>
+							<ContextMenu name="ИсторияСталоКонтекстноеМеню" id="96"/>
+							<ExtendedTooltip name="ИсторияСталоРасширеннаяПодсказка" id="97"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="98">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ЭДО_НастройкиЭДО</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Контрагенты" id="99">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагенты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Контрагент" id="100">
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИНН" id="101">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>12</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="АдресЭДО" id="102">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="АдресЗакреплен" id="103">
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Автоотправка" id="104">
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПриемУПД" id="105">
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПриемУКД" id="106">
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СверкаУПД" id="107">
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Пауза" id="108">
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПричинаПаузы" id="109">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>200</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Изменен" id="110">
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Исходные" id="111">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="История" id="112">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>История</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Дата" id="113">
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Пользователь" id="114">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Настройка" id="115">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Было" id="116">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>200</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Стало" id="117">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>200</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Поиск" id="118">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поиск</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="МесяцевОтгрузок" id="119">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Месяцев отгрузок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТолькоСНастройками" id="120">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Только с настройками</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="МожноМенять" id="121">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Можно менять</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Записать" id="122">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать изменения</v8:content>
+				</v8:item>
+			</Title>
+			<Shortcut>Ctrl+S</Shortcut>
+			<Action>ЗаписатьВыполнить</Action>
+		</Command>
+		<Command name="Обновить" id="123">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<Shortcut>F5</Shortcut>
+			<Action>ОбновитьВыполнить</Action>
+		</Command>
+		<Command name="ИзменитьВыделенные" id="124">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить выделенные...</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ИзменитьВыделенныеВыполнить</Action>
+		</Command>
+		<Command name="ОткрытьСостояниеЭДО" id="125">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояние ЭДО контрагента</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОткрытьСостояниеЭДОВыполнить</Action>
+		</Command>
+	</Commands>
+</Form>

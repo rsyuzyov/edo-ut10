@@ -1,0 +1,882 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Настройки ЭДО «Платформа ЭДО»</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ЗаписатьИЗакрыть" id="901">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ЗаписатьИЗакрыть</CommandName>
+				<DefaultButton>true</DefaultButton>
+				<ExtendedTooltip name="ЗаписатьИЗакрытьРасширеннаяПодсказка" id="902"/>
+			</Button>
+			<Button name="Записать" id="1">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ЗаписатьНастройки</CommandName>
+				<ExtendedTooltip name="ЗаписатьРасширеннаяПодсказка" id="2"/>
+			</Button>
+			<Button name="ПроверитьГотовность" id="3">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПроверитьГотовность</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Проверить</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ПроверитьГотовностьРасширеннаяПодсказка" id="4"/>
+			</Button>
+			<Button name="ЗавестиСвойства" id="5">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ЗавестиСвойства</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Завести свойства объектов</v8:content>
+					</v8:item>
+				</Title>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ЗавестиСвойстваРасширеннаяПодсказка" id="6"/>
+			</Button>
+			<Button name="ПеренестиВОбщие" id="7">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПеренестиВОбщие</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Перенести настройки в общие</v8:content>
+					</v8:item>
+				</Title>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ПеренестиВОбщиеРасширеннаяПодсказка" id="8"/>
+			</Button>
+			<Button name="СброситьНастройкиПоУмолчанию" id="926">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.СброситьНастройкиПоУмолчанию</CommandName>
+				<ExtendedTooltip name="СброситьНастройкиПоУмолчаниюРасширеннаяПодсказка" id="927"/>
+			</Button>
+			<Button name="Закрыть" id="9">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ExtendedTooltip name="ЗакрытьРасширеннаяПодсказка" id="10"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОбщиеПараметры" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общие параметры</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>WeakSeparation</Representation>
+			<ShowTitle>true</ShowTitle>
+			<ExtendedTooltip name="ГруппаОбщиеПараметрыРасширеннаяПодсказка" id="12"/>
+			<ChildItems>
+				<InputField name="ЛимитДокументовЗаПрогон" id="19">
+					<DataPath>ЛимитДокументовЗаПрогон</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документов за прогон</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Остаток уходит следующим прогоном.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<SpinButton>true</SpinButton>
+					<ContextMenu name="ЛимитДокументовЗаПрогонКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ЛимитДокументовЗаПрогонРасширеннаяПодсказка" id="21"/>
+				</InputField>
+				<InputField name="ГлубинаДнейОтправки" id="16">
+					<DataPath>ГлубинаДнейОтправки</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Глубина отбора, дней</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Второе ограничение окна. Нижняя граница = что ПОЗЖЕ: дата начала (по организации либо общая) или сегодня минус эти дни.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<SpinButton>true</SpinButton>
+					<ContextMenu name="ГлубинаДнейОтправкиКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ГлубинаДнейОтправкиРасширеннаяПодсказка" id="18"/>
+				</InputField>
+				<LabelField name="ДействующееОкно" id="22">
+					<DataPath>ДействующееОкно</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Действующее окно</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДействующееОкноКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ДействующееОкноРасширеннаяПодсказка" id="24"/>
+				</LabelField>
+				<InputField name="ГотовыеСтатусыЗаказа" id="25">
+					<DataPath>ГотовыеСтатусыЗаказа</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статусы заказа, готовые к отправке</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Через запятую. Состав перечисления в базах разный — несуществующие имена игнорируются.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="ГотовыеСтатусыЗаказаКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ГотовыеСтатусыЗаказаРасширеннаяПодсказка" id="27"/>
+				</InputField>
+				<InputField name="ГлубинаДнейСинхронизацииСтатусов" id="41">
+					<DataPath>ГлубинаДнейСинхронизацииСтатусов</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Окно синхронизации статусов, дней</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>На сколько дней назад PEDO-StatusSync опрашивает карточки оператора.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<SpinButton>true</SpinButton>
+					<ContextMenu name="ГлубинаДнейСинхронизацииСтатусовКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="ГлубинаДнейСинхронизацииСтатусовРасширеннаяПодсказка" id="43"/>
+				</InputField>
+				<InputField name="ТаймаутHTTPСек" id="44">
+					<DataPath>ТаймаутHTTPСек</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Таймаут HTTP, секунд</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Здоровый ответ приходит за 0,2–0,3 с. Большой таймаут в аварию множится на ретраи.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<SpinButton>true</SpinButton>
+					<ContextMenu name="ТаймаутHTTPСекКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="ТаймаутHTTPСекРасширеннаяПодсказка" id="46"/>
+				</InputField>
+				<InputField name="ДатаНачалаАвтоотправкиУКД" id="904">
+					<DataPath>ДатаНачалаАвтоотправкиУКД</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Автоотправка УКД с даты</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Регламент отправляет корректировки реализации с датой не раньше этой. Пусто - автоотправка УКД выключена, корректировки уходят только вручную.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ContextMenu name="ДатаНачалаАвтоотправкиУКДКонтекстноеМеню" id="905"/>
+					<ExtendedTooltip name="ДатаНачалаАвтоотправкиУКДРасширеннаяПодсказка" id="906"/>
+				</InputField>
+				<InputField name="ПаузаПередОтправкойУКДМинут" id="907">
+					<DataPath>ПаузаПередОтправкойУКДМинут</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пауза перед автоотправкой УКД, минут</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Корректировка уходит регламентом не раньше, чем через это время после того, как стала готовой, и только если ее с тех пор не меняли. Ручная отправка идет сразу.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<SpinButton>true</SpinButton>
+					<ContextMenu name="ПаузаПередОтправкойУКДМинутКонтекстноеМеню" id="908"/>
+					<ExtendedTooltip name="ПаузаПередОтправкойУКДМинутРасширеннаяПодсказка" id="909"/>
+				</InputField>
+				<InputField name="ПрочиеНашиАдресаЭДО" id="36">
+					<DataPath>ПрочиеНашиАдресаЭДО</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наши прочие адреса ЭДО</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Через запятую. Наши ящики у других операторов — по ним ловится «отправитель = получатель».</v8:content>
+						</v8:item>
+					</ToolTip>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="ПрочиеНашиАдресаЭДОКонтекстноеМеню" id="37"/>
+					<ExtendedTooltip name="ПрочиеНашиАдресаЭДОРасширеннаяПодсказка" id="38"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаУчетныеЗаписи" id="200">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учётные записи организаций</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>WeakSeparation</Representation>
+			<ShowTitle>true</ShowTitle>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>У каждой организации — свой оператор, сертификат подписанта и идентификатор участника ЭДО. Таблица только читает; все поля правятся в карточке учётной записи.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаУчетныеЗаписиРасширеннаяПодсказка" id="201"/>
+			<ChildItems>
+				<Table name="УчетныеЗаписи" id="202">
+					<ChangeRowSet>false</ChangeRowSet>
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<Height>6</Height>
+					<DataPath>УчетныеЗаписи</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="УчетныеЗаписиКонтекстноеМеню" id="203"/>
+					<AutoCommandBar name="УчетныеЗаписиКоманднаяПанель" id="204">
+						<AutoFill>false</AutoFill>
+						<ChildItems>
+							<Button name="ДобавитьУчетнуюЗапись" id="205">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ДобавитьУчетнуюЗапись</CommandName>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Добавить</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ДобавитьУчетнуюЗаписьРасширеннаяПодсказка" id="206"/>
+							</Button>
+							<Button name="ИзменитьУчетнуюЗапись" id="207">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ИзменитьУчетнуюЗапись</CommandName>
+								<DefaultButton>true</DefaultButton>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Изменить</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ИзменитьУчетнуюЗаписьРасширеннаяПодсказка" id="208"/>
+							</Button>
+							<Button name="УдалитьУчетнуюЗапись" id="209">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.УдалитьУчетнуюЗапись</CommandName>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Удалить</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="УдалитьУчетнуюЗаписьРасширеннаяПодсказка" id="210"/>
+							</Button>
+							<Button name="ПроверитьГотовностьУчетнойЗаписи" id="211">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ПроверитьГотовностьУчетнойЗаписи</CommandName>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Проверить готовность</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ПроверитьГотовностьУчетнойЗаписиРасширеннаяПодсказка" id="212"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="УчетныеЗаписиРасширеннаяПодсказка" id="213"/>
+					<SearchStringAddition name="УчетныеЗаписиСтрокаПоиска" id="214">
+						<AdditionSource>
+							<Item>УчетныеЗаписи</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="УчетныеЗаписиСтрокаПоискаКонтекстноеМеню" id="215"/>
+						<ExtendedTooltip name="УчетныеЗаписиСтрокаПоискаРасширеннаяПодсказка" id="216"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="УчетныеЗаписиСостояниеПросмотра" id="217">
+						<AdditionSource>
+							<Item>УчетныеЗаписи</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="УчетныеЗаписиСостояниеПросмотраКонтекстноеМеню" id="218"/>
+						<ExtendedTooltip name="УчетныеЗаписиСостояниеПросмотраРасширеннаяПодсказка" id="219"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="УчетныеЗаписиУправлениеПоиском" id="220">
+						<AdditionSource>
+							<Item>УчетныеЗаписи</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="УчетныеЗаписиУправлениеПоискомКонтекстноеМеню" id="221"/>
+						<ExtendedTooltip name="УчетныеЗаписиУправлениеПоискомРасширеннаяПодсказка" id="222"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<InputField name="УчетныеЗаписиОрганизация" id="223">
+							<DataPath>УчетныеЗаписи.Организация</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Организация</v8:content>
+								</v8:item>
+							</Title>
+							<Width>25</Width>
+							<ContextMenu name="УчетныеЗаписиОрганизацияКонтекстноеМеню" id="224"/>
+							<ExtendedTooltip name="УчетныеЗаписиОрганизацияРасширеннаяПодсказка" id="225"/>
+						</InputField>
+						<InputField name="УчетныеЗаписиОператор" id="226">
+							<DataPath>УчетныеЗаписи.Оператор</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Оператор</v8:content>
+								</v8:item>
+							</Title>
+							<Width>12</Width>
+							<ContextMenu name="УчетныеЗаписиОператорКонтекстноеМеню" id="227"/>
+							<ExtendedTooltip name="УчетныеЗаписиОператорРасширеннаяПодсказка" id="228"/>
+						</InputField>
+						<InputField name="УчетныеЗаписиСертификат" id="229">
+							<DataPath>УчетныеЗаписи.Сертификат</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сертификат</v8:content>
+								</v8:item>
+							</Title>
+							<Width>28</Width>
+							<ContextMenu name="УчетныеЗаписиСертификатКонтекстноеМеню" id="230"/>
+							<ExtendedTooltip name="УчетныеЗаписиСертификатРасширеннаяПодсказка" id="231"/>
+						</InputField>
+						<InputField name="УчетныеЗаписиПодписант" id="232">
+							<DataPath>УчетныеЗаписи.Подписант</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подписант</v8:content>
+								</v8:item>
+							</Title>
+							<Width>22</Width>
+							<ContextMenu name="УчетныеЗаписиПодписантКонтекстноеМеню" id="233"/>
+							<ExtendedTooltip name="УчетныеЗаписиПодписантРасширеннаяПодсказка" id="234"/>
+						</InputField>
+						<InputField name="УчетныеЗаписиНомерМЧД" id="235">
+							<DataPath>УчетныеЗаписи.НомерМЧД</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Номер МЧД</v8:content>
+								</v8:item>
+							</Title>
+							<Width>16</Width>
+							<ContextMenu name="УчетныеЗаписиНомерМЧДКонтекстноеМеню" id="236"/>
+							<ExtendedTooltip name="УчетныеЗаписиНомерМЧДРасширеннаяПодсказка" id="237"/>
+						</InputField>
+						<InputField name="УчетныеЗаписиОтправлятьСДаты" id="238">
+							<DataPath>УчетныеЗаписи.ОтправлятьСДаты</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отправлять с</v8:content>
+								</v8:item>
+							</Title>
+							<Width>12</Width>
+							<ContextMenu name="УчетныеЗаписиОтправлятьСДатыКонтекстноеМеню" id="239"/>
+							<ExtendedTooltip name="УчетныеЗаписиОтправлятьСДатыРасширеннаяПодсказка" id="240"/>
+						</InputField>
+						<InputField name="УчетныеЗаписиИдентификаторУчастника" id="241">
+							<DataPath>УчетныеЗаписи.ИдентификаторУчастника</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Идентификатор участника</v8:content>
+								</v8:item>
+							</Title>
+							<Width>34</Width>
+							<ContextMenu name="УчетныеЗаписиИдентификаторУчастникаКонтекстноеМеню" id="242"/>
+							<ExtendedTooltip name="УчетныеЗаписиИдентификаторУчастникаРасширеннаяПодсказка" id="243"/>
+						</InputField>
+						<InputField name="УчетныеЗаписиГотовность" id="244">
+							<DataPath>УчетныеЗаписи.Готовность</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Готовность</v8:content>
+								</v8:item>
+							</Title>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="УчетныеЗаписиГотовностьКонтекстноеМеню" id="245"/>
+							<ExtendedTooltip name="УчетныеЗаписиГотовностьРасширеннаяПодсказка" id="246"/>
+						</InputField>
+					</ChildItems>
+					<Events>
+						<Event name="Selection">УчетныеЗаписиВыбор</Event>
+					</Events>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаОператорыЭДО" id="920">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Операторы ЭДО: акты сверки</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>WeakSeparation</Representation>
+			<ShowTitle>true</ShowTitle>
+			<ExtendedTooltip name="ГруппаОператорыЭДОРасширеннаяПодсказка" id="921"/>
+			<ChildItems>
+				<InputField name="НастройкиОператоров" id="922">
+					<DataPath>НастройкиОператоров</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Префикс; название; акт сверки</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Top</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Строка на оператора: префикс ящика получателя; название; способ отправки акта сверки - xml, pdf или запрещено. Оператор не из списка получает акт в xml. Флаг контрагента ЭДО_АктыСверкиВPDF отправляет ему акт в pdf, кроме запрещенных операторов.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<MultiLine>true</MultiLine>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Height>6</Height>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="НастройкиОператоровКонтекстноеМеню" id="923"/>
+					<ExtendedTooltip name="НастройкиОператоровРасширеннаяПодсказка" id="924"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="СостояниеГотовности" id="47">
+			<DataPath>СостояниеГотовности</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Готовность к работе</v8:content>
+				</v8:item>
+			</Title>
+			<ReadOnly>true</ReadOnly>
+			<MultiLine>true</MultiLine>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Height>6</Height>
+			<HorizontalStretch>true</HorizontalStretch>
+			<ContextMenu name="СостояниеГотовностиКонтекстноеМеню" id="48"/>
+			<ExtendedTooltip name="СостояниеГотовностиРасширеннаяПодсказка" id="49"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="50">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ЭДО_Помощник</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ГлубинаДнейОтправки" id="52">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Глубина дней отправки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЛимитДокументовЗаПрогон" id="53">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Лимит документов за прогон</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДействующееОкно" id="54">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Действующее окно</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПрочиеНашиАдресаЭДО" id="57">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочие наши адреса ЭДО</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>500</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СостояниеГотовности" id="58">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояние готовности</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ГотовыеСтатусыЗаказа" id="59">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Готовые статусы заказа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>200</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ГлубинаДнейСинхронизацииСтатусов" id="60">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Глубина дней синхронизации статусов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТаймаутHTTPСек" id="61">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таймаут HTTP сек</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаНачалаАвтоотправкиУКД" id="910">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата начала автоотправки УКД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПаузаПередОтправкойУКДМинут" id="911">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пауза перед отправкой УКД, минут</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкиОператоров" id="925">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки операторов ЭДО</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="УчетныеЗаписи" id="247">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учетные записи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Организация" id="248">
+					<Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Оператор" id="249">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Сертификат" id="250">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>200</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Подписант" id="251">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>60</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="НомерМЧД" id="252">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОтправлятьСДаты" id="253">
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИдентификаторУчастника" id="254">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Готовность" id="255">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаписатьИЗакрыть" id="903">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗаписатьИЗакрыть</Action>
+		</Command>
+		<Command name="ЗаписатьНастройки" id="62">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗаписатьНастройки</Action>
+			<Shortcut>Ctrl+S</Shortcut>
+		</Command>
+		<Command name="ПроверитьГотовность" id="63">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить готовность</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПроверитьГотовность</Action>
+		</Command>
+		<Command name="ЗавестиСвойства" id="64">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Завести свойства</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗавестиСвойства</Action>
+		</Command>
+		<Command name="ПеренестиВОбщие" id="65">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести в общие</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПеренестиВОбщие</Action>
+		</Command>
+		<Command name="СброситьНастройкиПоУмолчанию" id="928">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Восстановить настройки по умолчанию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вернуть к умолчаниям расширения глубину отбора, документов за прогон, готовые статусы заказа, окно синхронизации статусов, таймаут HTTP, паузу перед УКД и таблицу операторов ЭДО. Перед сбросом показывает, что изменится. Учетные записи, сертификаты, МЧД, адреса и даты не изменяются.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СброситьНастройкиПоУмолчанию</Action>
+		</Command>
+		<Command name="ДобавитьУчетнуюЗапись" id="256">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить учетную запись</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Representation>TextPicture</Representation>
+			<Action>ДобавитьУчетнуюЗапись</Action>
+		</Command>
+		<Command name="ИзменитьУчетнуюЗапись" id="257">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить учетную запись</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.ChangeListItem</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Representation>TextPicture</Representation>
+			<Action>ИзменитьУчетнуюЗапись</Action>
+		</Command>
+		<Command name="УдалитьУчетнуюЗапись" id="258">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить учетную запись</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.DeleteListItem</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Representation>TextPicture</Representation>
+			<Action>УдалитьУчетнуюЗапись</Action>
+		</Command>
+		<Command name="ПроверитьГотовностьУчетнойЗаписи" id="259">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить готовность учетной записи</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПроверитьГотовностьУчетнойЗаписи</Action>
+		</Command>
+	</Commands>
+</Form>

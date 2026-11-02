@@ -1,0 +1,464 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Отправка документов в ЭДО</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="Отправить" id="1">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Отправить</CommandName>
+				<ExtendedTooltip name="ОтправитьРасширеннаяПодсказка" id="2"/>
+			</Button>
+			<Button name="Закрыть" id="3">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ExtendedTooltip name="ЗакрытьРасширеннаяПодсказка" id="4"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Организация" id="5">
+			<DataPath>Организация</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>От организации</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="7"/>
+			<Events>
+				<Event name="OnChange">ОрганизацияПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="Контрагент" id="8">
+			<DataPath>Контрагент</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="КонтрагентКонтекстноеМеню" id="9"/>
+			<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="10"/>
+			<Events>
+				<Event name="OnChange">КонтрагентПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="Ящик" id="11">
+			<DataPath>Ящик</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ящик контрагента</v8:content>
+				</v8:item>
+			</Title>
+			<ListChoiceMode>true</ListChoiceMode>
+			<ContextMenu name="ЯщикКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="ЯщикРасширеннаяПодсказка" id="13"/>
+		</InputField>
+		<InputField name="Подписант" id="14">
+			<DataPath>Подписант</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подписать</v8:content>
+				</v8:item>
+			</Title>
+			<ListChoiceMode>true</ListChoiceMode>
+			<ContextMenu name="ПодписантКонтекстноеМеню" id="15"/>
+			<ExtendedTooltip name="ПодписантРасширеннаяПодсказка" id="16"/>
+			<Events>
+				<Event name="OnChange">ПодписантПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="НомерМЧД" id="17">
+			<DataPath>НомерМЧД</DataPath>
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер МЧД</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер машиночитаемой доверенности подписанта-физлица: без нее оператор подпись не примет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ContextMenu name="НомерМЧДКонтекстноеМеню" id="18"/>
+			<ExtendedTooltip name="НомерМЧДРасширеннаяПодсказка" id="19"/>
+		</InputField>
+		<Table name="Файлы" id="20">
+			<HeightInTableRows>8</HeightInTableRows>
+			<DataPath>Файлы</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ФайлыКонтекстноеМеню" id="21"/>
+			<AutoCommandBar name="ФайлыКоманднаяПанель" id="22">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="ФайлыДобавитьФайлы" id="23">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ДобавитьФайлы</CommandName>
+						<ExtendedTooltip name="ФайлыДобавитьФайлыРасширеннаяПодсказка" id="24"/>
+					</Button>
+					<Button name="ФайлыУдалить" id="25">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Файлы.StandardCommand.Delete</CommandName>
+						<ExtendedTooltip name="ФайлыУдалитьРасширеннаяПодсказка" id="26"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ФайлыРасширеннаяПодсказка" id="27"/>
+			<SearchStringAddition name="ФайлыСтрокаПоиска" id="28">
+				<AdditionSource>
+					<Item>Файлы</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ФайлыСтрокаПоискаКонтекстноеМеню" id="29"/>
+				<ExtendedTooltip name="ФайлыСтрокаПоискаРасширеннаяПодсказка" id="30"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ФайлыСостояниеПросмотра" id="31">
+				<AdditionSource>
+					<Item>Файлы</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ФайлыСостояниеПросмотраКонтекстноеМеню" id="32"/>
+				<ExtendedTooltip name="ФайлыСостояниеПросмотраРасширеннаяПодсказка" id="33"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ФайлыУправлениеПоиском" id="34">
+				<AdditionSource>
+					<Item>Файлы</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ФайлыУправлениеПоискомКонтекстноеМеню" id="35"/>
+				<ExtendedTooltip name="ФайлыУправлениеПоискомРасширеннаяПодсказка" id="36"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ФайлыИмяФайла" id="37">
+					<DataPath>Файлы.ИмяФайла</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Файл</v8:content>
+						</v8:item>
+					</Title>
+					<Width>30</Width>
+					<ContextMenu name="ФайлыИмяФайлаКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ФайлыИмяФайлаРасширеннаяПодсказка" id="39"/>
+				</LabelField>
+				<InputField name="ФайлыТип" id="40">
+					<DataPath>Файлы.Тип</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип</v8:content>
+						</v8:item>
+					</Title>
+					<Width>18</Width>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ContextMenu name="ФайлыТипКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="ФайлыТипРасширеннаяПодсказка" id="42"/>
+					<Events>
+						<Event name="OnChange">ФайлыТипПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ФайлыНомер" id="43">
+					<DataPath>Файлы.Номер</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер</v8:content>
+						</v8:item>
+					</Title>
+					<Width>12</Width>
+					<ContextMenu name="ФайлыНомерКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="ФайлыНомерРасширеннаяПодсказка" id="45"/>
+				</InputField>
+				<InputField name="ФайлыДата" id="46">
+					<DataPath>Файлы.Дата</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата</v8:content>
+						</v8:item>
+					</Title>
+					<Width>10</Width>
+					<ContextMenu name="ФайлыДатаКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="ФайлыДатаРасширеннаяПодсказка" id="48"/>
+				</InputField>
+				<CheckBoxField name="ФайлыЗапроситьПодпись" id="49">
+					<DataPath>Файлы.ЗапроситьПодпись</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подпись контрагента</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Запросить ответную подпись контрагента</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ContextMenu name="ФайлыЗапроситьПодписьКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="ФайлыЗапроситьПодписьРасширеннаяПодсказка" id="51"/>
+				</CheckBoxField>
+				<InputField name="ФайлыКомментарий" id="52">
+					<DataPath>Файлы.Комментарий</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+					</Title>
+					<Width>20</Width>
+					<ContextMenu name="ФайлыКомментарийКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="ФайлыКомментарийРасширеннаяПодсказка" id="54"/>
+				</InputField>
+				<LabelField name="ФайлыРезультат" id="55">
+					<DataPath>Файлы.Результат</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Результат</v8:content>
+						</v8:item>
+					</Title>
+					<Width>30</Width>
+					<ContextMenu name="ФайлыРезультатКонтекстноеМеню" id="56"/>
+					<ExtendedTooltip name="ФайлыРезультатРасширеннаяПодсказка" id="57"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Организация" id="58">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Контрагент" id="59">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Ящик" id="60">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ящик</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Подписант" id="61">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подписант</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НомерМЧД" id="62">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер МЧД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Файлы" id="63">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файлы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Путь" id="64">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИмяФайла" id="65">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Тип" id="66">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Номер" id="67">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Дата" id="68">
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЗапроситьПодпись" id="69">
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Комментарий" id="70">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Результат" id="71">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Отправлен" id="72">
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИдДокумента" id="75">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОрганизацияОтправки" id="76">
+					<Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЯщикОтправки" id="77">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Отправить" id="73">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подписать и отправить</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОтправитьВыполнить</Action>
+		</Command>
+		<Command name="ДобавитьФайлы" id="74">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить файлы…</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ДобавитьФайлыВыполнить</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Организация">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="Контрагент">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="Адрес">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

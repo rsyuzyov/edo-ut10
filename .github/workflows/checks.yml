@@ -1,0 +1,24 @@
+# Собрать .cfe в облачном раннере нельзя — для этого нужна платформа 1С.
+# Здесь проверяется только то, что читается из самих исходников.
+name: checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Проверка «версия поднята» сравнивает src с последним релизным тегом.
+          fetch-depth: 0
+          fetch-tags: true
+
+      - name: build/checks.py
+        env:
+          HYGIENE_DENYLIST: ${{ secrets.HYGIENE_DENYLIST }}
+        run: python3 build/checks.py

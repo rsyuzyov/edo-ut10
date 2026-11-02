@@ -1,0 +1,582 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаРаботаСНоменклатуройЗагружаемогоДокумента" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Работа с номенклатурой загружаемого документа</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа работа с номенклатурой загружаемого документа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<CollapsedRepresentationTitle>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Работа с номенклатурой загружаемого документа</v8:content>
+				</v8:item>
+			</CollapsedRepresentationTitle>
+			<Collapsed>true</Collapsed>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаРаботаСНоменклатуройЗагружаемогоДокументаРасширеннаяПодсказка" id="15"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаРаботаСПоиском" id="62">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа работа с поиском</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа работа с поиском</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаРаботаСПоискомРасширеннаяПодсказка" id="63"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаКнопкиТаблицы" id="44">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа кнопки таблицы</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа кнопки таблицы</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<VerticalSpacing>Double</VerticalSpacing>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКнопкиТаблицыРасширеннаяПодсказка" id="45"/>
+							<ChildItems>
+								<Button name="КнопкаЗагрузить" id="133">
+									<Type>UsualButton</Type>
+									<Width>25</Width>
+									<CommandName>Form.Command.ЗарузкаЕдиничногоДокумента</CommandName>
+									<BackColor>style:ImportantColor</BackColor>
+									<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Загрузить документ</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="КнопкаЗагрузитьРасширеннаяПодсказка" id="134"/>
+								</Button>
+								<UsualGroup name="ГруппаПамять" id="52">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа память</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа память</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<VerticalSpacing>Half</VerticalSpacing>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПамятьРасширеннаяПодсказка" id="53"/>
+									<ChildItems>
+										<Button name="СохранитьТаблицуТоваров" id="54">
+											<Type>UsualButton</Type>
+											<Enabled>false</Enabled>
+											<CommandName>Form.Command.СохранитьТаблицуТоваров</CommandName>
+											<ExtendedTooltip name="СохранитьТаблицуТоваровРасширеннаяПодсказка" id="55"/>
+										</Button>
+										<Button name="ЗагрузитьИзПамятиТаблицуТоваров" id="58">
+											<Type>UsualButton</Type>
+											<Enabled>false</Enabled>
+											<CommandName>Form.Command.ЗагрузитьИзПамятиТаблицуТоваров</CommandName>
+											<ExtendedTooltip name="ЗагрузитьИзПамятиТаблицуТоваровРасширеннаяПодсказка" id="59"/>
+										</Button>
+										<UsualGroup name="ГруппаХранениеРезультатовВИБ" id="104">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа хранение результатов ВИБ</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа хранение результатов ВИБ</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаХранениеРезультатовВИБРасширеннаяПодсказка" id="105"/>
+											<ChildItems>
+												<CheckBoxField name="ИспользуетсяХранениеРезультатовПоискаВИБ" id="101">
+													<DataPath>ИспользованияХранениеРезультатовСопоставленияВИБ</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Используется хранение результатов поиска в ИБ</v8:content>
+														</v8:item>
+													</Title>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ИспользуетсяХранениеРезультатовПоискаВИБКонтекстноеМеню" id="102"/>
+													<ExtendedTooltip name="ИспользуетсяХранениеРезультатовПоискаВИБРасширеннаяПодсказка" id="103"/>
+													<Events>
+														<Event name="OnChange">ИспользованияХранениеРезультатовПоискаВИБПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<LabelDecoration name="ТекстОписаниеХраненияРезультатовВИБ" id="106">
+													<Visible>false</Visible>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Текст описание хранения результатов ВИБ</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ТекстОписаниеХраненияРезультатовВИБКонтекстноеМеню" id="107"/>
+													<ExtendedTooltip name="ТекстОписаниеХраненияРезультатовВИБРасширеннаяПодсказка" id="108"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ТаблицаСопоставленияНоменклатуры" id="109">
+			<Representation>List</Representation>
+			<Enabled>false</Enabled>
+			<HorizontalLines>false</HorizontalLines>
+			<VerticalLines>false</VerticalLines>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>ТаблицаСопоставленияНоменклатуры</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТаблицаСопоставленияНоменклатурыКонтекстноеМеню" id="110"/>
+			<AutoCommandBar name="ТаблицаСопоставленияНоменклатурыКоманднаяПанель" id="111">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<ButtonGroup name="ТаблицаСопоставленияНоменклатурыКнопкиПоиска" id="131">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Таблица сопоставления номенклатуры кнопки поиска</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Таблица сопоставления номенклатуры кнопки поиска</v8:content>
+							</v8:item>
+						</ToolTip>
+						<ExtendedTooltip name="ТаблицаСопоставленияНоменклатурыКнопкиПоискаРасширеннаяПодсказка" id="132"/>
+					</ButtonGroup>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ТаблицаСопоставленияНоменклатурыРасширеннаяПодсказка" id="112"/>
+			<SearchStringAddition name="ТаблицаСопоставленияНоменклатурыСтрокаПоиска" id="113">
+				<AdditionSource>
+					<Item>ТаблицаСопоставленияНоменклатуры</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаСопоставленияНоменклатурыСтрокаПоискаКонтекстноеМеню" id="114"/>
+				<ExtendedTooltip name="ТаблицаСопоставленияНоменклатурыСтрокаПоискаРасширеннаяПодсказка" id="115"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТаблицаСопоставленияНоменклатурыСостояниеПросмотра" id="116">
+				<AdditionSource>
+					<Item>ТаблицаСопоставленияНоменклатуры</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаСопоставленияНоменклатурыСостояниеПросмотраКонтекстноеМеню" id="117"/>
+				<ExtendedTooltip name="ТаблицаСопоставленияНоменклатурыСостояниеПросмотраРасширеннаяПодсказка" id="118"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТаблицаСопоставленияНоменклатурыУправлениеПоиском" id="119">
+				<AdditionSource>
+					<Item>ТаблицаСопоставленияНоменклатуры</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаСопоставленияНоменклатурыУправлениеПоискомКонтекстноеМеню" id="120"/>
+				<ExtendedTooltip name="ТаблицаСопоставленияНоменклатурыУправлениеПоискомРасширеннаяПодсказка" id="121"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeDeleteRow">ТаблицаСопоставленияНоменклатурыПередУдалением</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="ТаблицаСопоставленияНоменклатурыНаименованиеИзДокумента" id="122">
+					<DataPath>ТаблицаСопоставленияНоменклатуры.НаименованиеИзДокумента</DataPath>
+					<Enabled>false</Enabled>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаСопоставленияНоменклатурыНаименованиеИзДокументаКонтекстноеМеню" id="123"/>
+					<ExtendedTooltip name="ТаблицаСопоставленияНоменклатурыНаименованиеИзДокументаРасширеннаяПодсказка" id="124"/>
+				</InputField>
+				<InputField name="ТаблицаСопоставленияНоменклатурыКодТовараИзДокумента" id="125">
+					<DataPath>ТаблицаСопоставленияНоменклатуры.КодТовараИзДокумента</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаСопоставленияНоменклатурыКодТовараИзДокументаКонтекстноеМеню" id="126"/>
+					<ExtendedTooltip name="ТаблицаСопоставленияНоменклатурыКодТовараИзДокументаРасширеннаяПодсказка" id="127"/>
+				</InputField>
+				<InputField name="ТаблицаСопоставленияНоменклатурыАртикулТовараИзДокумента" id="128">
+					<DataPath>ТаблицаСопоставленияНоменклатуры.АртикулТовараИзДокумента</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаСопоставленияНоменклатурыАртикулТовараИзДокументаКонтекстноеМеню" id="129"/>
+					<ExtendedTooltip name="ТаблицаСопоставленияНоменклатурыАртикулТовараИзДокументаРасширеннаяПодсказка" id="130"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ЭДО_ПлатформаЭДО</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ПутьКФайлу" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь к файлу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПутьКXSD" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь к XSD</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПутьКФайлуНастройки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь к файлу настройки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ТаблицаСопоставленияНоменклатуры" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица сопоставления номенклатуры</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="НаименованиеИзДокумента" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование из документа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КодТовараИзДокумента" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код товара из документа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="АртикулТовараИзДокумента" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Артикул товара из документа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ИспользованияХранениеРезультатовСопоставленияВИБ" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использования хранение результатов поиска</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Save>
+				<Field>ИспользованияХранениеРезультатовСопоставленияВИБ</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ПараметрыЗагрузкиНоменклатуры" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры загрузки номенклатуры</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="АдресВременногоХранилищаКэш" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес временного хранилища кэш</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ИдентификаторЗагружаемогоДокумента" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор загружаемого документа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПутьКФайлуЗагружаемогоДокумента" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь к файлу загружаемого документа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФорматЗагружаемогоЕдиничногоДокумента" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Формат загружаемого единичного документа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПутьКВременномуФайлуДокументаНаСервере" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь к временному файлу документа на сервере</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВариантПриемникаЗагрузкиЕдиничногоДокумента" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вариант приемника загрузки единичного документа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПрефиксКонфигурации" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Префикс конфигурации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТребуетсяСопоставлениеТоваров" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Требуется сопоставление товаров</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СохранитьТаблицуТоваров" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить таблицу товаров</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить таблицу товаров</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СохранитьТаблицуТоваров</Action>
+		</Command>
+		<Command name="ЗагрузитьИзПамятиТаблицуТоваров" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить из памяти таблицу товаров</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить из памяти таблицу товаров</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьИзПамятиТаблицуТоваров</Action>
+		</Command>
+		<Command name="ЗарузкаЕдиничногоДокумента" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарузка единичного документа</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарузка единичного документа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗарузкаЕдиничногоДокумента</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="АдресВременногоХранилищаКэш">
+			<Type/>
+		</Parameter>
+		<Parameter name="ПутьКФайлуЗагружаемогоДокумента">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="ФорматЗагружаемогоДокумента">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>
