@@ -102,6 +102,9 @@
 							<ReadOnly>true</ReadOnly>
 							<SelectionMode>SingleRow</SelectionMode>
 							<RowSelectionMode>Row</RowSelectionMode>
+							<HorizontalLinesBWA>false</HorizontalLinesBWA>
+							<VerticalLinesBWA>false</VerticalLinesBWA>
+							<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
 							<EnableStartDrag>true</EnableStartDrag>
 							<DataPath>СписокКонтрагентов</DataPath>
 							<RowPictureDataPath>СписокКонтрагентов.DefaultPicture</RowPictureDataPath>

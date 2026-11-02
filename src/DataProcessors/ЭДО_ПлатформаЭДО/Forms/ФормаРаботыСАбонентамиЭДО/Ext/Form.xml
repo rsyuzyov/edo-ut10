@@ -25,6 +25,11 @@
 				<BackColor>style:ImportantColor</BackColor>
 				<ExtendedTooltip name="ФормаОткрытьФормуМассовойРассылкиПриглашенийВЭДОРасширеннаяПодсказка" id="164"/>
 			</Button>
+			<Button name="ФормаОткрытьФормуМассовогоСопоставленияКонтрагентовИзФайла" id="167">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОткрытьФормуМассовогоСопоставленияКонтрагентовИзФайла</CommandName>
+				<ExtendedTooltip name="ФормаОткрытьФормуМассовогоСопоставленияКонтрагентовИзФайлаРасширеннаяПодсказка" id="168"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -205,6 +210,9 @@
 									<ReadOnly>true</ReadOnly>
 									<SelectionMode>SingleRow</SelectionMode>
 									<RowSelectionMode>Row</RowSelectionMode>
+									<HorizontalLinesBWA>false</HorizontalLinesBWA>
+									<VerticalLinesBWA>false</VerticalLinesBWA>
+									<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
 									<EnableStartDrag>true</EnableStartDrag>
 									<DataPath>СписокКонтрагентов</DataPath>
 									<RowPictureDataPath>СписокКонтрагентов.DefaultPicture</RowPictureDataPath>
@@ -475,6 +483,8 @@
 									<Representation>List</Representation>
 									<ReadOnly>true</ReadOnly>
 									<RowSelectionMode>Cell</RowSelectionMode>
+									<HorizontalLinesBWA>false</HorizontalLinesBWA>
+									<VerticalLinesBWA>false</VerticalLinesBWA>
 									<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
 									<AutoInsertNewRow>true</AutoInsertNewRow>
 									<EnableStartDrag>true</EnableStartDrag>
@@ -1216,6 +1226,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОткрытьФормуМассовогоСопоставленияКонтрагентов</Action>
+		</Command>
+		<Command name="ОткрытьФормуМассовогоСопоставленияКонтрагентовИзФайла" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сопоставление контрагентов по файлу CSV</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть форму массового сопоставления контрагентов из файла</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьФормуМассовогоСопоставленияКонтрагентовИзФайла</Action>
 		</Command>
 	</Commands>
 </Form>

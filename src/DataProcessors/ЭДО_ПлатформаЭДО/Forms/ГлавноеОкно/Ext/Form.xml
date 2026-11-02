@@ -495,6 +495,33 @@
 			<ContextMenu name="ДекорацияНадписьРаботаПоУСКонтекстноеМеню" id="298"/>
 			<ExtendedTooltip name="ДекорацияНадписьРаботаПоУСРасширеннаяПодсказка" id="299"/>
 		</LabelDecoration>
+		<UsualGroup name="ГруппаФункцииДляТехническогоСпециалиста" id="300">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа функции для технического специалиста</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа функции для технического специалиста</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>HorizontalIfPossible</Group>
+			<Behavior>Auto</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаФункцииДляТехническогоСпециалистаРасширеннаяПодсказка" id="301"/>
+			<ChildItems>
+				<Button name="ВызватьОбработкуСобытийПоДокументам" id="302">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ВызватьОбработкуСобытийПоДокументам</CommandName>
+					<ExtendedTooltip name="ВызватьОбработкуСобытийПоДокументамРасширеннаяПодсказка" id="303"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
@@ -1497,6 +1524,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗапроситьУточненияПоВходящимДокументам</Action>
+		</Command>
+		<Command name="ВызватьОбработкуСобытийПоДокументам" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вызвать обработку событий по документам</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вызвать обработку событий по документам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВызватьОбработкуСобытийПоДокументам</Action>
 		</Command>
 	</Commands>
 	<Parameters>

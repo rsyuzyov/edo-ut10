@@ -73,6 +73,8 @@
 		<Table name="ФайлыНаОтправку" id="33">
 			<Representation>List</Representation>
 			<RowSelectionMode>Cell</RowSelectionMode>
+			<HorizontalLinesBWA>false</HorizontalLinesBWA>
+			<VerticalLinesBWA>false</VerticalLinesBWA>
 			<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
 			<AutoInsertNewRow>true</AutoInsertNewRow>
 			<EnableStartDrag>true</EnableStartDrag>

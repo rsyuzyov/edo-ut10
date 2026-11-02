@@ -73,6 +73,8 @@
 							<Representation>List</Representation>
 							<ReadOnly>true</ReadOnly>
 							<RowSelectionMode>Cell</RowSelectionMode>
+							<HorizontalLinesBWA>false</HorizontalLinesBWA>
+							<VerticalLinesBWA>false</VerticalLinesBWA>
 							<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
@@ -336,6 +338,8 @@
 												<Table name="ТаблицаФормализованных" id="129">
 													<Representation>List</Representation>
 													<RowSelectionMode>Cell</RowSelectionMode>
+													<HorizontalLinesBWA>false</HorizontalLinesBWA>
+													<VerticalLinesBWA>false</VerticalLinesBWA>
 													<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
 													<AutoInsertNewRow>true</AutoInsertNewRow>
 													<EnableStartDrag>true</EnableStartDrag>
@@ -451,6 +455,8 @@
 													<AutoMaxHeight>false</AutoMaxHeight>
 													<MultipleChoice>true</MultipleChoice>
 													<RowSelectionMode>Cell</RowSelectionMode>
+													<HorizontalLinesBWA>false</HorizontalLinesBWA>
+													<VerticalLinesBWA>false</VerticalLinesBWA>
 													<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
 													<AutoInsertNewRow>true</AutoInsertNewRow>
 													<EnableStartDrag>true</EnableStartDrag>
@@ -500,19 +506,48 @@
 													<ChildItems>
 														<InputField name="ТаблицаНеформализованныхДокумент" id="85">
 															<DataPath>ТаблицаНеформализованныхДляОтображения.Документ</DataPath>
+															<ReadOnly>true</ReadOnly>
 															<EditMode>EnterOnInput</EditMode>
 															<AutoEditMode>true</AutoEditMode>
 															<OpenButton>true</OpenButton>
 															<ContextMenu name="ТаблицаНеформализованныхДокументКонтекстноеМеню" id="86"/>
 															<ExtendedTooltip name="ТаблицаНеформализованныхДокументРасширеннаяПодсказка" id="87"/>
 														</InputField>
-														<InputField name="ТаблицаНеформализованныхИдентификатор" id="247">
-															<DataPath>ТаблицаНеформализованныхДляОтображения.ИдентификаторДокумента</DataPath>
-															<EditMode>EnterOnInput</EditMode>
-															<AutoEditMode>true</AutoEditMode>
-															<ContextMenu name="ТаблицаНеформализованныхИдентификаторКонтекстноеМеню" id="248"/>
-															<ExtendedTooltip name="ТаблицаНеформализованныхИдентификаторРасширеннаяПодсказка" id="249"/>
-														</InputField>
+														<ColumnGroup name="ТаблицаНеформализованныхГруппаИдентификаторПодпись" id="268">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Таблица неформализованных группа идентификатор подпись</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Таблица неформализованных группа идентификатор подпись</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ExtendedTooltip name="ТаблицаНеформализованныхГруппаИдентификаторПодписьРасширеннаяПодсказка" id="269"/>
+															<ChildItems>
+																<InputField name="ТаблицаНеформализованныхИдентификатор" id="247">
+																	<DataPath>ТаблицаНеформализованныхДляОтображения.ИдентификаторДокумента</DataPath>
+																	<ReadOnly>true</ReadOnly>
+																	<EditMode>EnterOnInput</EditMode>
+																	<AutoEditMode>true</AutoEditMode>
+																	<ContextMenu name="ТаблицаНеформализованныхИдентификаторКонтекстноеМеню" id="248"/>
+																	<ExtendedTooltip name="ТаблицаНеформализованныхИдентификаторРасширеннаяПодсказка" id="249"/>
+																</InputField>
+																<CheckBoxField name="ТаблицаНеформализованныхЗапрашиватьОтветнуюПодпись" id="270">
+																	<DataPath>ТаблицаНеформализованныхДляОтображения.ЗапрашиватьОтветнуюПодпись</DataPath>
+																	<EditMode>EnterOnInput</EditMode>
+																	<AutoEditMode>true</AutoEditMode>
+																	<ContextMenu name="ТаблицаНеформализованныхЗапрашиватьОтветнуюПодписьКонтекстноеМеню" id="271"/>
+																	<ExtendedTooltip name="ТаблицаНеформализованныхЗапрашиватьОтветнуюПодписьРасширеннаяПодсказка" id="272"/>
+																	<Events>
+																		<Event name="OnChange">ТаблицаНеформализованныхЗапрашиватьОтветнуюПодписьПриИзменении</Event>
+																	</Events>
+																</CheckBoxField>
+															</ChildItems>
+														</ColumnGroup>
 														<ColumnGroup name="ТаблицаНеформализованныхГруппаПечатнаяФорма" id="43">
 															<Title>
 																<v8:item>
@@ -530,6 +565,7 @@
 															<ChildItems>
 																<InputField name="ТаблицаНеформализованныхПредставлениеПечатнойФормы" id="97">
 																	<DataPath>ТаблицаНеформализованныхДляОтображения.ПредставлениеПечатнойФормы</DataPath>
+																	<ReadOnly>true</ReadOnly>
 																	<EditMode>EnterOnInput</EditMode>
 																	<AutoEditMode>true</AutoEditMode>
 																	<ContextMenu name="ТаблицаНеформализованныхПредставлениеПечатнойФормыКонтекстноеМеню" id="98"/>
@@ -541,6 +577,9 @@
 																	<AutoEditMode>true</AutoEditMode>
 																	<ContextMenu name="ТаблицаНеформализованныхФорматФайлаКонтекстноеМеню" id="89"/>
 																	<ExtendedTooltip name="ТаблицаНеформализованныхФорматФайлаРасширеннаяПодсказка" id="90"/>
+																	<Events>
+																		<Event name="OnChange">ТаблицаНеформализованныхФорматФайлаПриИзменении</Event>
+																	</Events>
 																</InputField>
 															</ChildItems>
 														</ColumnGroup>
@@ -581,6 +620,9 @@
 																			<AutoEditMode>true</AutoEditMode>
 																			<ContextMenu name="ТаблицаНеформализованныхНомерКонтекстноеМеню" id="113"/>
 																			<ExtendedTooltip name="ТаблицаНеформализованныхНомерРасширеннаяПодсказка" id="114"/>
+																			<Events>
+																				<Event name="OnChange">ТаблицаНеформализованныхНомерПриИзменении</Event>
+																			</Events>
 																		</InputField>
 																		<InputField name="ТаблицаНеформализованныхДата" id="115">
 																			<DataPath>ТаблицаНеформализованныхДляОтображения.Дата</DataPath>
@@ -588,6 +630,9 @@
 																			<AutoEditMode>true</AutoEditMode>
 																			<ContextMenu name="ТаблицаНеформализованныхДатаКонтекстноеМеню" id="116"/>
 																			<ExtendedTooltip name="ТаблицаНеформализованныхДатаРасширеннаяПодсказка" id="117"/>
+																			<Events>
+																				<Event name="OnChange">ТаблицаНеформализованныхДатаПриИзменении</Event>
+																			</Events>
 																		</InputField>
 																	</ChildItems>
 																</ColumnGroup>
@@ -706,6 +751,9 @@
 																			</ChoiceList>
 																			<ContextMenu name="ТаблицаНеформализованныхВидДокументаКонтекстноеМеню" id="119"/>
 																			<ExtendedTooltip name="ТаблицаНеформализованныхВидДокументаРасширеннаяПодсказка" id="120"/>
+																			<Events>
+																				<Event name="OnChange">ТаблицаНеформализованныхВидДокументаПриИзменении</Event>
+																			</Events>
 																		</InputField>
 																		<InputField name="ТаблицаНеформализованныхЗаголовок" id="109">
 																			<DataPath>ТаблицаНеформализованныхДляОтображения.Заголовок</DataPath>
@@ -713,6 +761,9 @@
 																			<AutoEditMode>true</AutoEditMode>
 																			<ContextMenu name="ТаблицаНеформализованныхЗаголовокКонтекстноеМеню" id="110"/>
 																			<ExtendedTooltip name="ТаблицаНеформализованныхЗаголовокРасширеннаяПодсказка" id="111"/>
+																			<Events>
+																				<Event name="OnChange">ТаблицаНеформализованныхЗаголовокПриИзменении</Event>
+																			</Events>
 																		</InputField>
 																	</ChildItems>
 																</ColumnGroup>
@@ -758,6 +809,8 @@
 												<Table name="ФайлыНаОтправку" id="168">
 													<Representation>List</Representation>
 													<RowSelectionMode>Cell</RowSelectionMode>
+													<HorizontalLinesBWA>false</HorizontalLinesBWA>
+													<VerticalLinesBWA>false</VerticalLinesBWA>
 													<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
 													<AutoInsertNewRow>true</AutoInsertNewRow>
 													<EnableStartDrag>true</EnableStartDrag>
@@ -818,20 +871,50 @@
 															<ContextMenu name="ФайлыНаОтправкуПутьКФайлуКонтекстноеМеню" id="199"/>
 															<ExtendedTooltip name="ФайлыНаОтправкуПутьКФайлуРасширеннаяПодсказка" id="200"/>
 														</InputField>
-														<InputField name="ФайлыНаОтправкуИдентификатор" id="250">
-															<DataPath>ТаблицаНеформализованныхИзФайловДляОтображения.ИдентификаторДокумента</DataPath>
-															<ReadOnly>true</ReadOnly>
-															<EditMode>EnterOnInput</EditMode>
-															<AutoEditMode>true</AutoEditMode>
-															<ContextMenu name="ФайлыНаОтправкуИдентификаторКонтекстноеМеню" id="251"/>
-															<ExtendedTooltip name="ФайлыНаОтправкуИдентификаторРасширеннаяПодсказка" id="252"/>
-														</InputField>
+														<ColumnGroup name="ТаблицаНеформализованныхИзФайлаГруппаИдентификаторПодпись" id="276">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Таблица неформализованных из файла группа идентификатор подпись</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Таблица неформализованных из файла группа идентификатор подпись</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ExtendedTooltip name="ТаблицаНеформализованныхИзФайлаГруппаИдентификаторПодписьРасширеннаяПодсказка" id="277"/>
+															<ChildItems>
+																<InputField name="ФайлыНаОтправкуИдентификатор" id="250">
+																	<DataPath>ТаблицаНеформализованныхИзФайловДляОтображения.ИдентификаторДокумента</DataPath>
+																	<ReadOnly>true</ReadOnly>
+																	<EditMode>EnterOnInput</EditMode>
+																	<AutoEditMode>true</AutoEditMode>
+																	<ContextMenu name="ФайлыНаОтправкуИдентификаторКонтекстноеМеню" id="251"/>
+																	<ExtendedTooltip name="ФайлыНаОтправкуИдентификаторРасширеннаяПодсказка" id="252"/>
+																</InputField>
+																<CheckBoxField name="ФайлыНаОтправкуЗапрашиватьОтветнуюПодпись" id="273">
+																	<DataPath>ТаблицаНеформализованныхИзФайловДляОтображения.ЗапрашиватьОтветнуюПодпись</DataPath>
+																	<EditMode>EnterOnInput</EditMode>
+																	<AutoEditMode>true</AutoEditMode>
+																	<ContextMenu name="ФайлыНаОтправкуЗапрашиватьОтветнуюПодписьКонтекстноеМеню" id="274"/>
+																	<ExtendedTooltip name="ФайлыНаОтправкуЗапрашиватьОтветнуюПодписьРасширеннаяПодсказка" id="275"/>
+																	<Events>
+																		<Event name="OnChange">ФайлыНаОтправкуЗапрашиватьОтветнуюПодписьПриИзменении</Event>
+																	</Events>
+																</CheckBoxField>
+															</ChildItems>
+														</ColumnGroup>
 														<InputField name="ФайлыНаОтправкуЗаголовок" id="201">
 															<DataPath>ТаблицаНеформализованныхИзФайловДляОтображения.Заголовок</DataPath>
 															<EditMode>EnterOnInput</EditMode>
 															<AutoEditMode>true</AutoEditMode>
 															<ContextMenu name="ФайлыНаОтправкуЗаголовокКонтекстноеМеню" id="202"/>
 															<ExtendedTooltip name="ФайлыНаОтправкуЗаголовокРасширеннаяПодсказка" id="203"/>
+															<Events>
+																<Event name="OnChange">ФайлыНаОтправкуЗаголовокПриИзменении</Event>
+															</Events>
 														</InputField>
 														<InputField name="ФайлыНаОтправкуНомер" id="204">
 															<DataPath>ТаблицаНеформализованныхИзФайловДляОтображения.Номер</DataPath>
@@ -839,6 +922,9 @@
 															<AutoEditMode>true</AutoEditMode>
 															<ContextMenu name="ФайлыНаОтправкуНомерКонтекстноеМеню" id="205"/>
 															<ExtendedTooltip name="ФайлыНаОтправкуНомерРасширеннаяПодсказка" id="206"/>
+															<Events>
+																<Event name="OnChange">ФайлыНаОтправкуНомерПриИзменении</Event>
+															</Events>
 														</InputField>
 														<InputField name="ФайлыНаОтправкуДата" id="207">
 															<DataPath>ТаблицаНеформализованныхИзФайловДляОтображения.Дата</DataPath>
@@ -846,6 +932,9 @@
 															<AutoEditMode>true</AutoEditMode>
 															<ContextMenu name="ФайлыНаОтправкуДатаКонтекстноеМеню" id="208"/>
 															<ExtendedTooltip name="ФайлыНаОтправкуДатаРасширеннаяПодсказка" id="209"/>
+															<Events>
+																<Event name="OnChange">ФайлыНаОтправкуДатаПриИзменении</Event>
+															</Events>
 														</InputField>
 														<InputField name="ФайлыНаОтправкуВидДокумента" id="210">
 															<DataPath>ТаблицаНеформализованныхИзФайловДляОтображения.ВидДокумента</DataPath>
@@ -947,6 +1036,9 @@
 															</ChoiceList>
 															<ContextMenu name="ФайлыНаОтправкуВидДокументаКонтекстноеМеню" id="211"/>
 															<ExtendedTooltip name="ФайлыНаОтправкуВидДокументаРасширеннаяПодсказка" id="212"/>
+															<Events>
+																<Event name="OnChange">ФайлыНаОтправкуВидДокументаПриИзменении</Event>
+															</Events>
 														</InputField>
 													</ChildItems>
 												</Table>
@@ -1187,6 +1279,28 @@
 					</Title>
 					<Type>
 						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЗапрашиватьОтветнуюПодпись" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Запрашивать ответную подпись</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИдентификаторСтроки" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор строки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:UUID</v8:Type>
 					</Type>
 				</Column>
 			</Columns>
@@ -1460,6 +1574,28 @@
 						<v8:Type>xs:boolean</v8:Type>
 					</Type>
 				</Column>
+				<Column name="ЗапрашиватьОтветнуюПодпись" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Запрашивать ответную подпись</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИдентификаторСтроки" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор строки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:UUID</v8:Type>
+					</Type>
+				</Column>
 			</Columns>
 		</Attribute>
 		<Attribute name="АдресВременногоХранилищаКэш" id="8">
@@ -1722,6 +1858,28 @@
 					</Title>
 					<Type>
 						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЗапрашиватьОтветнуюПодпись" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Запрашивать ответную подпись</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИдентификаторСтроки" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор строки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:UUID</v8:Type>
 					</Type>
 				</Column>
 			</Columns>
@@ -2036,6 +2194,28 @@
 					</Title>
 					<Type>
 						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЗапрашиватьОтветнуюПодпись" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Запрашивать ответную подпись</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИдентификаторСтроки" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор строки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:UUID</v8:Type>
 					</Type>
 				</Column>
 			</Columns>

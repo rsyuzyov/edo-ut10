@@ -78,6 +78,8 @@
 			<Form>ФормаАвторизацииПользователя</Form>
 			<Form>ФормаРаботыСШаблонамиПакетов</Form>
 			<Form>ФормаШаблонаПакета</Form>
+			<Form>ФормаВыводаСообщений</Form>
+			<Form>ФормаСопоставленияПоФайлу</Form>
 			<Template>ШаблонНастройки</Template>
 			<Template>Настройки</Template>
 			<Template>Форматы</Template>
@@ -85,6 +87,7 @@
 			<Template>XSLПреобразование</Template>
 			<Template>СлужебныеДанные</Template>
 			<Template>СкриптОтображенияФормыАвторизации</Template>
+			<Template>ИнтерпретацииОшибок</Template>
 		</ChildObjects>
 	</ExternalDataProcessor>
 </MetaDataObject>
