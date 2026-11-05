@@ -1218,6 +1218,44 @@
 									<ContextMenu name="ВхИННКонтекстноеМеню" id="852"/>
 									<ExtendedTooltip name="ВхИННРасширеннаяПодсказка" id="853"/>
 								</InputField>
+								<InputField name="ВхСумма" id="967">
+									<DataPath>Входящие.Сумма</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сумма</v8:content>
+										</v8:item>
+									</Title>
+									<Width>12</Width>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧДЦ=2</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="ВхСуммаКонтекстноеМеню" id="968"/>
+									<ExtendedTooltip name="ВхСуммаРасширеннаяПодсказка" id="969"/>
+								</InputField>
+								<InputField name="ВхСуммаНДС" id="970">
+									<DataPath>Входящие.СуммаНДС</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>НДС</v8:content>
+										</v8:item>
+									</Title>
+									<Width>10</Width>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧДЦ=2</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="ВхСуммаНДСКонтекстноеМеню" id="971"/>
+									<ExtendedTooltip name="ВхСуммаНДСРасширеннаяПодсказка" id="972"/>
+								</InputField>
 								<InputField name="ВхОрганизация" id="854">
 									<DataPath>Входящие.Организация</DataPath>
 									<ReadOnly>true</ReadOnly>
@@ -2757,6 +2795,26 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
+				<Column name="Сумма" id="963">
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СуммаНДС" id="964">
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
 			</Columns>
 		</Attribute>
 		<Attribute name="ВходящиеВсе" id="880">
@@ -2899,6 +2957,26 @@
 							<v8:Length>20</v8:Length>
 							<v8:AllowedLength>Variable</v8:AllowedLength>
 						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Сумма" id="965">
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СуммаНДС" id="966">
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
 					</Type>
 				</Column>
 			</Columns>
