@@ -50,7 +50,11 @@
 			</UsePurposes>
 			<ScriptVariant>Russian</ScriptVariant>
 			<Vendor>ontab</Vendor>
+<<<<<<< HEAD
 			<Version>1.5.71.0</Version>
+=======
+			<Version>1.5.70.5</Version>
+>>>>>>> 8fd8a35 (Добавить отмену фиксации ЧЗ из карточки ЭДО)
 			<DefaultLanguage>Language.Русский</DefaultLanguage>
 			<BriefInformation>
 				<v8:item>
@@ -91,5 +95,6 @@
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>
+
 
 
