@@ -229,6 +229,7 @@
 												</Title>
 												<ExtendedTooltip name="КнАннулироватьРасширеннаяПодсказка" id="143"/>
 											</Button>
+							<Button name="КнОтменитьФиксациюЧЗ" id="308"><Type>CommandBarButton</Type><CommandName>Form.Command.ОтменитьФиксациюЧЗ</CommandName><Title><v8:item><v8:lang>ru</v8:lang><v8:content>Снять фиксацию ЧЗ</v8:content></v8:item></Title><ExtendedTooltip name="КнОтменитьФиксациюЧЗРасширеннаяПодсказка" id="309"/></Button>
 											<Button name="КнОтправитьИсправление" id="160">
 												<Type>CommandBarButton</Type>
 												<CommandName>Form.Command.ОтправитьИсправление</CommandName>
@@ -355,6 +356,8 @@
 											<ContextMenu name="КолонкаСуммаОтправкиКонтекстноеМеню" id="263"/>
 											<ExtendedTooltip name="КолонкаСуммаОтправкиРасширеннаяПодсказка" id="264"/>
 										</InputField>
+						<InputField name="КолонкаФиксацияЧЗ" id="310"><DataPath>История.ФиксацияЧЗ</DataPath><ReadOnly>true</ReadOnly><Title><v8:item><v8:lang>ru</v8:lang><v8:content>Фиксация ЧЗ</v8:content></v8:item></Title><Width>12</Width><ContextMenu name="КолонкаФиксацияЧЗКонтекстноеМеню" id="311"/><ExtendedTooltip name="КолонкаФиксацияЧЗРасширеннаяПодсказка" id="312"/></InputField>
+						<InputField name="КолонкаДокументФиксацииЧЗ" id="313"><DataPath>История.ДокументФиксацииЧЗ</DataPath><ReadOnly>true</ReadOnly><Title><v8:item><v8:lang>ru</v8:lang><v8:content>Документ ЧЗ</v8:content></v8:item></Title><Width>22</Width><ContextMenu name="КолонкаДокументФиксацииЧЗКонтекстноеМеню" id="314"/><ExtendedTooltip name="КолонкаДокументФиксацииЧЗРасширеннаяПодсказка" id="315"/></InputField>
 										<InputField name="КолонкаПричина" id="62">
 											<DataPath>История.Причина</DataPath>
 											<Title>
@@ -1129,6 +1132,12 @@
 						</v8:NumberQualifiers>
 					</Type>
 				</Column>
+				<Column name="ФиксацияЧЗ" id="265">
+					<Type><v8:Type>xs:boolean</v8:Type></Type>
+				</Column>
+				<Column name="ДокументФиксацииЧЗ" id="266">
+					<Type><v8:Type>xs:string</v8:Type><v8:StringQualifiers><v8:Length>50</v8:Length><v8:AllowedLength>Variable</v8:AllowedLength></v8:StringQualifiers></Type>
+				</Column>
 			</Columns>
 		</Attribute>
 		<Attribute name="ХодДокумента" id="254">
@@ -1524,6 +1533,7 @@
 			</ToolTip>
 			<Action>АннулироватьОтправку</Action>
 		</Command>
+		<Command name="ОтменитьФиксациюЧЗ" id="275"><Title><v8:item><v8:lang>ru</v8:lang><v8:content>Снять фиксацию ЧЗ</v8:content></v8:item></Title><ToolTip><v8:item><v8:lang>ru</v8:lang><v8:content>Подать подписанную заявку на отмену фиксации выбранной отправки в Честном знаке</v8:content></v8:item></ToolTip><Action>ОтменитьФиксациюЧЗ</Action></Command>
 		<Command name="ПринятьАннулирование" id="140">
 			<Title>
 				<v8:item>
