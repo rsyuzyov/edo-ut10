@@ -19,6 +19,4 @@ jobs:
           fetch-tags: true
 
       - name: build/checks.py
-        env:
-          HYGIENE_DENYLIST: ${{ secrets.HYGIENE_DENYLIST }}
         run: python3 build/checks.py

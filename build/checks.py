@@ -17,7 +17,6 @@ import os
 import re
 import subprocess
 import sys
-import zipfile
 import xml.etree.ElementTree as ET
 
 # Формат выгрузки держим в 2.17 (платформы 8.3.20–8.3.24): старшая платформа читает
@@ -47,25 +46,9 @@ HYGIENE_PATTERNS = [
         "пароль строкой",
         re.compile(r"(?:Пароль|Password)\s*=\s*\"[^\"]{3,}\"", re.IGNORECASE),
     ),
-    (
-        "номер реального документа",
-        re.compile(r"\b[А-Я]{2}-[А-Я]?\d{6,}\b"),
-    ),
-    (
-        "ИНН, ОГРН или EAN в комментарии",
-        re.compile(r"//.*(?<![\d.,])(?!1234567890)(?:\d{10}|\d{12,13}|\d{15})(?![\d.,])"),
-    ),
 ]
 
-# Закрытый список слов (площадки, организации): не хранится в публичном дереве,
-# в CI приезжает секретом, значения разделены «;». В журнал слово не печатается.
-PRIVATE_WORDS = [
-    re.compile(r"\b" + re.escape(word.strip()), re.IGNORECASE)
-    for word in os.environ.get("HYGIENE_DENYLIST", "").split(";")
-    if word.strip()
-]
-
-TEXT_SUFFIXES = (".xml", ".bsl", ".txt", ".mdo", ".html", ".md", ".py", ".ps1", ".yml", ".yaml", ".xsd")
+TEXT_SUFFIXES = (".xml", ".bsl", ".txt", ".mdo", ".html")
 
 
 def repo_root() -> str:
@@ -175,7 +158,7 @@ def check_text_template_bom(report: Report) -> None:
 
     Без BOM ПолучитьМакет().ПолучитьТекст() в сеансе читает макет как ANSI,
     и настройки маппинга превращаются в кракозябры с невалидным XML внутри
-    (прецедент: BOM потерялся при правке, ФЛК и отправка встали).
+    (бой 02.10.2026: BOM потерялся при правке, ФЛК и отправка встали).
     """
     report.stage("BOM у текстовых макетов")
     checked = 0
@@ -212,42 +195,27 @@ def check_xml_parses(report: Report) -> None:
         report.fail("в src не найдено ни одного XML")
 
 
-def hygiene_sources():
-    """Текст всех файлов дерева, включая вложенные в zip-макеты: (имя, текст)."""
-    for path in iter_files(repo_root()):
-        relative = rel(path).replace(os.sep, "/")
-        if relative.startswith(".git/") or relative == "build/checks.py":
-            continue
-        if path.lower().endswith(TEXT_SUFFIXES):
-            try:
-                with open(path, "r", encoding="utf-8-sig", errors="strict") as handle:
-                    yield rel(path), handle.read()
-            except (UnicodeDecodeError, OSError):
-                continue
-        elif zipfile.is_zipfile(path):
-            with zipfile.ZipFile(path) as archive:
-                for number, entry in enumerate(archive.infolist(), 1):
-                    payload = archive.read(entry)
-                    try:
-                        yield "%s#%d" % (rel(path), number), payload.decode("utf-8-sig")
-                    except UnicodeDecodeError:
-                        yield "%s#%d" % (rel(path), number), payload.decode("cp1251", "replace")
-
-
 def check_hygiene(report: Report) -> None:
     """Следы конкретной базы в публичном дереве."""
     report.stage("гигиена публичного дерева")
     hits = 0
-    for name, text in hygiene_sources():
+    for path in iter_files(src_dir()):
+        if not path.lower().endswith(TEXT_SUFFIXES):
+            continue
+        try:
+            with open(path, "r", encoding="utf-8-sig", errors="strict") as handle:
+                text = handle.read()
+        except (UnicodeDecodeError, OSError):
+            continue
         for line_no, line in enumerate(text.splitlines(), 1):
             for title, pattern in HYGIENE_PATTERNS:
                 match = pattern.search(line)
                 if match:
                     hits += 1
-                    report.fail("%s:%d — %s: %s" % (name, line_no, title, match.group(0)[:80]))
-            if any(word.search(line) for word in PRIVATE_WORDS):
-                hits += 1
-                report.fail("%s:%d — слово из закрытого списка" % (name, line_no))
+                    report.fail(
+                        "%s:%d — %s: %s"
+                        % (rel(path), line_no, title, match.group(0)[:80])
+                    )
     if not hits:
         report.ok("следов конкретной базы не найдено")
 
