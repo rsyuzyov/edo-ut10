@@ -227,9 +227,9 @@
 														<v8:content>Аннулировать</v8:content>
 													</v8:item>
 												</Title>
-							<ExtendedTooltip name="КнАннулироватьРасширеннаяПодсказка" id="143"/>
+												<ExtendedTooltip name="КнАннулироватьРасширеннаяПодсказка" id="143"/>
 											</Button>
-							<Button name="КнОтменитьФиксациюЧЗ" id="273"><Type>CommandBarButton</Type><CommandName>Form.Command.ОтменитьФиксациюЧЗ</CommandName><Title><v8:item><v8:lang>ru</v8:lang><v8:content>Снять фиксацию ЧЗ</v8:content></v8:item></Title><ExtendedTooltip name="КнОтменитьФиксациюЧЗРасширеннаяПодсказка" id="274"/></Button>
+							<Button name="КнОтменитьФиксациюЧЗ" id="308"><Type>CommandBarButton</Type><CommandName>Form.Command.ОтменитьФиксациюЧЗ</CommandName><Title><v8:item><v8:lang>ru</v8:lang><v8:content>Снять фиксацию ЧЗ</v8:content></v8:item></Title><ExtendedTooltip name="КнОтменитьФиксациюЧЗРасширеннаяПодсказка" id="309"/></Button>
 											<Button name="КнОтправитьИсправление" id="160">
 												<Type>CommandBarButton</Type>
 												<CommandName>Form.Command.ОтправитьИсправление</CommandName>
@@ -354,10 +354,10 @@
 											</Title>
 											<Width>12</Width>
 											<ContextMenu name="КолонкаСуммаОтправкиКонтекстноеМеню" id="263"/>
-							<ExtendedTooltip name="КолонкаСуммаОтправкиРасширеннаяПодсказка" id="264"/>
+											<ExtendedTooltip name="КолонкаСуммаОтправкиРасширеннаяПодсказка" id="264"/>
 										</InputField>
-						<InputField name="КолонкаФиксацияЧЗ" id="267"><DataPath>История.ФиксацияЧЗ</DataPath><ReadOnly>true</ReadOnly><Title><v8:item><v8:lang>ru</v8:lang><v8:content>Фиксация ЧЗ</v8:content></v8:item></Title><Width>12</Width><ContextMenu name="КолонкаФиксацияЧЗКонтекстноеМеню" id="268"/><ExtendedTooltip name="КолонкаФиксацияЧЗРасширеннаяПодсказка" id="269"/></InputField>
-						<InputField name="КолонкаДокументФиксацииЧЗ" id="270"><DataPath>История.ДокументФиксацииЧЗ</DataPath><ReadOnly>true</ReadOnly><Title><v8:item><v8:lang>ru</v8:lang><v8:content>Документ ЧЗ</v8:content></v8:item></Title><Width>22</Width><ContextMenu name="КолонкаДокументФиксацииЧЗКонтекстноеМеню" id="271"/><ExtendedTooltip name="КолонкаДокументФиксацииЧЗРасширеннаяПодсказка" id="272"/></InputField>
+						<InputField name="КолонкаФиксацияЧЗ" id="310"><DataPath>История.ФиксацияЧЗ</DataPath><ReadOnly>true</ReadOnly><Title><v8:item><v8:lang>ru</v8:lang><v8:content>Фиксация ЧЗ</v8:content></v8:item></Title><Width>12</Width><ContextMenu name="КолонкаФиксацияЧЗКонтекстноеМеню" id="311"/><ExtendedTooltip name="КолонкаФиксацияЧЗРасширеннаяПодсказка" id="312"/></InputField>
+						<InputField name="КолонкаДокументФиксацииЧЗ" id="313"><DataPath>История.ДокументФиксацииЧЗ</DataPath><ReadOnly>true</ReadOnly><Title><v8:item><v8:lang>ru</v8:lang><v8:content>Документ ЧЗ</v8:content></v8:item></Title><Width>22</Width><ContextMenu name="КолонкаДокументФиксацииЧЗКонтекстноеМеню" id="314"/><ExtendedTooltip name="КолонкаДокументФиксацииЧЗРасширеннаяПодсказка" id="315"/></InputField>
 										<InputField name="КолонкаПричина" id="62">
 											<DataPath>История.Причина</DataPath>
 											<Title>
