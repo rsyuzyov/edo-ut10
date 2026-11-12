@@ -30,6 +30,7 @@
 		<ChildObjects>
 			<Form>Форма</Form>
 			<Form>ФормаВходящего</Form>
+			<Form>ФормаВходящегоФайла</Form>
 		</ChildObjects>
 	</DataProcessor>
 </MetaDataObject>
