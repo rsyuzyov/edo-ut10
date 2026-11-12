@@ -114,7 +114,7 @@
 						<Event name="OnChange">ОтборПриИзменении</Event>
 					</Events>
 				</InputField>
-				<RadioButtonField name="ПолеВидДокументов" id="702">
+				<InputField name="ПолеВидДокументов" id="702">
 					<DataPath>ОтборВидДокументов</DataPath>
 					<Title>
 						<v8:item>
@@ -123,55 +123,15 @@
 						</v8:item>
 					</Title>
 					<TitleLocation>Left</TitleLocation>
-					<RadioButtonType>RadioButtons</RadioButtonType>
-					<ColumnsCount>3</ColumnsCount>
-					<ChoiceList>
-						<xr:Item>
-							<xr:Presentation/>
-							<xr:CheckState>0</xr:CheckState>
-							<xr:Value xsi:type="FormChoiceListDesTimeValue">
-								<Presentation>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>Все</v8:content>
-									</v8:item>
-								</Presentation>
-								<Value xsi:type="xs:string">Все</Value>
-							</xr:Value>
-						</xr:Item>
-						<xr:Item>
-							<xr:Presentation/>
-							<xr:CheckState>0</xr:CheckState>
-							<xr:Value xsi:type="FormChoiceListDesTimeValue">
-								<Presentation>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>УПД</v8:content>
-									</v8:item>
-								</Presentation>
-								<Value xsi:type="xs:string">УПД</Value>
-							</xr:Value>
-						</xr:Item>
-						<xr:Item>
-							<xr:Presentation/>
-							<xr:CheckState>0</xr:CheckState>
-							<xr:Value xsi:type="FormChoiceListDesTimeValue">
-								<Presentation>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>УКД</v8:content>
-									</v8:item>
-								</Presentation>
-								<Value xsi:type="xs:string">УКД</Value>
-							</xr:Value>
-						</xr:Item>
-				</ChoiceList>
+					<Width>20</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ListChoiceMode>true</ListChoiceMode>
 					<ContextMenu name="ПолеВидДокументовКонтекстноеМеню" id="703"/>
 					<ExtendedTooltip name="ПолеВидДокументовРасширеннаяПодсказка" id="704"/>
 					<Events>
 						<Event name="OnChange">ОтборПриИзменении</Event>
 					</Events>
-				</RadioButtonField>
+				</InputField>
 				<LabelDecoration name="НадписьПосчитано" id="20">
 					<Title formatted="false">
 						<v8:item>
