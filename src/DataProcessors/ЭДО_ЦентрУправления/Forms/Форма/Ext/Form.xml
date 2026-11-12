@@ -974,19 +974,49 @@
 							<Title formatted="false">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Входящие УПД из Платформы ЭДО за период</v8:content>
+									<v8:content>Входящие УПД и УКД от операторов ЭДО за период</v8:content>
 								</v8:item>
 							</Title>
 							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Входящие УПД из Платформы ЭДО за период. Список получают кнопкой «Получить список» (обращение к оператору); поступление создается по выделенным строкам без проведения - проверьте и проведите его сами</v8:content>
+									<v8:content>Входящие УПД и УКД от операторов ЭДО за период. Список получают кнопкой «Получить список» (обращение к оператору); поступление создается по выделенным строкам без проведения - проверьте и проведите его сами</v8:content>
 								</v8:item>
 							</ToolTip>
 							<ToolTipRepresentation>Button</ToolTipRepresentation>
 							<ContextMenu name="НадписьВходящиеКонтекстноеМеню" id="804"/>
 							<ExtendedTooltip name="НадписьВходящиеРасширеннаяПодсказка" id="805"/>
 						</LabelDecoration>
+						<UsualGroup name="ГруппаВходящиеОператор" id="973">
+							<Group>AlwaysHorizontal</Group>
+							<ExtendedTooltip name="ГруппаВходящиеОператорРасширеннаяПодсказка" id="974"/>
+							<ChildItems>
+								<InputField name="ПолеОтборОператор" id="975">
+									<DataPath>ОтборОператор</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Оператор</v8:content>
+										</v8:item>
+									</Title>
+									<Width>18</Width>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ContextMenu name="ПолеОтборОператорКонтекстноеМеню" id="976"/>
+									<ExtendedTooltip name="ПолеОтборОператорРасширеннаяПодсказка" id="977"/>
+									<Events>
+										<Event name="OnChange">ОтборОператораПриИзменении</Event>
+									</Events>
+								</InputField>
+								<LabelDecoration name="НадписьСостояниеОператоров" id="978">
+									<Visible>false</Visible>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<TextColor>web:Gray</TextColor>
+									<ContextMenu name="НадписьСостояниеОператоровКонтекстноеМеню" id="979"/>
+									<ExtendedTooltip name="НадписьСостояниеОператоровРасширеннаяПодсказка" id="980"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
 						<Table name="ТаблицаВходящиеСводка" id="806">
 							<CommandBarLocation>None</CommandBarLocation>
 							<ChangeRowSet>false</ChangeRowSet>
@@ -1138,6 +1168,19 @@
 									<Width>10</Width>
 									<ContextMenu name="ВхВидКонтекстноеМеню" id="943"/>
 									<ExtendedTooltip name="ВхВидРасширеннаяПодсказка" id="944"/>
+								</InputField>
+								<InputField name="ВхОператор" id="981">
+									<DataPath>Входящие.ОператорПредставление</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Оператор</v8:content>
+										</v8:item>
+									</Title>
+									<Width>14</Width>
+									<ContextMenu name="ВхОператорКонтекстноеМеню" id="982"/>
+									<ExtendedTooltip name="ВхОператорРасширеннаяПодсказка" id="983"/>
 								</InputField>
 								<InputField name="ВхНомер" id="845">
 									<DataPath>Входящие.Номер</DataPath>
@@ -1797,6 +1840,21 @@
 			</Title>
 			<Type>
 				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтборОператор" id="973">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор оператор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>20</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
 		<Attribute name="ОтборВидДокументов" id="700">
@@ -2775,6 +2833,33 @@
 						</v8:NumberQualifiers>
 					</Type>
 				</Column>
+				<Column name="Ключ" id="974">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Оператор" id="975">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>20</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОператорПредставление" id="976">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
 			</Columns>
 		</Attribute>
 		<Attribute name="ВходящиеВсе" id="880">
@@ -2937,6 +3022,33 @@
 							<v8:FractionDigits>2</v8:FractionDigits>
 							<v8:AllowedSign>Any</v8:AllowedSign>
 						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Ключ" id="977">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Оператор" id="978">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>20</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОператорПредставление" id="979">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
 					</Type>
 				</Column>
 			</Columns>
