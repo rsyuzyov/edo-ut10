@@ -1189,12 +1189,31 @@
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Дата</v8:content>
+											<v8:content>Дата документа</v8:content>
 										</v8:item>
 									</Title>
 									<Width>10</Width>
 									<ContextMenu name="ВхДатаКонтекстноеМеню" id="843"/>
 									<ExtendedTooltip name="ВхДатаРасширеннаяПодсказка" id="844"/>
+								</InputField>
+								<InputField name="ВхДатаПолучения" id="984">
+									<DataPath>Входящие.ДатаПолучения</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Получен</v8:content>
+										</v8:item>
+									</Title>
+									<Width>14</Width>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ='dd.MM.yyyy HH:mm'</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="ВхДатаПолученияКонтекстноеМеню" id="985"/>
+									<ExtendedTooltip name="ВхДатаПолученияРасширеннаяПодсказка" id="986"/>
 								</InputField>
 								<InputField name="ВхВид" id="942">
 									<DataPath>Входящие.Вид</DataPath>
@@ -2739,6 +2758,20 @@
 						</v8:DateQualifiers>
 					</Type>
 				</Column>
+				<Column name="ДатаПолучения" id="987">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Получен</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
 				<Column name="Номер" id="872">
 					<Type>
 						<v8:Type>xs:string</v8:Type>
@@ -2853,6 +2886,11 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
+				<Column name="Односторонний" id="988">
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
 				<Column name="Сумма" id="963">
 					<Type>
 						<v8:Type>xs:decimal</v8:Type>
@@ -2927,6 +2965,20 @@
 						<v8:Type>xs:dateTime</v8:Type>
 						<v8:DateQualifiers>
 							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДатаПолучения" id="989">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Получен</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
 						</v8:DateQualifiers>
 					</Type>
 				</Column>
@@ -3042,6 +3094,11 @@
 							<v8:Length>20</v8:Length>
 							<v8:AllowedLength>Variable</v8:AllowedLength>
 						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Односторонний" id="990">
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
 					</Type>
 				</Column>
 				<Column name="Сумма" id="965">
