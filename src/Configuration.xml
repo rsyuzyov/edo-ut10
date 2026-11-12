@@ -33,11 +33,11 @@
 		</InternalInfo>
 		<Properties>
 			<ObjectBelonging>Adopted</ObjectBelonging>
-			<Name>ЦентрУправленияЭДО</Name>
+			<Name>ЦентрЭДО</Name>
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Центр управления ЭДО</v8:content>
+					<v8:content>Центр ЭДО</v8:content>
 				</v8:item>
 			</Synonym>
 			<Comment/>
