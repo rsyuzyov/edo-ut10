@@ -74,6 +74,7 @@
 			<CommonModule>ЭДО_Витрина</CommonModule>
 			<CommonModule>ЭДО_НастройкиКонтрагентов</CommonModule>
 			<CommonModule>ЭДО_ВходящиеДокументы</CommonModule>
+			<CommonModule>ЭДО_ОператорПлатформа</CommonModule>
 		<CommonModule>ЭлектронныеДокументыКлиент</CommonModule>
 		<CommonModule>ОбменСГИСЭПДКлиентПереопределяемый</CommonModule>
 		<CommonModule>ЭлектронныеДокументыПереопределяемый</CommonModule>
