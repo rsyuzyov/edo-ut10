@@ -65,6 +65,7 @@
 		</Properties>
 		<ChildObjects>
 			<Language>Русский</Language>
+			<Role>ЭДО_Пользователь</Role>
 			<CommonModule>ЭДО_Сервер</CommonModule>
 			<CommonModule>ЭДО_Клиент</CommonModule>
 			<CommonModule>ЭДО_ФорматАктСверки</CommonModule>
