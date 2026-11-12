@@ -409,6 +409,57 @@ def check_duplicate_methods(report: Report) -> None:
         report.ok("повторов нет — %d модул(ей)" % checked)
 
 
+def check_child_objects(report: Report) -> None:
+    """Каждый объект из src/<Вид>/<Имя>.xml зарегистрирован в ChildObjects Configuration.xml, и наоборот.
+
+    Без регистрации объект не попадает в расширение, а вызовы его модуля роняют компиляцию
+    вызывающих (прецедент: при слиянии main конфликт строки версии разрешили целиком в пользу
+    main и потеряли соседнюю строку <CommonModule>).
+    """
+    report.stage("состав ChildObjects и объекты в src")
+    try:
+        configuration_root = ET.parse(os.path.join(src_dir(), "Configuration.xml")).getroot()
+    except (ET.ParseError, OSError) as error:
+        report.fail("Configuration.xml не прочитан: %s" % error)
+        return
+    child_objects = configuration_root.find(".//" + MD_NS + "ChildObjects")
+    if child_objects is None:
+        report.fail("в Configuration.xml нет ChildObjects")
+        return
+    registered = {
+        (child.tag.replace(MD_NS, ""), (child.text or "").strip()) for child in child_objects
+    }
+    on_disk: dict[tuple[str, str], str] = {}
+    for kind_dir in sorted(os.listdir(src_dir())):
+        kind_path = os.path.join(src_dir(), kind_dir)
+        if not os.path.isdir(kind_path):
+            continue
+        for file_name in sorted(os.listdir(kind_path)):
+            object_file = os.path.join(kind_path, file_name)
+            if not file_name.endswith(".xml") or not os.path.isfile(object_file):
+                continue
+            try:
+                object_root = ET.parse(object_file).getroot()
+            except ET.ParseError:
+                continue  # о разборе отчитывается отдельная проверка
+            object_elements = list(object_root)
+            if not object_elements:
+                continue
+            object_kind = object_elements[0].tag.replace(MD_NS, "")
+            on_disk[(object_kind, file_name[: -len(".xml")])] = rel(object_file)
+    missing_registration = sorted(set(on_disk) - registered)
+    missing_files = sorted(registered - set(on_disk))
+    for object_kind, object_name in missing_registration:
+        report.fail(
+            "%s есть в src, но не зарегистрирован в ChildObjects: <%s>%s</%s>"
+            % (on_disk[(object_kind, object_name)], object_kind, object_name, object_kind)
+        )
+    for object_kind, object_name in missing_files:
+        report.fail("в ChildObjects есть <%s>%s</%s>, а файла объекта нет" % (object_kind, object_name, object_kind))
+    if not missing_registration and not missing_files:
+        report.ok("совпадает — %d объект(ов)" % len(registered))
+
+
 def main() -> int:
     # Отчёт на русском: на Windows консоль по умолчанию не UTF-8, и без этого
     # вывод приезжает вопросиками (в cmd понадобится ещё `chcp 65001`).
@@ -438,6 +489,7 @@ def main() -> int:
     check_xml_parses(report)
     check_hygiene(report)
     check_duplicate_methods(report)
+    check_child_objects(report)
     check_version_bumped(report, version)
     check_version_above_base(report, version)
 
