@@ -89,6 +89,7 @@
 			<DataProcessor>ЭДО_КарточкаДокумента</DataProcessor>
 			<DataProcessor>ЭДО_ЦентрУправления</DataProcessor>
 			<DataProcessor>ЭДО_НастройкиЭДО</DataProcessor>
+			<DataProcessor>ЗначенияСвойствОбъекта</DataProcessor>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>

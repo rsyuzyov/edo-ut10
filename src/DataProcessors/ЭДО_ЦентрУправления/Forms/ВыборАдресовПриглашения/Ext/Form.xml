@@ -141,6 +141,17 @@
 					<ContextMenu name="ЯщикиДатаПриглашенияКонтекстноеМеню" id="37"/>
 					<ExtendedTooltip name="ЯщикиДатаПриглашенияРасширеннаяПодсказка" id="38"/>
 				</LabelField>
+				<LabelField name="ЯщикиСвязьС" id="54">
+					<DataPath>Ящики.СвязьС</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Связь с</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЯщикиСвязьСКонтекстноеМеню" id="55"/>
+					<ExtendedTooltip name="ЯщикиСвязьСРасширеннаяПодсказка" id="56"/>
+				</LabelField>
 			</ChildItems>
 		</Table>
 		<LabelField name="Итог" id="39">
@@ -207,6 +218,14 @@
 						</v8:DateQualifiers>
 					</Type>
 				</Column>
+				<Column name="СвязьС" id="53">
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
 				<Column name="Можно" id="49">
 					<Type>
 						<v8:Type>xs:boolean</v8:Type>
@@ -219,6 +238,21 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Итог</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредупреждениеОпроса" id="52">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предупреждение опроса</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
