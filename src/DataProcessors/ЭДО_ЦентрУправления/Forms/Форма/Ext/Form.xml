@@ -132,6 +132,56 @@
 						<Event name="OnChange">ОтборПриИзменении</Event>
 					</Events>
 				</InputField>
+				<InputField name="ПолеОтборКонтрагент" id="946">
+					<DataPath>ОтборКонтрагент</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дашборд, разбор, контрагенты, входящие и приглашения - только по этому контрагенту (входящие - по ИНН продавца); в приглашениях - и без отгрузок за период, чтобы позвать в ЭДО до первой отгрузки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ChoiceButton>true</ChoiceButton>
+					<ClearButton>true</ClearButton>
+					<ContextMenu name="ПолеОтборКонтрагентКонтекстноеМеню" id="947"/>
+					<ExtendedTooltip name="ПолеОтборКонтрагентРасширеннаяПодсказка" id="948"/>
+					<Events>
+						<Event name="OnChange">ОтборПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ПолеНомерДокумента" id="949">
+					<DataPath>ПоискНомерДокумента</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ №</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер реализации, корректировки или акта сверки; Enter открывает карточку ЭДО документа</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Width>16</Width>
+					<ClearButton>true</ClearButton>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>номер, Enter</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="ПолеНомерДокументаКонтекстноеМеню" id="950"/>
+					<ExtendedTooltip name="ПолеНомерДокументаРасширеннаяПодсказка" id="951"/>
+					<Events>
+						<Event name="OnChange">ПолеНомерДокументаПриИзменении</Event>
+					</Events>
+				</InputField>
 				<LabelDecoration name="НадписьПосчитано" id="20">
 					<Title formatted="false">
 						<v8:item>
@@ -226,56 +276,6 @@
 													<ContextMenu name="ИтогГруппаКонтекстноеМеню" id="45"/>
 													<ExtendedTooltip name="ИтогГруппаРасширеннаяПодсказка" id="46"/>
 												</InputField>
-				<InputField name="ПолеОтборКонтрагент" id="946">
-					<DataPath>ОтборКонтрагент</DataPath>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Контрагент</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Дашборд, разбор, контрагенты и приглашения - только по этому контрагенту; в приглашениях - и без отгрузок за период, чтобы позвать в ЭДО до первой отгрузки</v8:content>
-						</v8:item>
-					</ToolTip>
-					<ChoiceButton>true</ChoiceButton>
-					<ClearButton>true</ClearButton>
-					<ContextMenu name="ПолеОтборКонтрагентКонтекстноеМеню" id="947"/>
-					<ExtendedTooltip name="ПолеОтборКонтрагентРасширеннаяПодсказка" id="948"/>
-					<Events>
-						<Event name="OnChange">ОтборПриИзменении</Event>
-					</Events>
-				</InputField>
-				<InputField name="ПолеНомерДокумента" id="949">
-					<DataPath>ПоискНомерДокумента</DataPath>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Документ №</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Номер реализации, корректировки или акта сверки; Enter открывает карточку ЭДО документа</v8:content>
-						</v8:item>
-					</ToolTip>
-					<Width>16</Width>
-					<ClearButton>true</ClearButton>
-					<InputHint>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>номер, Enter</v8:content>
-						</v8:item>
-					</InputHint>
-					<ContextMenu name="ПолеНомерДокументаКонтекстноеМеню" id="950"/>
-					<ExtendedTooltip name="ПолеНомерДокументаРасширеннаяПодсказка" id="951"/>
-					<Events>
-						<Event name="OnChange">ПолеНомерДокументаПриИзменении</Event>
-					</Events>
-				</InputField>
 												<InputField name="ИтогКоличество" id="47">
 													<DataPath>ИтогиГрупп.Количество</DataPath>
 													<Title>
