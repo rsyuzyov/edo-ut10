@@ -280,6 +280,333 @@
 								</InputField>
 							</ChildItems>
 						</UsualGroup>
+						<UsualGroup name="ГруппаПараметрыОтправки" id="3001">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отправка</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>WeakSeparation</Representation>
+							<ShowTitle>true</ShowTitle>
+							<ExtendedTooltip name="ГруппаПараметрыОтправкиРасширеннаяПодсказка" id="3002"/>
+							<ChildItems>
+								<CheckBoxField name="ОтправлятьТолькоПослеГотовности" id="3003">
+									<DataPath>ОтправлятьТолькоПослеГотовности</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отправлять только готовые документы (1 - да, 0 - по таймеру)</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Готовым считается напечатанный документ либо помеченный вручную. 0 возвращает прежнее поведение «через N минут после проведения».</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="ОтправлятьТолькоПослеГотовностиКонтекстноеМеню" id="3004"/>
+									<ExtendedTooltip name="ОтправлятьТолькоПослеГотовностиРасширеннаяПодсказка" id="3005"/>
+								</CheckBoxField>
+								<CheckBoxField name="АвтоотправкаТолькоРазрешенным" id="3007">
+									<DataPath>АвтоотправкаТолькоРазрешенным</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Автоотправка только отмеченным контрагентам (1 - да, 0 - всем)</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>1 - очередь берет документы только контрагентов с флагом ЭДО_АвтоотправкаРазрешена. Остальным документ уходит только по кнопке, в колонке ЭДО - «Автоотправка контрагенту не включена».</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="АвтоотправкаТолькоРазрешеннымКонтекстноеМеню" id="3008"/>
+									<ExtendedTooltip name="АвтоотправкаТолькоРазрешеннымРасширеннаяПодсказка" id="3009"/>
+								</CheckBoxField>
+								<CheckBoxField name="ПроверятьКодыМаркировкиПередОтправкой" id="3011">
+									<DataPath>ПроверятьКодыМаркировкиПередОтправкой</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Проверять коды маркировки перед отправкой (1 - да, 0 - нет)</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>1 - маркируемый товар без кодов в ШтрихкодыУпаковок не отправляется. 0 - проверки нет (коды контролируются при проведении реализации или хранятся в другой табличной части).</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="ПроверятьКодыМаркировкиПередОтправкойКонтекстноеМеню" id="3012"/>
+									<ExtendedTooltip name="ПроверятьКодыМаркировкиПередОтправкойРасширеннаяПодсказка" id="3013"/>
+								</CheckBoxField>
+								<CheckBoxField name="ГТДИзНоменклатурыПриПустойСерии" id="3015">
+									<DataPath>ГТДИзНоменклатурыПриПустойСерии</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Заполнять ГТД из номенклатуры при пустой серии (1 - да, 0 - нет)</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Номер ГТД и страна происхождения в УПД берутся из серии строки. 1 - если в строке нет серии, они берутся из карточки номенклатуры (для баз без учета по сериям). Данные карточки могут быть устаревшими: ее ГТД перезаписывают поступлениями.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="ГТДИзНоменклатурыПриПустойСерииКонтекстноеМеню" id="3016"/>
+									<ExtendedTooltip name="ГТДИзНоменклатурыПриПустойСерииРасширеннаяПодсказка" id="3017"/>
+								</CheckBoxField>
+								<InputField name="НерабочиеПрефиксыЭДО" id="3019">
+									<DataPath>НерабочиеПрефиксыЭДО</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Префиксы операторов, куда отправка не проходит</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Через запятую, например 2LT. Документы этим получателям синхронизация НЕ возвращает в очередь после отказа: причина внешняя и повтором не лечится.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<ContextMenu name="НерабочиеПрефиксыЭДОКонтекстноеМеню" id="3020"/>
+									<ExtendedTooltip name="НерабочиеПрефиксыЭДОРасширеннаяПодсказка" id="3021"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПараметрыВходящих" id="3023">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Входящие</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>WeakSeparation</Representation>
+							<ShowTitle>true</ShowTitle>
+							<ExtendedTooltip name="ГруппаПараметрыВходящихРасширеннаяПодсказка" id="3024"/>
+							<ChildItems>
+								<CheckBoxField name="АвтоматическоеПринятиеУПД" id="3025">
+									<DataPath>АвтоматическоеПринятиеУПД</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Автоматическое принятие входящих УПД (1 - да, 0 - нет)</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Входящие УПД от контрагентов с флагом ЭДО_АвтоматическоеПринятиеУПД принимаются регламентом без участия человека. Входящие УКД - только от контрагентов с флагом ЭДО_АвтоматическоеПринятиеУКД.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="АвтоматическоеПринятиеУПДКонтекстноеМеню" id="3026"/>
+									<ExtendedTooltip name="АвтоматическоеПринятиеУПДРасширеннаяПодсказка" id="3027"/>
+								</CheckBoxField>
+								<InputField name="ГлубинаДнейПринятияУПД" id="3029">
+									<DataPath>ГлубинаДнейПринятияУПД</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Окно принятия входящих УПД, дней</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>На сколько дней назад регламент ищет входящие УПД без ответа. Не больше 90.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="ГлубинаДнейПринятияУПДКонтекстноеМеню" id="3030"/>
+									<ExtendedTooltip name="ГлубинаДнейПринятияУПДРасширеннаяПодсказка" id="3031"/>
+								</InputField>
+								<CheckBoxField name="АвтопривязкаВходящих" id="3033">
+									<DataPath>АвтопривязкаВходящих</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Автопривязка входящих УПД к поступлениям (1 - да, 0 - нет)</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Регламент привязывает входящий УПД к поступлению, если оно одно с тем же номером входящего документа и сумма совпала в пределах допуска, и переносит в поступление коды маркировки из УПД.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="АвтопривязкаВходящихКонтекстноеМеню" id="3034"/>
+									<ExtendedTooltip name="АвтопривязкаВходящихРасширеннаяПодсказка" id="3035"/>
+								</CheckBoxField>
+								<InputField name="ГлубинаДнейАвтопривязки" id="3037">
+									<DataPath>ГлубинаДнейАвтопривязки</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Окно автопривязки входящих, дней</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>За сколько дней назад регламент автопривязки берет входящие УПД. Не больше 90.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="ГлубинаДнейАвтопривязкиКонтекстноеМеню" id="3038"/>
+									<ExtendedTooltip name="ГлубинаДнейАвтопривязкиРасширеннаяПодсказка" id="3039"/>
+								</InputField>
+								<CheckBoxField name="ОбщийЯщикВходящих" id="3041">
+									<DataPath>ОбщийЯщикВходящих</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Общий ящик входящих у всех организаций (Да/пусто)</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Да - у всех учетных записей базы один ящик оператора с одинаковой выдачей: список входящих скачивается один раз и раздается организациям по ИНН покупателя. Пусто - каждая учетная запись опрашивается отдельно.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="ОбщийЯщикВходящихКонтекстноеМеню" id="3042"/>
+									<ExtendedTooltip name="ОбщийЯщикВходящихРасширеннаяПодсказка" id="3043"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПараметрыСверки" id="3045">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сверка</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>WeakSeparation</Representation>
+							<ShowTitle>true</ShowTitle>
+							<ExtendedTooltip name="ГруппаПараметрыСверкиРасширеннаяПодсказка" id="3046"/>
+							<ChildItems>
+								<InputField name="ДопускСуммыУПД" id="3047">
+									<DataPath>ДопускСуммыУПД</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Допуск расхождения суммы УПД, руб.</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Допустимая разница между суммой в базе и суммой в УПД (с НДС и отдельно по НДС), рубли.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="ДопускСуммыУПДКонтекстноеМеню" id="3048"/>
+									<ExtendedTooltip name="ДопускСуммыУПДРасширеннаяПодсказка" id="3049"/>
+								</InputField>
+								<InputField name="ПоискПоступленияМесяцевНазад" id="3051">
+									<DataPath>ПоискПоступленияМесяцевНазад</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Поиск поступления, месяцев назад</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Нижняя граница окна поиска поступления относительно даты УПД.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="ПоискПоступленияМесяцевНазадКонтекстноеМеню" id="3052"/>
+									<ExtendedTooltip name="ПоискПоступленияМесяцевНазадРасширеннаяПодсказка" id="3053"/>
+								</InputField>
+								<InputField name="ПоискПоступленияМесяцевВперёд" id="3055">
+									<DataPath>ПоискПоступленияМесяцевВперёд</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Поиск поступления, месяцев вперёд</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Верхняя граница окна поиска поступления относительно даты УПД.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="ПоискПоступленияМесяцевВперёдКонтекстноеМеню" id="3056"/>
+									<ExtendedTooltip name="ПоискПоступленияМесяцевВперёдРасширеннаяПодсказка" id="3057"/>
+								</InputField>
+								<InputField name="ОкноСверкиРасхожденийДней" id="3059">
+									<DataPath>ОкноСверкиРасхожденийДней</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>За сколько дней сверять суммы отправленного</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сторож расхождений сверяет сумму отправки с текущей суммой документа за этот период.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="ОкноСверкиРасхожденийДнейКонтекстноеМеню" id="3060"/>
+									<ExtendedTooltip name="ОкноСверкиРасхожденийДнейРасширеннаяПодсказка" id="3061"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПараметрыПрочие" id="3063">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Прочее</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>WeakSeparation</Representation>
+							<ShowTitle>true</ShowTitle>
+							<ExtendedTooltip name="ГруппаПараметрыПрочиеРасширеннаяПодсказка" id="3064"/>
+							<ChildItems>
+								<InputField name="ДнейБезПодтвержденияПОА" id="3065">
+									<DataPath>ДнейБезПодтвержденияПОА</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Наш запрос на аннулирование без ответа, дней</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Центр управления показывает наши запросы на аннулирование, которые контрагент не подтвердил дольше этого срока.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="ДнейБезПодтвержденияПОАКонтекстноеМеню" id="3066"/>
+									<ExtendedTooltip name="ДнейБезПодтвержденияПОАРасширеннаяПодсказка" id="3067"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
 						<UsualGroup name="ГруппаУчетныеЗаписи" id="1200">
 							<Title>
 								<v8:item>
@@ -1675,6 +2002,210 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Дней страховки без пометки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтправлятьТолькоПослеГотовности" id="3006">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправлять только готовые документы (1 - да, 0 - по таймеру)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="АвтоотправкаТолькоРазрешенным" id="3010">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автоотправка только отмеченным контрагентам (1 - да, 0 - всем)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПроверятьКодыМаркировкиПередОтправкой" id="3014">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверять коды маркировки перед отправкой (1 - да, 0 - нет)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ГТДИзНоменклатурыПриПустойСерии" id="3018">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнять ГТД из номенклатуры при пустой серии (1 - да, 0 - нет)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НерабочиеПрефиксыЭДО" id="3022">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Префиксы операторов, куда отправка не проходит</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>500</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АвтоматическоеПринятиеУПД" id="3028">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автоматическое принятие входящих УПД (1 - да, 0 - нет)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ГлубинаДнейПринятияУПД" id="3032">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Окно принятия входящих УПД, дней</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АвтопривязкаВходящих" id="3036">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автопривязка входящих УПД к поступлениям (1 - да, 0 - нет)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ГлубинаДнейАвтопривязки" id="3040">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Окно автопривязки входящих, дней</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОбщийЯщикВходящих" id="3044">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общий ящик входящих у всех организаций (Да/пусто)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДопускСуммыУПД" id="3050">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Допуск расхождения суммы УПД, руб.</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоискПоступленияМесяцевНазад" id="3054">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поиск поступления, месяцев назад</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоискПоступленияМесяцевВперёд" id="3058">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поиск поступления, месяцев вперёд</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОкноСверкиРасхожденийДней" id="3062">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>За сколько дней сверять суммы отправленного</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДнейБезПодтвержденияПОА" id="3068">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наш запрос на аннулирование без ответа, дней</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
