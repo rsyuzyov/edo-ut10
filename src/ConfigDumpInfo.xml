@@ -73,16 +73,6 @@
 		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Template.Форматы.Template" id="3fe22be1-57c4-4e96-81bf-5a251dc45c43.0" configVersion="a157eb74bb8132c9013429b985f53f109e53e590"/>
 		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Template.ШаблонНастройки" id="defe6c69-1f56-4132-b518-e8e05b8c7262" configVersion="5e9c440469e6e670ef9bff7d355f79a3961586cb"/>
 		<Metadata name="DataProcessor.ЭДО_ПлатформаЭДО.Template.ШаблонНастройки.Template" id="defe6c69-1f56-4132-b518-e8e05b8c7262.0" configVersion="cb765248416c1416580d5dba6960a0578229638b"/>
-		<Metadata name="DataProcessor.ЭДО_Помощник" id="a51d5fd1-b231-52eb-9ea7-0eaa0de1a011" configVersion="788cec1179490628e1d6cdfdb3ac9b12b565fc04"/>
-		<Metadata name="DataProcessor.ЭДО_Помощник.Form.Форма" id="0533f7a1-f345-5a52-8a54-09a6a2a552e0" configVersion="beee58cb71bb9ebf77db1f96addfb886fba1e6b8"/>
-		<Metadata name="DataProcessor.ЭДО_Помощник.Form.Форма.Form" id="0533f7a1-f345-5a52-8a54-09a6a2a552e0.0" configVersion="9e99ebc5a05141f82716753102354cac192297cd"/>
-		<Metadata name="DataProcessor.ЭДО_Помощник.ObjectModule" id="a51d5fd1-b231-52eb-9ea7-0eaa0de1a011.0" configVersion="27f540cbe5099db2c3a630807917c8bfc15ca8c6"/>
-		<Metadata name="DataProcessor.ЭДО_Помощник.Template.НастройкаКонфигурация" id="a730e190-23bc-5ed0-9d9e-17a084d392d4" configVersion="3dd6ffb51a1987f6a5631217ceaf995f520dc8e0"/>
-		<Metadata name="DataProcessor.ЭДО_Помощник.Template.НастройкаКонфигурация.Template" id="a730e190-23bc-5ed0-9d9e-17a084d392d4.0" configVersion="6eb5c09c60fa83149f49cca6770d0e5e2b69be71"/>
-		<Metadata name="DataProcessor.ЭДО_Помощник.Template.НастройкаРеализация" id="f53e76fc-e275-56d4-9d9c-3dfa0819a03e" configVersion="301f053221d28229c07c436a3a5557cd7a651b4c"/>
-		<Metadata name="DataProcessor.ЭДО_Помощник.Template.НастройкаРеализация.Template" id="f53e76fc-e275-56d4-9d9c-3dfa0819a03e.0" configVersion="1507864fa6066ff40e7a5c77f49ca1e603e1c01a"/>
-		<Metadata name="DataProcessor.ЭДО_Помощник.Template.СхемаУПД" id="8f3b2d5f-a0e4-5edb-9280-20d72f29d359" configVersion="7be94232a7d8ec40318ca8e67e45837590c58b23"/>
-		<Metadata name="DataProcessor.ЭДО_Помощник.Template.СхемаУПД.Template" id="8f3b2d5f-a0e4-5edb-9280-20d72f29d359.0" configVersion="f9d41a177526adaf39b98584a14ac38a10b9fab1"/>
 		<Metadata name="Language.Русский" id="d3f0eb59-aaa5-5c4c-9e95-5a11efa86c8d" configVersion="2e03cdc55289ed71e00065875cf28678ddded935"/>
 	</ConfigVersions>
 </ConfigDumpInfo>
