@@ -31,6 +31,11 @@
 			<Form>Форма</Form>
 			<Form>ВыборАдресовПриглашения</Form>
 			<Form>ОтправкаФайлов</Form>
+			<Template>НастройкаКонфигурация</Template>
+			<Template>НастройкаРеализация</Template>
+			<Template>НастройкаКорректировка</Template>
+			<Template>СхемаУПД</Template>
+			<Template>СхемаУКД</Template>
 		</ChildObjects>
 	</DataProcessor>
 </MetaDataObject>
