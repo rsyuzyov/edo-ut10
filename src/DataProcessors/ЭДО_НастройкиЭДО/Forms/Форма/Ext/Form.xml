@@ -119,6 +119,7 @@
 										</v8:item>
 									</ToolTip>
 									<SpinButton>true</SpinButton>
+									<MinValue xsi:type="xs:decimal">1</MinValue>
 									<ContextMenu name="ЛимитДокументовЗаПрогонКонтекстноеМеню" id="1020"/>
 									<ExtendedTooltip name="ЛимитДокументовЗаПрогонРасширеннаяПодсказка" id="1021"/>
 								</InputField>
@@ -137,6 +138,7 @@
 										</v8:item>
 									</ToolTip>
 									<SpinButton>true</SpinButton>
+									<MinValue xsi:type="xs:decimal">1</MinValue>
 									<ContextMenu name="ГлубинаДнейОтправкиКонтекстноеМеню" id="1017"/>
 									<ExtendedTooltip name="ГлубинаДнейОтправкиРасширеннаяПодсказка" id="1018"/>
 								</InputField>
@@ -203,6 +205,7 @@
 										</v8:item>
 									</ToolTip>
 									<SpinButton>true</SpinButton>
+									<MinValue xsi:type="xs:decimal">1</MinValue>
 									<ContextMenu name="ГлубинаДнейСинхронизацииСтатусовКонтекстноеМеню" id="1042"/>
 									<ExtendedTooltip name="ГлубинаДнейСинхронизацииСтатусовРасширеннаяПодсказка" id="1043"/>
 								</InputField>
@@ -221,6 +224,7 @@
 										</v8:item>
 									</ToolTip>
 									<SpinButton>true</SpinButton>
+									<MinValue xsi:type="xs:decimal">1</MinValue>
 									<ContextMenu name="ТаймаутHTTPСекКонтекстноеМеню" id="1045"/>
 									<ExtendedTooltip name="ТаймаутHTTPСекРасширеннаяПодсказка" id="1046"/>
 								</InputField>
@@ -430,6 +434,7 @@
 										</v8:item>
 									</ToolTip>
 									<SpinButton>true</SpinButton>
+									<MinValue xsi:type="xs:decimal">1</MinValue>
 									<ContextMenu name="ГлубинаДнейПринятияУПДКонтекстноеМеню" id="3030"/>
 									<ExtendedTooltip name="ГлубинаДнейПринятияУПДРасширеннаяПодсказка" id="3031"/>
 								</InputField>
@@ -466,6 +471,7 @@
 										</v8:item>
 									</ToolTip>
 									<SpinButton>true</SpinButton>
+									<MinValue xsi:type="xs:decimal">1</MinValue>
 									<ContextMenu name="ГлубинаДнейАвтопривязкиКонтекстноеМеню" id="3038"/>
 									<ExtendedTooltip name="ГлубинаДнейАвтопривязкиРасширеннаяПодсказка" id="3039"/>
 								</InputField>
@@ -534,6 +540,7 @@
 										</v8:item>
 									</ToolTip>
 									<SpinButton>true</SpinButton>
+									<MinValue xsi:type="xs:decimal">1</MinValue>
 									<ContextMenu name="ПоискПоступленияМесяцевНазадКонтекстноеМеню" id="3052"/>
 									<ExtendedTooltip name="ПоискПоступленияМесяцевНазадРасширеннаяПодсказка" id="3053"/>
 								</InputField>
@@ -552,6 +559,7 @@
 										</v8:item>
 									</ToolTip>
 									<SpinButton>true</SpinButton>
+									<MinValue xsi:type="xs:decimal">1</MinValue>
 									<ContextMenu name="ПоискПоступленияМесяцевВперёдКонтекстноеМеню" id="3056"/>
 									<ExtendedTooltip name="ПоискПоступленияМесяцевВперёдРасширеннаяПодсказка" id="3057"/>
 								</InputField>
@@ -570,6 +578,7 @@
 										</v8:item>
 									</ToolTip>
 									<SpinButton>true</SpinButton>
+									<MinValue xsi:type="xs:decimal">1</MinValue>
 									<ContextMenu name="ОкноСверкиРасхожденийДнейКонтекстноеМеню" id="3060"/>
 									<ExtendedTooltip name="ОкноСверкиРасхожденийДнейРасширеннаяПодсказка" id="3061"/>
 								</InputField>
@@ -1651,6 +1660,17 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Можно менять</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="МожноМенятьОбщиеНастройки" id="3069">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Можно менять общие настройки</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
