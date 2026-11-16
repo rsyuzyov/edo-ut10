@@ -119,6 +119,7 @@
 										</v8:item>
 									</ToolTip>
 									<SpinButton>true</SpinButton>
+									<MinValue xsi:type="xs:decimal">1</MinValue>
 									<ContextMenu name="ЛимитДокументовЗаПрогонКонтекстноеМеню" id="1020"/>
 									<ExtendedTooltip name="ЛимитДокументовЗаПрогонРасширеннаяПодсказка" id="1021"/>
 								</InputField>
@@ -137,6 +138,7 @@
 										</v8:item>
 									</ToolTip>
 									<SpinButton>true</SpinButton>
+									<MinValue xsi:type="xs:decimal">1</MinValue>
 									<ContextMenu name="ГлубинаДнейОтправкиКонтекстноеМеню" id="1017"/>
 									<ExtendedTooltip name="ГлубинаДнейОтправкиРасширеннаяПодсказка" id="1018"/>
 								</InputField>
@@ -203,6 +205,7 @@
 										</v8:item>
 									</ToolTip>
 									<SpinButton>true</SpinButton>
+									<MinValue xsi:type="xs:decimal">1</MinValue>
 									<ContextMenu name="ГлубинаДнейСинхронизацииСтатусовКонтекстноеМеню" id="1042"/>
 									<ExtendedTooltip name="ГлубинаДнейСинхронизацииСтатусовРасширеннаяПодсказка" id="1043"/>
 								</InputField>
@@ -221,6 +224,7 @@
 										</v8:item>
 									</ToolTip>
 									<SpinButton>true</SpinButton>
+									<MinValue xsi:type="xs:decimal">1</MinValue>
 									<ContextMenu name="ТаймаутHTTPСекКонтекстноеМеню" id="1045"/>
 									<ExtendedTooltip name="ТаймаутHTTPСекРасширеннаяПодсказка" id="1046"/>
 								</InputField>
@@ -430,6 +434,7 @@
 										</v8:item>
 									</ToolTip>
 									<SpinButton>true</SpinButton>
+									<MinValue xsi:type="xs:decimal">1</MinValue>
 									<ContextMenu name="ГлубинаДнейПринятияУПДКонтекстноеМеню" id="3030"/>
 									<ExtendedTooltip name="ГлубинаДнейПринятияУПДРасширеннаяПодсказка" id="3031"/>
 								</InputField>
@@ -466,6 +471,7 @@
 										</v8:item>
 									</ToolTip>
 									<SpinButton>true</SpinButton>
+									<MinValue xsi:type="xs:decimal">1</MinValue>
 									<ContextMenu name="ГлубинаДнейАвтопривязкиКонтекстноеМеню" id="3038"/>
 									<ExtendedTooltip name="ГлубинаДнейАвтопривязкиРасширеннаяПодсказка" id="3039"/>
 								</InputField>
@@ -534,6 +540,7 @@
 										</v8:item>
 									</ToolTip>
 									<SpinButton>true</SpinButton>
+									<MinValue xsi:type="xs:decimal">1</MinValue>
 									<ContextMenu name="ПоискПоступленияМесяцевНазадКонтекстноеМеню" id="3052"/>
 									<ExtendedTooltip name="ПоискПоступленияМесяцевНазадРасширеннаяПодсказка" id="3053"/>
 								</InputField>
@@ -552,6 +559,7 @@
 										</v8:item>
 									</ToolTip>
 									<SpinButton>true</SpinButton>
+									<MinValue xsi:type="xs:decimal">1</MinValue>
 									<ContextMenu name="ПоискПоступленияМесяцевВперёдКонтекстноеМеню" id="3056"/>
 									<ExtendedTooltip name="ПоискПоступленияМесяцевВперёдРасширеннаяПодсказка" id="3057"/>
 								</InputField>
@@ -570,6 +578,7 @@
 										</v8:item>
 									</ToolTip>
 									<SpinButton>true</SpinButton>
+									<MinValue xsi:type="xs:decimal">1</MinValue>
 									<ContextMenu name="ОкноСверкиРасхожденийДнейКонтекстноеМеню" id="3060"/>
 									<ExtendedTooltip name="ОкноСверкиРасхожденийДнейРасширеннаяПодсказка" id="3061"/>
 								</InputField>
@@ -824,7 +833,7 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Входящие из СБИС</v8:content>
+									<v8:content>Входящие из СБИС и Диадока</v8:content>
 								</v8:item>
 							</Title>
 							<Group>Vertical</Group>
@@ -833,11 +842,31 @@
 							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Ящики, из которых «Входящие» Центра ЭДО забирают УПД и УКД кроме Платформы ЭДО. Вход по логину и паролю пользователя СБИС, у которого есть доступ к документам организации.</v8:content>
+									<v8:content>Ящики, из которых «Входящие» Центра ЭДО забирают УПД и УКД кроме Платформы ЭДО. Вход по логину и паролю пользователя СБИС или Диадока, у которого есть доступ к документам организации. Для Диадока нужен еще ключ разработчика API. Пароль хранится в базе в открытом виде: используйте отдельного пользователя оператора только с правом чтения входящих.</v8:content>
 								</v8:item>
 							</ToolTip>
 							<ExtendedTooltip name="ГруппаЯщикиОператоровРасширеннаяПодсказка" id="1932"/>
 							<ChildItems>
+								<InputField name="КлючРазработчикаДиадок" id="3069">
+									<DataPath>КлючРазработчикаДиадок</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ключ разработчика API Диадока</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ключ клиента API Контур.Диадок (ddauth_api_client_id), выдает Контур. Нужен для входящих из ящиков Диадока; логин и пароль пользователя Диадока задаются в таблице ящиков.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<PasswordMode>true</PasswordMode>
+									<ContextMenu name="КлючРазработчикаДиадокКонтекстноеМеню" id="3070"/>
+									<ExtendedTooltip name="КлючРазработчикаДиадокРасширеннаяПодсказка" id="3071"/>
+								</InputField>
 								<Table name="ЯщикиОператоров" id="1933">
 									<Height>4</Height>
 									<DataPath>ЯщикиОператоров</DataPath>
@@ -902,6 +931,19 @@
 														<Value xsi:type="xs:string">sbis</Value>
 													</xr:Value>
 												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Диадок</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">diadoc</Value>
+													</xr:Value>
+												</xr:Item>
 											</ChoiceList>
 											<ContextMenu name="ЯщикиОператоровОператорКонтекстноеМеню" id="1946"/>
 											<ExtendedTooltip name="ЯщикиОператоровОператорРасширеннаяПодсказка" id="1947"/>
@@ -929,7 +971,7 @@
 											<ToolTip>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Заполняется только при смене пароля: записанный пароль форма не показывает.</v8:content>
+													<v8:content>Заполняется только при смене пароля: записанный пароль форма не показывает. Пароль хранится в базе в открытом виде: используйте отдельного пользователя оператора только с правом чтения входящих.</v8:content>
 												</v8:item>
 											</ToolTip>
 											<Width>15</Width>
@@ -1657,6 +1699,17 @@
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
+		<Attribute name="МожноМенятьОбщиеНастройки" id="3069">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Можно менять общие настройки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
 		<Attribute name="ГлубинаДнейОтправки" id="1052">
 			<Title>
 				<v8:item>
@@ -2055,6 +2108,21 @@
 			</Title>
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КлючРазработчикаДиадок" id="3072">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ключ разработчика API Диадока</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>200</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
 		<Attribute name="НерабочиеПрефиксыЭДО" id="3022">
