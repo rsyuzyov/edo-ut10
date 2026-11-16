@@ -863,6 +863,7 @@
 									</ToolTip>
 									<AutoMaxWidth>false</AutoMaxWidth>
 									<HorizontalStretch>true</HorizontalStretch>
+									<PasswordMode>true</PasswordMode>
 									<ContextMenu name="КлючРазработчикаДиадокКонтекстноеМеню" id="3070"/>
 									<ExtendedTooltip name="КлючРазработчикаДиадокРасширеннаяПодсказка" id="3071"/>
 								</InputField>
