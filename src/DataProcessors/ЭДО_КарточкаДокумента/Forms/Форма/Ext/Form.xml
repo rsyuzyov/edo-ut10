@@ -736,6 +736,19 @@
 											<ContextMenu name="ДокументыКонтрагентаСтатусКонтекстноеМеню" id="237"/>
 											<ExtendedTooltip name="ДокументыКонтрагентаСтатусРасширеннаяПодсказка" id="238"/>
 										</InputField>
+										<InputField name="ДокументыКонтрагентаПричина" id="321">
+											<DataPath>ДокументыКонтрагента.Причина</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Причина</v8:content>
+												</v8:item>
+											</Title>
+											<Width>40</Width>
+											<ContextMenu name="ДокументыКонтрагентаПричинаКонтекстноеМеню" id="322"/>
+											<ExtendedTooltip name="ДокументыКонтрагентаПричинаРасширеннаяПодсказка" id="323"/>
+										</InputField>
 										<InputField name="ДокументыКонтрагентаАдрес" id="239">
 											<DataPath>ДокументыКонтрагента.Адрес</DataPath>
 											<ReadOnly>true</ReadOnly>
@@ -1399,6 +1412,15 @@
 						<v8:Type>xs:string</v8:Type>
 						<v8:StringQualifiers>
 							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Причина" id="320">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>200</v8:Length>
 							<v8:AllowedLength>Variable</v8:AllowedLength>
 						</v8:StringQualifiers>
 					</Type>
