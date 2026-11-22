@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<Catalog uuid="5c85c520-4324-486d-a8b4-6b5443bd59c2">
+		<InternalInfo>
+			<xr:GeneratedType name="CatalogObject.Номенклатура" category="Object">
+				<xr:TypeId>8b9fafac-3e66-45c6-aff3-4d5818b1fa8b</xr:TypeId>
+				<xr:ValueId>abc04503-6ebe-42df-8496-78d728528945</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogRef.Номенклатура" category="Ref">
+				<xr:TypeId>d6932d3d-5b3b-44d8-a79a-c58554287c25</xr:TypeId>
+				<xr:ValueId>ee46ef7d-3dfd-40ca-b4a5-1b594c2065a7</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogSelection.Номенклатура" category="Selection">
+				<xr:TypeId>cb5b8266-71f2-421d-ba9c-e96f6cd75b0d</xr:TypeId>
+				<xr:ValueId>a5bb7ad2-e6ab-4834-9d0b-469d5c4aef58</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogList.Номенклатура" category="List">
+				<xr:TypeId>eac01e40-18e8-4938-a671-ca235209508d</xr:TypeId>
+				<xr:ValueId>e58314a8-cfcc-4de5-a9e4-0d44e7d875bf</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogManager.Номенклатура" category="Manager">
+				<xr:TypeId>ff61919a-5596-434c-bb1c-10e19d638b81</xr:TypeId>
+				<xr:ValueId>68643301-b1ca-44fb-9a41-27033e728892</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogTabularSection.Номенклатура.Изображения" category="TabularSection">
+				<xr:TypeId>13cf1435-3dac-41c0-8f2f-760eeae8cbeb</xr:TypeId>
+				<xr:ValueId>f9fa30ed-550e-4b33-ba5b-a372a2c99bf3</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogTabularSectionRow.Номенклатура.Изображения" category="TabularSectionRow">
+				<xr:TypeId>0995f85a-89da-4ad0-9716-9769bc815a7e</xr:TypeId>
+				<xr:ValueId>0298c958-5043-48ed-aa22-c03743f2aae5</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<Name>Номенклатура</Name>
+			<Comment/>
+			<ExtendedConfigurationObject>22d218e8-ed66-4c7c-9e9f-3a9e5c99ab15</ExtendedConfigurationObject>
+		</Properties>
+		<ChildObjects/>
+	</Catalog>
+</MetaDataObject>

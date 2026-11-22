@@ -50,7 +50,7 @@
 			</UsePurposes>
 			<ScriptVariant>Russian</ScriptVariant>
 			<Vendor>ontab</Vendor>
-<Version>1.7.19.2</Version>
+<Version>1.7.20.0</Version>
 			<DefaultLanguage>Language.Русский</DefaultLanguage>
 			<BriefInformation>
 				<v8:item>
@@ -86,8 +86,12 @@
 		<CommonModule>ЭлектронныеДокументыСлужебныйВызовСервера</CommonModule>
 		<CommonModule>МодульРегламентныхЗаданий</CommonModule>
 			<CommonCommand>ЭДО_ОтправитьПоЭДО</CommonCommand>
+			<Catalog>ВидыНоменклатуры</Catalog>
+			<Catalog>КлассификаторЕдиницИзмерения</Catalog>
 			<Catalog>Контрагенты</Catalog>
+			<Catalog>Номенклатура</Catalog>
 			<Catalog>Организации</Catalog>
+			<Catalog>ХарактеристикиНоменклатуры</Catalog>
 			<Document>АктСверкиВзаиморасчетов</Document>
 			<DataProcessor>ЭДО_ПлатформаЭДО</DataProcessor>
 			<DataProcessor>ЭДО_КарточкаДокумента</DataProcessor>

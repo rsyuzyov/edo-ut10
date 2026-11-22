@@ -30,6 +30,7 @@
 		<ChildObjects>
 			<Form>Форма</Form>
 			<Form>ВыборАдресовПриглашения</Form>
+			<Form>СопоставлениеНоменклатуры</Form>
 			<Form>ОтправкаФайлов</Form>
 			<Template>НастройкаКонфигурация</Template>
 			<Template>НастройкаРеализация</Template>

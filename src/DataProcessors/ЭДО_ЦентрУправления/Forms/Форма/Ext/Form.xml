@@ -1107,6 +1107,11 @@
 										<CommandName>Form.Command.СоздатьПоступленияПоВходящим</CommandName>
 										<ExtendedTooltip name="КнопкаВхСоздатьПоступленияРасширеннаяПодсказка" id="831"/>
 									</Button>
+									<Button name="КнопкаВхСопоставитьНоменклатуру" id="954">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.СопоставитьНоменклатуру</CommandName>
+										<ExtendedTooltip name="КнопкаВхСопоставитьНоменклатуруРасширеннаяПодсказка" id="955"/>
+									</Button>
 									<Button name="КнопкаВхПривязатьКПоступлению" id="927">
 										<Type>CommandBarButton</Type>
 										<CommandName>Form.Command.ПривязатьКПоступлению</CommandName>
@@ -3309,6 +3314,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СоздатьПоступленияПоВходящимВыполнить</Action>
+		</Command>
+		<Command name="СопоставитьНоменклатуру" id="956">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сопоставить номенклатуру</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть строки входящего и сопоставить номенклатуру поставщика с номенклатурой 1С. Соответствия пишутся в регистр «Номенклатура контрагентов».</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СопоставитьНоменклатуруВыполнить</Action>
 		</Command>
 		<Command name="ПривязатьКПоступлению" id="929">
 			<Title>
