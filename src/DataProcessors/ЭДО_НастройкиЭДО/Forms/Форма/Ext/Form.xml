@@ -96,7 +96,7 @@
 							<Group>Vertical</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
-							<VerticalScrollOnReduceSize>true</VerticalScrollOnReduceSize>
+							<ScrollOnCompress>true</ScrollOnCompress>
 							<Height>5</Height>
 							<VerticalStretch>true</VerticalStretch>
 							<ExtendedTooltip name="ПанельПрокруткиОбщихНастроекРасширеннаяПодсказка" id="3081"/>
@@ -1135,7 +1135,7 @@
 							<Group>Vertical</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
-							<VerticalScrollOnReduceSize>true</VerticalScrollOnReduceSize>
+							<ScrollOnCompress>true</ScrollOnCompress>
 							<Height>5</Height>
 							<VerticalStretch>true</VerticalStretch>
 							<ExtendedTooltip name="ПанельПрокруткиКонтрагентовРасширеннаяПодсказка" id="3083"/>
