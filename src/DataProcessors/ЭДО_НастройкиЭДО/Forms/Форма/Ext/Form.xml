@@ -867,6 +867,25 @@
 									<ContextMenu name="КлючРазработчикаДиадокКонтекстноеМеню" id="3070"/>
 									<ExtendedTooltip name="КлючРазработчикаДиадокРасширеннаяПодсказка" id="3071"/>
 								</InputField>
+								<InputField name="КаталогСпулаДиадокВеб" id="3073">
+									<DataPath>КаталогСпулаДиадокВеб</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Папка веб-выгрузки Диадока</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Папка на сервере 1С, куда внешний скрипт складывает документы из веб-кабинета Диадока. Из нее Центр читает входящие оператора «Диадок (веб)».</v8:content>
+										</v8:item>
+									</ToolTip>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<ContextMenu name="КаталогСпулаДиадокВебКонтекстноеМеню" id="3074"/>
+									<ExtendedTooltip name="КаталогСпулаДиадокВебРасширеннаяПодсказка" id="3075"/>
+								</InputField>
 								<Table name="ЯщикиОператоров" id="1933">
 									<Height>4</Height>
 									<DataPath>ЯщикиОператоров</DataPath>
@@ -2134,6 +2153,21 @@
 				<v8:Type>xs:string</v8:Type>
 				<v8:StringQualifiers>
 					<v8:Length>200</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КаталогСпулаДиадокВеб" id="3076">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Папка веб-выгрузки Диадока</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
 			</Type>
