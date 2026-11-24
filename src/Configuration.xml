@@ -50,7 +50,7 @@
 			</UsePurposes>
 			<ScriptVariant>Russian</ScriptVariant>
 			<Vendor>ontab</Vendor>
-<Version>1.7.20.5</Version>
+<Version>1.7.20.9</Version>
 			<DefaultLanguage>Language.Русский</DefaultLanguage>
 			<BriefInformation>
 				<v8:item>
@@ -79,6 +79,7 @@
 			<CommonModule>ЭДО_ОператорСБИС</CommonModule>
 			<CommonModule>ЭДО_ОператорДиадок</CommonModule>
 			<CommonModule>ЭДО_ОператорДиадокВеб</CommonModule>
+			<CommonModule>ЭДО_ДиадокВебКлиент</CommonModule>
 			<CommonModule>ЭДО_КлючОрганизации</CommonModule>
 		<CommonModule>ЭлектронныеДокументыКлиент</CommonModule>
 		<CommonModule>ОбменСГИСЭПДКлиентПереопределяемый</CommonModule>

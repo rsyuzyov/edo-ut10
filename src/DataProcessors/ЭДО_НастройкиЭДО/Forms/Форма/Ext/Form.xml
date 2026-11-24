@@ -1544,6 +1544,39 @@
 							<ShowTitle>true</ShowTitle>
 							<ExtendedTooltip name="ГруппаЯщикиДиадокВебРасширеннаяПодсказка" id="4565"/>
 							<ChildItems>
+								<InputField name="ЛогинКабинетаДиадок" id="4600">
+									<DataPath>ЛогинКабинетаДиадок</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Логин кабинета Диадока</v8:content>
+										</v8:item>
+									</Title>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<ContextMenu name="ЛогинКабинетаДиадокКонтекстноеМеню" id="4601"/>
+									<ExtendedTooltip name="ЛогинКабинетаДиадокРасширеннаяПодсказка" id="4602"/>
+								</InputField>
+								<InputField name="ПарольКабинетаДиадок" id="4603">
+									<DataPath>ПарольКабинетаДиадок</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Пароль кабинета Диадока</v8:content>
+										</v8:item>
+									</Title>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<PasswordMode>true</PasswordMode>
+									<ContextMenu name="ПарольКабинетаДиадокКонтекстноеМеню" id="4604"/>
+									<ExtendedTooltip name="ПарольКабинетаДиадокРасширеннаяПодсказка" id="4605"/>
+								</InputField>
+								<Button name="ПроверитьВходВКабинет" id="4606">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПроверитьВходВКабинет</CommandName>
+									<ExtendedTooltip name="ПроверитьВходВКабинетРасширеннаяПодсказка" id="4607"/>
+								</Button>
+
 <InputField name="КаталогСпулаДиадокВеб" id="4566">
 									<DataPath>КаталогСпулаДиадокВеб</DataPath>
 									<Title>
@@ -3152,6 +3185,37 @@
 				</Column>
 			</Columns>
 		</Attribute>
+
+		<Attribute name="ЛогинКабинетаДиадок" id="4608">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Логин кабинета Диадока</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПарольКабинетаДиадок" id="4609">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пароль кабинета Диадока</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>200</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 </Attributes>
 	<Commands>
 		<Command name="Записать" id="122">
@@ -3348,6 +3412,22 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПроверитьЯщикДиадокВеб</Action>
+		</Command>
+
+		<Command name="ПроверитьВходВКабинет" id="4610">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить вход в кабинет</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вход в веб-кабинет Диадока записанными логином и паролем. Если кабинет потребует код, 1С спросит его.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверитьВходВКабинет</Action>
 		</Command>
 </Commands>
 </Form>
