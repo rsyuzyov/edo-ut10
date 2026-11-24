@@ -92,6 +92,15 @@
 								</Button>
 							</ChildItems>
 						</CommandBar>
+						<UsualGroup name="ПанельПрокруткиОбщихНастроек" id="3080">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<VerticalScrollOnReduceSize>true</VerticalScrollOnReduceSize>
+							<Height>5</Height>
+							<VerticalStretch>true</VerticalStretch>
+							<ExtendedTooltip name="ПанельПрокруткиОбщихНастроекРасширеннаяПодсказка" id="3081"/>
+							<ChildItems>
 						<UsualGroup name="ГруппаОбщиеПараметры" id="1011">
 							<Title>
 								<v8:item>
@@ -1083,6 +1092,8 @@
 							<ContextMenu name="СостояниеГотовностиКонтекстноеМеню" id="1048"/>
 							<ExtendedTooltip name="СостояниеГотовностиРасширеннаяПодсказка" id="1049"/>
 						</InputField>
+							</ChildItems>
+						</UsualGroup>
 					</ChildItems>
 				</Page>
 				<Page name="СтраницаНастройкиКонтрагентов" id="2107">
@@ -1120,6 +1131,15 @@
 								</Button>
 							</ChildItems>
 						</CommandBar>
+						<UsualGroup name="ПанельПрокруткиКонтрагентов" id="3082">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<VerticalScrollOnReduceSize>true</VerticalScrollOnReduceSize>
+							<Height>5</Height>
+							<VerticalStretch>true</VerticalStretch>
+							<ExtendedTooltip name="ПанельПрокруткиКонтрагентовРасширеннаяПодсказка" id="3083"/>
+							<ChildItems>
 						<LabelDecoration name="НадписьТолькоПросмотр" id="11">
 							<Visible>false</Visible>
 							<TextColor>style:SpecialTextColor</TextColor>
@@ -1518,6 +1538,8 @@
 										</InputField>
 									</ChildItems>
 								</Table>
+							</ChildItems>
+						</UsualGroup>
 							</ChildItems>
 						</UsualGroup>
 					</ChildItems>
