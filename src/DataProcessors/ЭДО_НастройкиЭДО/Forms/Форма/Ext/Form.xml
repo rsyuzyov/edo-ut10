@@ -27,81 +27,47 @@
 			<PagesRepresentation>TabsOnTop</PagesRepresentation>
 			<ExtendedTooltip name="ГруппаЗакладкиРасширеннаяПодсказка" id="2102"/>
 			<ChildItems>
-				<Page name="СтраницаОбщиеНастройки" id="2103">
+								<Page name="СтраницаОтправка" id="4107">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Общие настройки</v8:content>
+							<v8:content>Отправка</v8:content>
 						</v8:item>
 					</Title>
 					<Group>Vertical</Group>
-					<ExtendedTooltip name="СтраницаОбщиеНастройкиРасширеннаяПодсказка" id="2104"/>
+					<ExtendedTooltip name="СтраницаОтправкаРасширеннаяПодсказка" id="4108"/>
 					<ChildItems>
-						<CommandBar name="КоманднаяПанельОбщихНастроек" id="2105">
-							<ExtendedTooltip name="КоманднаяПанельОбщихНастроекРасширеннаяПодсказка" id="2106"/>
+<CommandBar name="ОтправкаКоманднаяПанельОбщихНастроек" id="4109">
+							<ExtendedTooltip name="ОтправкаКоманднаяПанельОбщихНастроекРасширеннаяПодсказка" id="4110"/>
 							<ChildItems>
-								<Button name="ЗаписатьИЗакрыть" id="1901">
+<Button name="ОтправкаЗаписатьИЗакрыть" id="4111">
 									<Type>CommandBarButton</Type>
 									<CommandName>Form.Command.ЗаписатьИЗакрыть</CommandName>
-									<ExtendedTooltip name="ЗаписатьИЗакрытьРасширеннаяПодсказка" id="1902"/>
+									<ExtendedTooltip name="ОтправкаЗаписатьИЗакрытьРасширеннаяПодсказка" id="4112"/>
 								</Button>
-								<Button name="КнопкаЗаписатьНастройки" id="1001">
+<Button name="ОтправкаКнопкаЗаписатьНастройки" id="4113">
 									<Type>CommandBarButton</Type>
 									<CommandName>Form.Command.ЗаписатьНастройки</CommandName>
-									<ExtendedTooltip name="КнопкаЗаписатьНастройкиРасширеннаяПодсказка" id="1002"/>
+									<ExtendedTooltip name="ОтправкаКнопкаЗаписатьНастройкиРасширеннаяПодсказка" id="4114"/>
 								</Button>
-								<Button name="ПроверитьГотовность" id="1003">
-									<Type>CommandBarButton</Type>
-									<CommandName>Form.Command.ПроверитьГотовность</CommandName>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Проверить</v8:content>
-										</v8:item>
-									</Title>
-									<ExtendedTooltip name="ПроверитьГотовностьРасширеннаяПодсказка" id="1004"/>
-								</Button>
-								<Button name="ЗавестиСвойства" id="1005">
-									<Type>CommandBarButton</Type>
-									<CommandName>Form.Command.ЗавестиСвойства</CommandName>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Завести свойства объектов</v8:content>
-										</v8:item>
-									</Title>
-									<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
-									<ExtendedTooltip name="ЗавестиСвойстваРасширеннаяПодсказка" id="1006"/>
-								</Button>
-								<Button name="ПеренестиВОбщие" id="1007">
-									<Type>CommandBarButton</Type>
-									<CommandName>Form.Command.ПеренестиВОбщие</CommandName>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Перенести настройки в общие</v8:content>
-										</v8:item>
-									</Title>
-									<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
-									<ExtendedTooltip name="ПеренестиВОбщиеРасширеннаяПодсказка" id="1008"/>
-								</Button>
-								<Button name="СброситьНастройкиПоУмолчанию" id="1926">
+<Button name="ОтправкаСброситьНастройкиПоУмолчанию" id="4115">
 									<Type>CommandBarButton</Type>
 									<CommandName>Form.Command.СброситьНастройкиПоУмолчанию</CommandName>
-									<ExtendedTooltip name="СброситьНастройкиПоУмолчаниюРасширеннаяПодсказка" id="1927"/>
+									<ExtendedTooltip name="ОтправкаСброситьНастройкиПоУмолчаниюРасширеннаяПодсказка" id="4116"/>
 								</Button>
-							</ChildItems>
+</ChildItems>
 						</CommandBar>
-						<UsualGroup name="ПанельПрокруткиОбщихНастроек" id="3080">
-							<Group>Vertical</Group>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ScrollOnCompress>true</ScrollOnCompress>
-							<Height>5</Height>
-							<VerticalStretch>true</VerticalStretch>
-							<ExtendedTooltip name="ПанельПрокруткиОбщихНастроекРасширеннаяПодсказка" id="3081"/>
-							<ChildItems>
-						<UsualGroup name="ГруппаОбщиеПараметры" id="1011">
+<UsualGroup name="ПанельПрокруткиОтправка" id="4117">
+						<Height>5</Height>
+						<VerticalStretch>true</VerticalStretch>
+						<Group>Vertical</Group>
+						<Behavior>Auto</Behavior>
+						<Representation>None</Representation>
+						<ShowTitle>false</ShowTitle>
+						<ScrollOnCompress>true</ScrollOnCompress>
+						<ExtendedTooltip name="ПанельПрокруткиОтправкаРасширеннаяПодсказка" id="4118"/>
+						<ChildItems>
+<UsualGroup name="ГруппаОбщиеПараметры" id="4119">
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -111,9 +77,9 @@
 							<Group>Vertical</Group>
 							<Representation>WeakSeparation</Representation>
 							<ShowTitle>true</ShowTitle>
-							<ExtendedTooltip name="ГруппаОбщиеПараметрыРасширеннаяПодсказка" id="1012"/>
+							<ExtendedTooltip name="ГруппаОбщиеПараметрыРасширеннаяПодсказка" id="4120"/>
 							<ChildItems>
-								<InputField name="ЛимитДокументовЗаПрогон" id="1019">
+								<InputField name="ЛимитДокументовЗаПрогон" id="4121">
 									<DataPath>ЛимитДокументовЗаПрогон</DataPath>
 									<Title>
 										<v8:item>
@@ -129,10 +95,10 @@
 									</ToolTip>
 									<SpinButton>true</SpinButton>
 									<MinValue xsi:type="xs:decimal">1</MinValue>
-									<ContextMenu name="ЛимитДокументовЗаПрогонКонтекстноеМеню" id="1020"/>
-									<ExtendedTooltip name="ЛимитДокументовЗаПрогонРасширеннаяПодсказка" id="1021"/>
+									<ContextMenu name="ЛимитДокументовЗаПрогонКонтекстноеМеню" id="4122"/>
+									<ExtendedTooltip name="ЛимитДокументовЗаПрогонРасширеннаяПодсказка" id="4123"/>
 								</InputField>
-								<InputField name="ГлубинаДнейОтправки" id="1016">
+								<InputField name="ГлубинаДнейОтправки" id="4124">
 									<DataPath>ГлубинаДнейОтправки</DataPath>
 									<Title>
 										<v8:item>
@@ -148,10 +114,10 @@
 									</ToolTip>
 									<SpinButton>true</SpinButton>
 									<MinValue xsi:type="xs:decimal">1</MinValue>
-									<ContextMenu name="ГлубинаДнейОтправкиКонтекстноеМеню" id="1017"/>
-									<ExtendedTooltip name="ГлубинаДнейОтправкиРасширеннаяПодсказка" id="1018"/>
+									<ContextMenu name="ГлубинаДнейОтправкиКонтекстноеМеню" id="4125"/>
+									<ExtendedTooltip name="ГлубинаДнейОтправкиРасширеннаяПодсказка" id="4126"/>
 								</InputField>
-								<LabelField name="ДействующееОкно" id="1022">
+								<LabelField name="ДействующееОкно" id="4127">
 									<DataPath>ДействующееОкно</DataPath>
 									<Title>
 										<v8:item>
@@ -159,10 +125,10 @@
 											<v8:content>Действующее окно</v8:content>
 										</v8:item>
 									</Title>
-									<ContextMenu name="ДействующееОкноКонтекстноеМеню" id="1023"/>
-									<ExtendedTooltip name="ДействующееОкноРасширеннаяПодсказка" id="1024"/>
+									<ContextMenu name="ДействующееОкноКонтекстноеМеню" id="4128"/>
+									<ExtendedTooltip name="ДействующееОкноРасширеннаяПодсказка" id="4129"/>
 								</LabelField>
-								<InputField name="ДнейСтраховкиБезПометки" id="2001">
+								<InputField name="ДнейСтраховкиБезПометки" id="4130">
 									<DataPath>ДнейСтраховкиБезПометки</DataPath>
 									<Title>
 										<v8:item>
@@ -177,10 +143,10 @@
 										</v8:item>
 									</ToolTip>
 									<SpinButton>true</SpinButton>
-									<ContextMenu name="ДнейСтраховкиБезПометкиКонтекстноеМеню" id="2002"/>
-									<ExtendedTooltip name="ДнейСтраховкиБезПометкиРасширеннаяПодсказка" id="2003"/>
+									<ContextMenu name="ДнейСтраховкиБезПометкиКонтекстноеМеню" id="4131"/>
+									<ExtendedTooltip name="ДнейСтраховкиБезПометкиРасширеннаяПодсказка" id="4132"/>
 								</InputField>
-								<InputField name="ГотовыеСтатусыЗаказа" id="1025">
+								<InputField name="ГотовыеСтатусыЗаказа" id="4133">
 									<DataPath>ГотовыеСтатусыЗаказа</DataPath>
 									<Title>
 										<v8:item>
@@ -196,10 +162,10 @@
 									</ToolTip>
 									<AutoMaxWidth>false</AutoMaxWidth>
 									<HorizontalStretch>true</HorizontalStretch>
-									<ContextMenu name="ГотовыеСтатусыЗаказаКонтекстноеМеню" id="1026"/>
-									<ExtendedTooltip name="ГотовыеСтатусыЗаказаРасширеннаяПодсказка" id="1027"/>
+									<ContextMenu name="ГотовыеСтатусыЗаказаКонтекстноеМеню" id="4134"/>
+									<ExtendedTooltip name="ГотовыеСтатусыЗаказаРасширеннаяПодсказка" id="4135"/>
 								</InputField>
-								<InputField name="ГлубинаДнейСинхронизацииСтатусов" id="1041">
+								<InputField name="ГлубинаДнейСинхронизацииСтатусов" id="4136">
 									<DataPath>ГлубинаДнейСинхронизацииСтатусов</DataPath>
 									<Title>
 										<v8:item>
@@ -215,10 +181,10 @@
 									</ToolTip>
 									<SpinButton>true</SpinButton>
 									<MinValue xsi:type="xs:decimal">1</MinValue>
-									<ContextMenu name="ГлубинаДнейСинхронизацииСтатусовКонтекстноеМеню" id="1042"/>
-									<ExtendedTooltip name="ГлубинаДнейСинхронизацииСтатусовРасширеннаяПодсказка" id="1043"/>
+									<ContextMenu name="ГлубинаДнейСинхронизацииСтатусовКонтекстноеМеню" id="4137"/>
+									<ExtendedTooltip name="ГлубинаДнейСинхронизацииСтатусовРасширеннаяПодсказка" id="4138"/>
 								</InputField>
-								<InputField name="ТаймаутHTTPСек" id="1044">
+								<InputField name="ТаймаутHTTPСек" id="4139">
 									<DataPath>ТаймаутHTTPСек</DataPath>
 									<Title>
 										<v8:item>
@@ -234,10 +200,10 @@
 									</ToolTip>
 									<SpinButton>true</SpinButton>
 									<MinValue xsi:type="xs:decimal">1</MinValue>
-									<ContextMenu name="ТаймаутHTTPСекКонтекстноеМеню" id="1045"/>
-									<ExtendedTooltip name="ТаймаутHTTPСекРасширеннаяПодсказка" id="1046"/>
+									<ContextMenu name="ТаймаутHTTPСекКонтекстноеМеню" id="4140"/>
+									<ExtendedTooltip name="ТаймаутHTTPСекРасширеннаяПодсказка" id="4141"/>
 								</InputField>
-								<InputField name="ДатаНачалаАвтоотправкиУКД" id="1904">
+								<InputField name="ДатаНачалаАвтоотправкиУКД" id="4142">
 									<DataPath>ДатаНачалаАвтоотправкиУКД</DataPath>
 									<Title>
 										<v8:item>
@@ -251,10 +217,10 @@
 											<v8:content>Регламент отправляет корректировки реализации с датой не раньше этой. Пусто - автоотправка УКД выключена, корректировки уходят только вручную.</v8:content>
 										</v8:item>
 									</ToolTip>
-									<ContextMenu name="ДатаНачалаАвтоотправкиУКДКонтекстноеМеню" id="1905"/>
-									<ExtendedTooltip name="ДатаНачалаАвтоотправкиУКДРасширеннаяПодсказка" id="1906"/>
+									<ContextMenu name="ДатаНачалаАвтоотправкиУКДКонтекстноеМеню" id="4143"/>
+									<ExtendedTooltip name="ДатаНачалаАвтоотправкиУКДРасширеннаяПодсказка" id="4144"/>
 								</InputField>
-								<InputField name="ПаузаПередОтправкойУКДМинут" id="1907">
+								<InputField name="ПаузаПередОтправкойУКДМинут" id="4145">
 									<DataPath>ПаузаПередОтправкойУКДМинут</DataPath>
 									<Title>
 										<v8:item>
@@ -269,10 +235,10 @@
 										</v8:item>
 									</ToolTip>
 									<SpinButton>true</SpinButton>
-									<ContextMenu name="ПаузаПередОтправкойУКДМинутКонтекстноеМеню" id="1908"/>
-									<ExtendedTooltip name="ПаузаПередОтправкойУКДМинутРасширеннаяПодсказка" id="1909"/>
+									<ContextMenu name="ПаузаПередОтправкойУКДМинутКонтекстноеМеню" id="4146"/>
+									<ExtendedTooltip name="ПаузаПередОтправкойУКДМинутРасширеннаяПодсказка" id="4147"/>
 								</InputField>
-								<InputField name="ПрочиеНашиАдресаЭДО" id="1036">
+								<InputField name="ПрочиеНашиАдресаЭДО" id="4148">
 									<DataPath>ПрочиеНашиАдресаЭДО</DataPath>
 									<Title>
 										<v8:item>
@@ -288,12 +254,12 @@
 									</ToolTip>
 									<AutoMaxWidth>false</AutoMaxWidth>
 									<HorizontalStretch>true</HorizontalStretch>
-									<ContextMenu name="ПрочиеНашиАдресаЭДОКонтекстноеМеню" id="1037"/>
-									<ExtendedTooltip name="ПрочиеНашиАдресаЭДОРасширеннаяПодсказка" id="1038"/>
+									<ContextMenu name="ПрочиеНашиАдресаЭДОКонтекстноеМеню" id="4149"/>
+									<ExtendedTooltip name="ПрочиеНашиАдресаЭДОРасширеннаяПодсказка" id="4150"/>
 								</InputField>
 							</ChildItems>
 						</UsualGroup>
-						<UsualGroup name="ГруппаПараметрыОтправки" id="3001">
+<UsualGroup name="ГруппаПараметрыОтправки" id="4151">
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -303,9 +269,9 @@
 							<Group>Vertical</Group>
 							<Representation>WeakSeparation</Representation>
 							<ShowTitle>true</ShowTitle>
-							<ExtendedTooltip name="ГруппаПараметрыОтправкиРасширеннаяПодсказка" id="3002"/>
+							<ExtendedTooltip name="ГруппаПараметрыОтправкиРасширеннаяПодсказка" id="4152"/>
 							<ChildItems>
-								<CheckBoxField name="ОтправлятьТолькоПослеГотовности" id="3003">
+								<CheckBoxField name="ОтправлятьТолькоПослеГотовности" id="4153">
 									<DataPath>ОтправлятьТолькоПослеГотовности</DataPath>
 									<Title>
 										<v8:item>
@@ -320,10 +286,10 @@
 											<v8:content>Готовым считается напечатанный документ либо помеченный вручную. 0 возвращает прежнее поведение «через N минут после проведения».</v8:content>
 										</v8:item>
 									</ToolTip>
-									<ContextMenu name="ОтправлятьТолькоПослеГотовностиКонтекстноеМеню" id="3004"/>
-									<ExtendedTooltip name="ОтправлятьТолькоПослеГотовностиРасширеннаяПодсказка" id="3005"/>
+									<ContextMenu name="ОтправлятьТолькоПослеГотовностиКонтекстноеМеню" id="4154"/>
+									<ExtendedTooltip name="ОтправлятьТолькоПослеГотовностиРасширеннаяПодсказка" id="4155"/>
 								</CheckBoxField>
-								<CheckBoxField name="АвтоотправкаТолькоРазрешенным" id="3007">
+								<CheckBoxField name="АвтоотправкаТолькоРазрешенным" id="4156">
 									<DataPath>АвтоотправкаТолькоРазрешенным</DataPath>
 									<Title>
 										<v8:item>
@@ -338,10 +304,10 @@
 											<v8:content>1 - очередь берет документы только контрагентов с флагом ЭДО_АвтоотправкаРазрешена. Остальным документ уходит только по кнопке, в колонке ЭДО - «Автоотправка контрагенту не включена».</v8:content>
 										</v8:item>
 									</ToolTip>
-									<ContextMenu name="АвтоотправкаТолькоРазрешеннымКонтекстноеМеню" id="3008"/>
-									<ExtendedTooltip name="АвтоотправкаТолькоРазрешеннымРасширеннаяПодсказка" id="3009"/>
+									<ContextMenu name="АвтоотправкаТолькоРазрешеннымКонтекстноеМеню" id="4157"/>
+									<ExtendedTooltip name="АвтоотправкаТолькоРазрешеннымРасширеннаяПодсказка" id="4158"/>
 								</CheckBoxField>
-								<CheckBoxField name="ПроверятьКодыМаркировкиПередОтправкой" id="3011">
+								<CheckBoxField name="ПроверятьКодыМаркировкиПередОтправкой" id="4159">
 									<DataPath>ПроверятьКодыМаркировкиПередОтправкой</DataPath>
 									<Title>
 										<v8:item>
@@ -356,10 +322,10 @@
 											<v8:content>1 - маркируемый товар без кодов в ШтрихкодыУпаковок не отправляется. 0 - проверки нет (коды контролируются при проведении реализации или хранятся в другой табличной части).</v8:content>
 										</v8:item>
 									</ToolTip>
-									<ContextMenu name="ПроверятьКодыМаркировкиПередОтправкойКонтекстноеМеню" id="3012"/>
-									<ExtendedTooltip name="ПроверятьКодыМаркировкиПередОтправкойРасширеннаяПодсказка" id="3013"/>
+									<ContextMenu name="ПроверятьКодыМаркировкиПередОтправкойКонтекстноеМеню" id="4160"/>
+									<ExtendedTooltip name="ПроверятьКодыМаркировкиПередОтправкойРасширеннаяПодсказка" id="4161"/>
 								</CheckBoxField>
-								<CheckBoxField name="ГТДИзНоменклатурыПриПустойСерии" id="3015">
+								<CheckBoxField name="ГТДИзНоменклатурыПриПустойСерии" id="4162">
 									<DataPath>ГТДИзНоменклатурыПриПустойСерии</DataPath>
 									<Title>
 										<v8:item>
@@ -374,10 +340,10 @@
 											<v8:content>Номер ГТД и страна происхождения в УПД берутся из серии строки. 1 - если в строке нет серии, они берутся из карточки номенклатуры (для баз без учета по сериям). Данные карточки могут быть устаревшими: ее ГТД перезаписывают поступлениями.</v8:content>
 										</v8:item>
 									</ToolTip>
-									<ContextMenu name="ГТДИзНоменклатурыПриПустойСерииКонтекстноеМеню" id="3016"/>
-									<ExtendedTooltip name="ГТДИзНоменклатурыПриПустойСерииРасширеннаяПодсказка" id="3017"/>
+									<ContextMenu name="ГТДИзНоменклатурыПриПустойСерииКонтекстноеМеню" id="4163"/>
+									<ExtendedTooltip name="ГТДИзНоменклатурыПриПустойСерииРасширеннаяПодсказка" id="4164"/>
 								</CheckBoxField>
-								<InputField name="НерабочиеПрефиксыЭДО" id="3019">
+								<InputField name="НерабочиеПрефиксыЭДО" id="4165">
 									<DataPath>НерабочиеПрефиксыЭДО</DataPath>
 									<Title>
 										<v8:item>
@@ -393,12 +359,56 @@
 									</ToolTip>
 									<AutoMaxWidth>false</AutoMaxWidth>
 									<HorizontalStretch>true</HorizontalStretch>
-									<ContextMenu name="НерабочиеПрефиксыЭДОКонтекстноеМеню" id="3020"/>
-									<ExtendedTooltip name="НерабочиеПрефиксыЭДОРасширеннаяПодсказка" id="3021"/>
+									<ContextMenu name="НерабочиеПрефиксыЭДОКонтекстноеМеню" id="4166"/>
+									<ExtendedTooltip name="НерабочиеПрефиксыЭДОРасширеннаяПодсказка" id="4167"/>
 								</InputField>
 							</ChildItems>
+						</UsualGroup>							</ChildItems>
 						</UsualGroup>
-						<UsualGroup name="ГруппаПараметрыВходящих" id="3023">
+					</ChildItems>
+				</Page>
+
+				<Page name="СтраницаВходящие" id="4178">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Входящие</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="СтраницаВходящиеРасширеннаяПодсказка" id="4179"/>
+					<ChildItems>
+<CommandBar name="ВходящиеКоманднаяПанельОбщихНастроек" id="4180">
+							<ExtendedTooltip name="ВходящиеКоманднаяПанельОбщихНастроекРасширеннаяПодсказка" id="4181"/>
+							<ChildItems>
+<Button name="ВходящиеЗаписатьИЗакрыть" id="4182">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ЗаписатьИЗакрыть</CommandName>
+									<ExtendedTooltip name="ВходящиеЗаписатьИЗакрытьРасширеннаяПодсказка" id="4183"/>
+								</Button>
+<Button name="ВходящиеКнопкаЗаписатьНастройки" id="4184">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ЗаписатьНастройки</CommandName>
+									<ExtendedTooltip name="ВходящиеКнопкаЗаписатьНастройкиРасширеннаяПодсказка" id="4185"/>
+								</Button>
+<Button name="ВходящиеСброситьНастройкиПоУмолчанию" id="4186">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.СброситьНастройкиПоУмолчанию</CommandName>
+									<ExtendedTooltip name="ВходящиеСброситьНастройкиПоУмолчаниюРасширеннаяПодсказка" id="4187"/>
+								</Button>
+</ChildItems>
+						</CommandBar>
+<UsualGroup name="ПанельПрокруткиВходящие" id="4188">
+						<Height>5</Height>
+						<VerticalStretch>true</VerticalStretch>
+						<Group>Vertical</Group>
+						<Behavior>Auto</Behavior>
+						<Representation>None</Representation>
+						<ShowTitle>false</ShowTitle>
+						<ScrollOnCompress>true</ScrollOnCompress>
+						<ExtendedTooltip name="ПанельПрокруткиВходящиеРасширеннаяПодсказка" id="4189"/>
+						<ChildItems>
+<UsualGroup name="ГруппаПараметрыВходящих" id="4190">
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -408,9 +418,9 @@
 							<Group>Vertical</Group>
 							<Representation>WeakSeparation</Representation>
 							<ShowTitle>true</ShowTitle>
-							<ExtendedTooltip name="ГруппаПараметрыВходящихРасширеннаяПодсказка" id="3024"/>
+							<ExtendedTooltip name="ГруппаПараметрыВходящихРасширеннаяПодсказка" id="4191"/>
 							<ChildItems>
-								<CheckBoxField name="АвтоматическоеПринятиеУПД" id="3025">
+								<CheckBoxField name="АвтоматическоеПринятиеУПД" id="4192">
 									<DataPath>АвтоматическоеПринятиеУПД</DataPath>
 									<Title>
 										<v8:item>
@@ -425,10 +435,10 @@
 											<v8:content>Входящие УПД от контрагентов с флагом ЭДО_АвтоматическоеПринятиеУПД принимаются регламентом без участия человека. Входящие УКД - только от контрагентов с флагом ЭДО_АвтоматическоеПринятиеУКД.</v8:content>
 										</v8:item>
 									</ToolTip>
-									<ContextMenu name="АвтоматическоеПринятиеУПДКонтекстноеМеню" id="3026"/>
-									<ExtendedTooltip name="АвтоматическоеПринятиеУПДРасширеннаяПодсказка" id="3027"/>
+									<ContextMenu name="АвтоматическоеПринятиеУПДКонтекстноеМеню" id="4193"/>
+									<ExtendedTooltip name="АвтоматическоеПринятиеУПДРасширеннаяПодсказка" id="4194"/>
 								</CheckBoxField>
-								<InputField name="ГлубинаДнейПринятияУПД" id="3029">
+								<InputField name="ГлубинаДнейПринятияУПД" id="4195">
 									<DataPath>ГлубинаДнейПринятияУПД</DataPath>
 									<Title>
 										<v8:item>
@@ -444,10 +454,10 @@
 									</ToolTip>
 									<SpinButton>true</SpinButton>
 									<MinValue xsi:type="xs:decimal">1</MinValue>
-									<ContextMenu name="ГлубинаДнейПринятияУПДКонтекстноеМеню" id="3030"/>
-									<ExtendedTooltip name="ГлубинаДнейПринятияУПДРасширеннаяПодсказка" id="3031"/>
+									<ContextMenu name="ГлубинаДнейПринятияУПДКонтекстноеМеню" id="4196"/>
+									<ExtendedTooltip name="ГлубинаДнейПринятияУПДРасширеннаяПодсказка" id="4197"/>
 								</InputField>
-								<CheckBoxField name="АвтопривязкаВходящих" id="3033">
+								<CheckBoxField name="АвтопривязкаВходящих" id="4198">
 									<DataPath>АвтопривязкаВходящих</DataPath>
 									<Title>
 										<v8:item>
@@ -462,10 +472,10 @@
 											<v8:content>Регламент привязывает входящий УПД к поступлению, если оно одно с тем же номером входящего документа и сумма совпала в пределах допуска, и переносит в поступление коды маркировки из УПД.</v8:content>
 										</v8:item>
 									</ToolTip>
-									<ContextMenu name="АвтопривязкаВходящихКонтекстноеМеню" id="3034"/>
-									<ExtendedTooltip name="АвтопривязкаВходящихРасширеннаяПодсказка" id="3035"/>
+									<ContextMenu name="АвтопривязкаВходящихКонтекстноеМеню" id="4199"/>
+									<ExtendedTooltip name="АвтопривязкаВходящихРасширеннаяПодсказка" id="4200"/>
 								</CheckBoxField>
-								<InputField name="ГлубинаДнейАвтопривязки" id="3037">
+								<InputField name="ГлубинаДнейАвтопривязки" id="4201">
 									<DataPath>ГлубинаДнейАвтопривязки</DataPath>
 									<Title>
 										<v8:item>
@@ -481,10 +491,10 @@
 									</ToolTip>
 									<SpinButton>true</SpinButton>
 									<MinValue xsi:type="xs:decimal">1</MinValue>
-									<ContextMenu name="ГлубинаДнейАвтопривязкиКонтекстноеМеню" id="3038"/>
-									<ExtendedTooltip name="ГлубинаДнейАвтопривязкиРасширеннаяПодсказка" id="3039"/>
+									<ContextMenu name="ГлубинаДнейАвтопривязкиКонтекстноеМеню" id="4202"/>
+									<ExtendedTooltip name="ГлубинаДнейАвтопривязкиРасширеннаяПодсказка" id="4203"/>
 								</InputField>
-								<CheckBoxField name="ОбщийЯщикВходящих" id="3041">
+								<CheckBoxField name="ОбщийЯщикВходящих" id="4204">
 									<DataPath>ОбщийЯщикВходящих</DataPath>
 									<Title>
 										<v8:item>
@@ -499,12 +509,56 @@
 											<v8:content>Да - у всех учетных записей базы один ящик оператора с одинаковой выдачей: список входящих скачивается один раз и раздается организациям по ИНН покупателя. Пусто - каждая учетная запись опрашивается отдельно.</v8:content>
 										</v8:item>
 									</ToolTip>
-									<ContextMenu name="ОбщийЯщикВходящихКонтекстноеМеню" id="3042"/>
-									<ExtendedTooltip name="ОбщийЯщикВходящихРасширеннаяПодсказка" id="3043"/>
+									<ContextMenu name="ОбщийЯщикВходящихКонтекстноеМеню" id="4205"/>
+									<ExtendedTooltip name="ОбщийЯщикВходящихРасширеннаяПодсказка" id="4206"/>
 								</CheckBoxField>
 							</ChildItems>
+						</UsualGroup>							</ChildItems>
 						</UsualGroup>
-						<UsualGroup name="ГруппаПараметрыСверки" id="3045">
+					</ChildItems>
+				</Page>
+
+				<Page name="СтраницаСверка" id="4217">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сверка</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="СтраницаСверкаРасширеннаяПодсказка" id="4218"/>
+					<ChildItems>
+<CommandBar name="СверкаКоманднаяПанельОбщихНастроек" id="4219">
+							<ExtendedTooltip name="СверкаКоманднаяПанельОбщихНастроекРасширеннаяПодсказка" id="4220"/>
+							<ChildItems>
+<Button name="СверкаЗаписатьИЗакрыть" id="4221">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ЗаписатьИЗакрыть</CommandName>
+									<ExtendedTooltip name="СверкаЗаписатьИЗакрытьРасширеннаяПодсказка" id="4222"/>
+								</Button>
+<Button name="СверкаКнопкаЗаписатьНастройки" id="4223">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ЗаписатьНастройки</CommandName>
+									<ExtendedTooltip name="СверкаКнопкаЗаписатьНастройкиРасширеннаяПодсказка" id="4224"/>
+								</Button>
+<Button name="СверкаСброситьНастройкиПоУмолчанию" id="4225">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.СброситьНастройкиПоУмолчанию</CommandName>
+									<ExtendedTooltip name="СверкаСброситьНастройкиПоУмолчаниюРасширеннаяПодсказка" id="4226"/>
+								</Button>
+</ChildItems>
+						</CommandBar>
+<UsualGroup name="ПанельПрокруткиСверка" id="4227">
+						<Height>5</Height>
+						<VerticalStretch>true</VerticalStretch>
+						<Group>Vertical</Group>
+						<Behavior>Auto</Behavior>
+						<Representation>None</Representation>
+						<ShowTitle>false</ShowTitle>
+						<ScrollOnCompress>true</ScrollOnCompress>
+						<ExtendedTooltip name="ПанельПрокруткиСверкаРасширеннаяПодсказка" id="4228"/>
+						<ChildItems>
+<UsualGroup name="ГруппаПараметрыСверки" id="4229">
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -514,9 +568,9 @@
 							<Group>Vertical</Group>
 							<Representation>WeakSeparation</Representation>
 							<ShowTitle>true</ShowTitle>
-							<ExtendedTooltip name="ГруппаПараметрыСверкиРасширеннаяПодсказка" id="3046"/>
+							<ExtendedTooltip name="ГруппаПараметрыСверкиРасширеннаяПодсказка" id="4230"/>
 							<ChildItems>
-								<InputField name="ДопускСуммыУПД" id="3047">
+								<InputField name="ДопускСуммыУПД" id="4231">
 									<DataPath>ДопускСуммыУПД</DataPath>
 									<Title>
 										<v8:item>
@@ -531,10 +585,10 @@
 										</v8:item>
 									</ToolTip>
 									<SpinButton>true</SpinButton>
-									<ContextMenu name="ДопускСуммыУПДКонтекстноеМеню" id="3048"/>
-									<ExtendedTooltip name="ДопускСуммыУПДРасширеннаяПодсказка" id="3049"/>
+									<ContextMenu name="ДопускСуммыУПДКонтекстноеМеню" id="4232"/>
+									<ExtendedTooltip name="ДопускСуммыУПДРасширеннаяПодсказка" id="4233"/>
 								</InputField>
-								<InputField name="ПоискПоступленияМесяцевНазад" id="3051">
+								<InputField name="ПоискПоступленияМесяцевНазад" id="4234">
 									<DataPath>ПоискПоступленияМесяцевНазад</DataPath>
 									<Title>
 										<v8:item>
@@ -550,10 +604,10 @@
 									</ToolTip>
 									<SpinButton>true</SpinButton>
 									<MinValue xsi:type="xs:decimal">1</MinValue>
-									<ContextMenu name="ПоискПоступленияМесяцевНазадКонтекстноеМеню" id="3052"/>
-									<ExtendedTooltip name="ПоискПоступленияМесяцевНазадРасширеннаяПодсказка" id="3053"/>
+									<ContextMenu name="ПоискПоступленияМесяцевНазадКонтекстноеМеню" id="4235"/>
+									<ExtendedTooltip name="ПоискПоступленияМесяцевНазадРасширеннаяПодсказка" id="4236"/>
 								</InputField>
-								<InputField name="ПоискПоступленияМесяцевВперёд" id="3055">
+								<InputField name="ПоискПоступленияМесяцевВперёд" id="4237">
 									<DataPath>ПоискПоступленияМесяцевВперёд</DataPath>
 									<Title>
 										<v8:item>
@@ -569,10 +623,10 @@
 									</ToolTip>
 									<SpinButton>true</SpinButton>
 									<MinValue xsi:type="xs:decimal">1</MinValue>
-									<ContextMenu name="ПоискПоступленияМесяцевВперёдКонтекстноеМеню" id="3056"/>
-									<ExtendedTooltip name="ПоискПоступленияМесяцевВперёдРасширеннаяПодсказка" id="3057"/>
+									<ContextMenu name="ПоискПоступленияМесяцевВперёдКонтекстноеМеню" id="4238"/>
+									<ExtendedTooltip name="ПоискПоступленияМесяцевВперёдРасширеннаяПодсказка" id="4239"/>
 								</InputField>
-								<InputField name="ОкноСверкиРасхожденийДней" id="3059">
+								<InputField name="ОкноСверкиРасхожденийДней" id="4240">
 									<DataPath>ОкноСверкиРасхожденийДней</DataPath>
 									<Title>
 										<v8:item>
@@ -588,12 +642,80 @@
 									</ToolTip>
 									<SpinButton>true</SpinButton>
 									<MinValue xsi:type="xs:decimal">1</MinValue>
-									<ContextMenu name="ОкноСверкиРасхожденийДнейКонтекстноеМеню" id="3060"/>
-									<ExtendedTooltip name="ОкноСверкиРасхожденийДнейРасширеннаяПодсказка" id="3061"/>
+									<ContextMenu name="ОкноСверкиРасхожденийДнейКонтекстноеМеню" id="4241"/>
+									<ExtendedTooltip name="ОкноСверкиРасхожденийДнейРасширеннаяПодсказка" id="4242"/>
 								</InputField>
 							</ChildItems>
+						</UsualGroup>							</ChildItems>
 						</UsualGroup>
-						<UsualGroup name="ГруппаПараметрыПрочие" id="3063">
+					</ChildItems>
+				</Page>
+
+				<Page name="СтраницаПрочее" id="4257">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прочее</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="СтраницаПрочееРасширеннаяПодсказка" id="4258"/>
+					<ChildItems>
+<CommandBar name="ПрочееКоманднаяПанельОбщихНастроек" id="4259">
+							<ExtendedTooltip name="ПрочееКоманднаяПанельОбщихНастроекРасширеннаяПодсказка" id="4260"/>
+							<ChildItems>
+<Button name="ПрочееЗаписатьИЗакрыть" id="4261">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ЗаписатьИЗакрыть</CommandName>
+									<ExtendedTooltip name="ПрочееЗаписатьИЗакрытьРасширеннаяПодсказка" id="4262"/>
+								</Button>
+<Button name="ПрочееКнопкаЗаписатьНастройки" id="4263">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ЗаписатьНастройки</CommandName>
+									<ExtendedTooltip name="ПрочееКнопкаЗаписатьНастройкиРасширеннаяПодсказка" id="4264"/>
+								</Button>
+<Button name="ПрочееЗавестиСвойства" id="4265">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ЗавестиСвойства</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Завести свойства объектов</v8:content>
+										</v8:item>
+									</Title>
+									<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+									<ExtendedTooltip name="ПрочееЗавестиСвойстваРасширеннаяПодсказка" id="4266"/>
+								</Button>
+<Button name="ПрочееПеренестиВОбщие" id="4267">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ПеренестиВОбщие</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Перенести настройки в общие</v8:content>
+										</v8:item>
+									</Title>
+									<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+									<ExtendedTooltip name="ПрочееПеренестиВОбщиеРасширеннаяПодсказка" id="4268"/>
+								</Button>
+<Button name="ПрочееСброситьНастройкиПоУмолчанию" id="4269">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.СброситьНастройкиПоУмолчанию</CommandName>
+									<ExtendedTooltip name="ПрочееСброситьНастройкиПоУмолчаниюРасширеннаяПодсказка" id="4270"/>
+								</Button>
+</ChildItems>
+						</CommandBar>
+<UsualGroup name="ПанельПрокруткиПрочее" id="4271">
+						<Height>5</Height>
+						<VerticalStretch>true</VerticalStretch>
+						<Group>Vertical</Group>
+						<Behavior>Auto</Behavior>
+						<Representation>None</Representation>
+						<ShowTitle>false</ShowTitle>
+						<ScrollOnCompress>true</ScrollOnCompress>
+						<ExtendedTooltip name="ПанельПрокруткиПрочееРасширеннаяПодсказка" id="4272"/>
+						<ChildItems>
+<UsualGroup name="ГруппаПараметрыПрочие" id="4273">
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -603,9 +725,9 @@
 							<Group>Vertical</Group>
 							<Representation>WeakSeparation</Representation>
 							<ShowTitle>true</ShowTitle>
-							<ExtendedTooltip name="ГруппаПараметрыПрочиеРасширеннаяПодсказка" id="3064"/>
+							<ExtendedTooltip name="ГруппаПараметрыПрочиеРасширеннаяПодсказка" id="4274"/>
 							<ChildItems>
-								<InputField name="ДнейБезПодтвержденияПОА" id="3065">
+								<InputField name="ДнейБезПодтвержденияПОА" id="4275">
 									<DataPath>ДнейБезПодтвержденияПОА</DataPath>
 									<Title>
 										<v8:item>
@@ -620,12 +742,119 @@
 										</v8:item>
 									</ToolTip>
 									<SpinButton>true</SpinButton>
-									<ContextMenu name="ДнейБезПодтвержденияПОАКонтекстноеМеню" id="3066"/>
-									<ExtendedTooltip name="ДнейБезПодтвержденияПОАРасширеннаяПодсказка" id="3067"/>
+									<ContextMenu name="ДнейБезПодтвержденияПОАКонтекстноеМеню" id="4276"/>
+									<ExtendedTooltip name="ДнейБезПодтвержденияПОАРасширеннаяПодсказка" id="4277"/>
 								</InputField>
 							</ChildItems>
 						</UsualGroup>
-						<UsualGroup name="ГруппаУчетныеЗаписи" id="1200">
+<UsualGroup name="ГруппаОператорыЭДО" id="4278">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Операторы ЭДО: акты сверки</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>WeakSeparation</Representation>
+							<ShowTitle>true</ShowTitle>
+							<ExtendedTooltip name="ГруппаОператорыЭДОРасширеннаяПодсказка" id="4279"/>
+							<ChildItems>
+								<InputField name="НастройкиОператоров" id="4280">
+									<DataPath>НастройкиОператоров</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Префикс; название; акт сверки</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Top</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Строка на оператора: префикс ящика получателя; название; способ отправки акта сверки - xml, pdf или запрещено. Оператор не из списка получает акт в xml. Флаг контрагента ЭДО_АктыСверкиВPDF отправляет ему акт в pdf, кроме запрещенных операторов.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<MultiLine>true</MultiLine>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Height>6</Height>
+									<HorizontalStretch>true</HorizontalStretch>
+									<ContextMenu name="НастройкиОператоровКонтекстноеМеню" id="4281"/>
+									<ExtendedTooltip name="НастройкиОператоровРасширеннаяПодсказка" id="4282"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+<InputField name="СостояниеГотовности" id="4283">
+							<DataPath>СостояниеГотовности</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Готовность к работе</v8:content>
+								</v8:item>
+							</Title>
+							<ReadOnly>true</ReadOnly>
+							<MultiLine>true</MultiLine>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Height>6</Height>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="СостояниеГотовностиКонтекстноеМеню" id="4284"/>
+							<ExtendedTooltip name="СостояниеГотовностиРасширеннаяПодсказка" id="4285"/>
+						</InputField>							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+
+				<Page name="СтраницаПлатформа" id="4298">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Платформа ЭДО</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="СтраницаПлатформаРасширеннаяПодсказка" id="4299"/>
+					<ChildItems>
+<CommandBar name="ПлатформаКоманднаяПанельОбщихНастроек" id="4300">
+							<ExtendedTooltip name="ПлатформаКоманднаяПанельОбщихНастроекРасширеннаяПодсказка" id="4301"/>
+							<ChildItems>
+<Button name="ПлатформаЗаписатьИЗакрыть" id="4302">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ЗаписатьИЗакрыть</CommandName>
+									<ExtendedTooltip name="ПлатформаЗаписатьИЗакрытьРасширеннаяПодсказка" id="4303"/>
+								</Button>
+<Button name="ПлатформаКнопкаЗаписатьНастройки" id="4304">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ЗаписатьНастройки</CommandName>
+									<ExtendedTooltip name="ПлатформаКнопкаЗаписатьНастройкиРасширеннаяПодсказка" id="4305"/>
+								</Button>
+<Button name="ПлатформаПроверитьГотовность" id="4306">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ПроверитьГотовность</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Проверить</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ПлатформаПроверитьГотовностьРасширеннаяПодсказка" id="4307"/>
+								</Button>
+<Button name="ПлатформаСброситьНастройкиПоУмолчанию" id="4308">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.СброситьНастройкиПоУмолчанию</CommandName>
+									<ExtendedTooltip name="ПлатформаСброситьНастройкиПоУмолчаниюРасширеннаяПодсказка" id="4309"/>
+								</Button>
+</ChildItems>
+						</CommandBar>
+<UsualGroup name="ПанельПрокруткиПлатформа" id="4310">
+						<Height>5</Height>
+						<VerticalStretch>true</VerticalStretch>
+						<Group>Vertical</Group>
+						<Behavior>Auto</Behavior>
+						<Representation>None</Representation>
+						<ShowTitle>false</ShowTitle>
+						<ScrollOnCompress>true</ScrollOnCompress>
+						<ExtendedTooltip name="ПанельПрокруткиПлатформаРасширеннаяПодсказка" id="4311"/>
+						<ChildItems>
+<UsualGroup name="ГруппаУчетныеЗаписи" id="4312">
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -641,19 +870,19 @@
 									<v8:content>У каждой организации — свой оператор, сертификат подписанта и идентификатор участника ЭДО. Таблица только читает; все поля правятся в карточке учётной записи.</v8:content>
 								</v8:item>
 							</ToolTip>
-							<ExtendedTooltip name="ГруппаУчетныеЗаписиРасширеннаяПодсказка" id="1201"/>
+							<ExtendedTooltip name="ГруппаУчетныеЗаписиРасширеннаяПодсказка" id="4313"/>
 							<ChildItems>
-								<Table name="УчетныеЗаписи" id="1202">
+								<Table name="УчетныеЗаписи" id="4314">
 									<ChangeRowSet>false</ChangeRowSet>
 									<ChangeRowOrder>false</ChangeRowOrder>
 									<Height>6</Height>
 									<DataPath>УчетныеЗаписи</DataPath>
 									<RowFilter xsi:nil="true"/>
-									<ContextMenu name="УчетныеЗаписиКонтекстноеМеню" id="1203"/>
-									<AutoCommandBar name="УчетныеЗаписиКоманднаяПанель" id="1204">
+									<ContextMenu name="УчетныеЗаписиКонтекстноеМеню" id="4315"/>
+									<AutoCommandBar name="УчетныеЗаписиКоманднаяПанель" id="4316">
 										<AutoFill>false</AutoFill>
 										<ChildItems>
-											<Button name="ДобавитьУчетнуюЗапись" id="1205">
+											<Button name="ДобавитьУчетнуюЗапись" id="4317">
 												<Type>CommandBarButton</Type>
 												<CommandName>Form.Command.ДобавитьУчетнуюЗапись</CommandName>
 												<Title>
@@ -662,9 +891,9 @@
 														<v8:content>Добавить</v8:content>
 													</v8:item>
 												</Title>
-												<ExtendedTooltip name="ДобавитьУчетнуюЗаписьРасширеннаяПодсказка" id="1206"/>
+												<ExtendedTooltip name="ДобавитьУчетнуюЗаписьРасширеннаяПодсказка" id="4318"/>
 											</Button>
-											<Button name="ИзменитьУчетнуюЗапись" id="1207">
+											<Button name="ИзменитьУчетнуюЗапись" id="4319">
 												<Type>CommandBarButton</Type>
 												<CommandName>Form.Command.ИзменитьУчетнуюЗапись</CommandName>
 												<DefaultButton>true</DefaultButton>
@@ -674,9 +903,9 @@
 														<v8:content>Изменить</v8:content>
 													</v8:item>
 												</Title>
-												<ExtendedTooltip name="ИзменитьУчетнуюЗаписьРасширеннаяПодсказка" id="1208"/>
+												<ExtendedTooltip name="ИзменитьУчетнуюЗаписьРасширеннаяПодсказка" id="4320"/>
 											</Button>
-											<Button name="УдалитьУчетнуюЗапись" id="1209">
+											<Button name="УдалитьУчетнуюЗапись" id="4321">
 												<Type>CommandBarButton</Type>
 												<CommandName>Form.Command.УдалитьУчетнуюЗапись</CommandName>
 												<Title>
@@ -685,9 +914,9 @@
 														<v8:content>Удалить</v8:content>
 													</v8:item>
 												</Title>
-												<ExtendedTooltip name="УдалитьУчетнуюЗаписьРасширеннаяПодсказка" id="1210"/>
+												<ExtendedTooltip name="УдалитьУчетнуюЗаписьРасширеннаяПодсказка" id="4322"/>
 											</Button>
-											<Button name="ПроверитьГотовностьУчетнойЗаписи" id="1211">
+											<Button name="ПроверитьГотовностьУчетнойЗаписи" id="4323">
 												<Type>CommandBarButton</Type>
 												<CommandName>Form.Command.ПроверитьГотовностьУчетнойЗаписи</CommandName>
 												<Title>
@@ -696,37 +925,37 @@
 														<v8:content>Проверить готовность</v8:content>
 													</v8:item>
 												</Title>
-												<ExtendedTooltip name="ПроверитьГотовностьУчетнойЗаписиРасширеннаяПодсказка" id="1212"/>
+												<ExtendedTooltip name="ПроверитьГотовностьУчетнойЗаписиРасширеннаяПодсказка" id="4324"/>
 											</Button>
 										</ChildItems>
 									</AutoCommandBar>
-									<ExtendedTooltip name="УчетныеЗаписиРасширеннаяПодсказка" id="1213"/>
-									<SearchStringAddition name="УчетныеЗаписиСтрокаПоиска" id="1214">
+									<ExtendedTooltip name="УчетныеЗаписиРасширеннаяПодсказка" id="4325"/>
+									<SearchStringAddition name="УчетныеЗаписиСтрокаПоиска" id="4326">
 										<AdditionSource>
 											<Item>УчетныеЗаписи</Item>
 											<Type>SearchStringRepresentation</Type>
 										</AdditionSource>
-										<ContextMenu name="УчетныеЗаписиСтрокаПоискаКонтекстноеМеню" id="1215"/>
-										<ExtendedTooltip name="УчетныеЗаписиСтрокаПоискаРасширеннаяПодсказка" id="1216"/>
+										<ContextMenu name="УчетныеЗаписиСтрокаПоискаКонтекстноеМеню" id="4327"/>
+										<ExtendedTooltip name="УчетныеЗаписиСтрокаПоискаРасширеннаяПодсказка" id="4328"/>
 									</SearchStringAddition>
-									<ViewStatusAddition name="УчетныеЗаписиСостояниеПросмотра" id="1217">
+									<ViewStatusAddition name="УчетныеЗаписиСостояниеПросмотра" id="4329">
 										<AdditionSource>
 											<Item>УчетныеЗаписи</Item>
 											<Type>ViewStatusRepresentation</Type>
 										</AdditionSource>
-										<ContextMenu name="УчетныеЗаписиСостояниеПросмотраКонтекстноеМеню" id="1218"/>
-										<ExtendedTooltip name="УчетныеЗаписиСостояниеПросмотраРасширеннаяПодсказка" id="1219"/>
+										<ContextMenu name="УчетныеЗаписиСостояниеПросмотраКонтекстноеМеню" id="4330"/>
+										<ExtendedTooltip name="УчетныеЗаписиСостояниеПросмотраРасширеннаяПодсказка" id="4331"/>
 									</ViewStatusAddition>
-									<SearchControlAddition name="УчетныеЗаписиУправлениеПоиском" id="1220">
+									<SearchControlAddition name="УчетныеЗаписиУправлениеПоиском" id="4332">
 										<AdditionSource>
 											<Item>УчетныеЗаписи</Item>
 											<Type>SearchControl</Type>
 										</AdditionSource>
-										<ContextMenu name="УчетныеЗаписиУправлениеПоискомКонтекстноеМеню" id="1221"/>
-										<ExtendedTooltip name="УчетныеЗаписиУправлениеПоискомРасширеннаяПодсказка" id="1222"/>
+										<ContextMenu name="УчетныеЗаписиУправлениеПоискомКонтекстноеМеню" id="4333"/>
+										<ExtendedTooltip name="УчетныеЗаписиУправлениеПоискомРасширеннаяПодсказка" id="4334"/>
 									</SearchControlAddition>
 									<ChildItems>
-										<InputField name="УчетныеЗаписиОрганизация" id="1223">
+										<InputField name="УчетныеЗаписиОрганизация" id="4335">
 											<DataPath>УчетныеЗаписи.Организация</DataPath>
 											<ReadOnly>true</ReadOnly>
 											<Title>
@@ -736,10 +965,10 @@
 												</v8:item>
 											</Title>
 											<Width>25</Width>
-											<ContextMenu name="УчетныеЗаписиОрганизацияКонтекстноеМеню" id="1224"/>
-											<ExtendedTooltip name="УчетныеЗаписиОрганизацияРасширеннаяПодсказка" id="1225"/>
+											<ContextMenu name="УчетныеЗаписиОрганизацияКонтекстноеМеню" id="4336"/>
+											<ExtendedTooltip name="УчетныеЗаписиОрганизацияРасширеннаяПодсказка" id="4337"/>
 										</InputField>
-										<InputField name="УчетныеЗаписиОператор" id="1226">
+										<InputField name="УчетныеЗаписиОператор" id="4338">
 											<DataPath>УчетныеЗаписи.Оператор</DataPath>
 											<ReadOnly>true</ReadOnly>
 											<Title>
@@ -749,10 +978,10 @@
 												</v8:item>
 											</Title>
 											<Width>12</Width>
-											<ContextMenu name="УчетныеЗаписиОператорКонтекстноеМеню" id="1227"/>
-											<ExtendedTooltip name="УчетныеЗаписиОператорРасширеннаяПодсказка" id="1228"/>
+											<ContextMenu name="УчетныеЗаписиОператорКонтекстноеМеню" id="4339"/>
+											<ExtendedTooltip name="УчетныеЗаписиОператорРасширеннаяПодсказка" id="4340"/>
 										</InputField>
-										<InputField name="УчетныеЗаписиСертификат" id="1229">
+										<InputField name="УчетныеЗаписиСертификат" id="4341">
 											<DataPath>УчетныеЗаписи.Сертификат</DataPath>
 											<ReadOnly>true</ReadOnly>
 											<Title>
@@ -762,10 +991,10 @@
 												</v8:item>
 											</Title>
 											<Width>28</Width>
-											<ContextMenu name="УчетныеЗаписиСертификатКонтекстноеМеню" id="1230"/>
-											<ExtendedTooltip name="УчетныеЗаписиСертификатРасширеннаяПодсказка" id="1231"/>
+											<ContextMenu name="УчетныеЗаписиСертификатКонтекстноеМеню" id="4342"/>
+											<ExtendedTooltip name="УчетныеЗаписиСертификатРасширеннаяПодсказка" id="4343"/>
 										</InputField>
-										<InputField name="УчетныеЗаписиПодписант" id="1232">
+										<InputField name="УчетныеЗаписиПодписант" id="4344">
 											<DataPath>УчетныеЗаписи.Подписант</DataPath>
 											<ReadOnly>true</ReadOnly>
 											<Title>
@@ -775,10 +1004,10 @@
 												</v8:item>
 											</Title>
 											<Width>22</Width>
-											<ContextMenu name="УчетныеЗаписиПодписантКонтекстноеМеню" id="1233"/>
-											<ExtendedTooltip name="УчетныеЗаписиПодписантРасширеннаяПодсказка" id="1234"/>
+											<ContextMenu name="УчетныеЗаписиПодписантКонтекстноеМеню" id="4345"/>
+											<ExtendedTooltip name="УчетныеЗаписиПодписантРасширеннаяПодсказка" id="4346"/>
 										</InputField>
-										<InputField name="УчетныеЗаписиНомерМЧД" id="1235">
+										<InputField name="УчетныеЗаписиНомерМЧД" id="4347">
 											<DataPath>УчетныеЗаписи.НомерМЧД</DataPath>
 											<ReadOnly>true</ReadOnly>
 											<Title>
@@ -788,10 +1017,10 @@
 												</v8:item>
 											</Title>
 											<Width>16</Width>
-											<ContextMenu name="УчетныеЗаписиНомерМЧДКонтекстноеМеню" id="1236"/>
-											<ExtendedTooltip name="УчетныеЗаписиНомерМЧДРасширеннаяПодсказка" id="1237"/>
+											<ContextMenu name="УчетныеЗаписиНомерМЧДКонтекстноеМеню" id="4348"/>
+											<ExtendedTooltip name="УчетныеЗаписиНомерМЧДРасширеннаяПодсказка" id="4349"/>
 										</InputField>
-										<InputField name="УчетныеЗаписиОтправлятьСДаты" id="1238">
+										<InputField name="УчетныеЗаписиОтправлятьСДаты" id="4350">
 											<DataPath>УчетныеЗаписи.ОтправлятьСДаты</DataPath>
 											<ReadOnly>true</ReadOnly>
 											<Title>
@@ -801,10 +1030,10 @@
 												</v8:item>
 											</Title>
 											<Width>12</Width>
-											<ContextMenu name="УчетныеЗаписиОтправлятьСДатыКонтекстноеМеню" id="1239"/>
-											<ExtendedTooltip name="УчетныеЗаписиОтправлятьСДатыРасширеннаяПодсказка" id="1240"/>
+											<ContextMenu name="УчетныеЗаписиОтправлятьСДатыКонтекстноеМеню" id="4351"/>
+											<ExtendedTooltip name="УчетныеЗаписиОтправлятьСДатыРасширеннаяПодсказка" id="4352"/>
 										</InputField>
-										<InputField name="УчетныеЗаписиИдентификаторУчастника" id="1241">
+										<InputField name="УчетныеЗаписиИдентификаторУчастника" id="4353">
 											<DataPath>УчетныеЗаписи.ИдентификаторУчастника</DataPath>
 											<ReadOnly>true</ReadOnly>
 											<Title>
@@ -814,10 +1043,10 @@
 												</v8:item>
 											</Title>
 											<Width>34</Width>
-											<ContextMenu name="УчетныеЗаписиИдентификаторУчастникаКонтекстноеМеню" id="1242"/>
-											<ExtendedTooltip name="УчетныеЗаписиИдентификаторУчастникаРасширеннаяПодсказка" id="1243"/>
+											<ContextMenu name="УчетныеЗаписиИдентификаторУчастникаКонтекстноеМеню" id="4354"/>
+											<ExtendedTooltip name="УчетныеЗаписиИдентификаторУчастникаРасширеннаяПодсказка" id="4355"/>
 										</InputField>
-										<InputField name="УчетныеЗаписиГотовность" id="1244">
+										<InputField name="УчетныеЗаписиГотовность" id="4356">
 											<DataPath>УчетныеЗаписи.Готовность</DataPath>
 											<ReadOnly>true</ReadOnly>
 											<Title>
@@ -828,8 +1057,8 @@
 											</Title>
 											<AutoMaxWidth>false</AutoMaxWidth>
 											<HorizontalStretch>true</HorizontalStretch>
-											<ContextMenu name="УчетныеЗаписиГотовностьКонтекстноеМеню" id="1245"/>
-											<ExtendedTooltip name="УчетныеЗаписиГотовностьРасширеннаяПодсказка" id="1246"/>
+											<ContextMenu name="УчетныеЗаписиГотовностьКонтекстноеМеню" id="4357"/>
+											<ExtendedTooltip name="УчетныеЗаписиГотовностьРасширеннаяПодсказка" id="4358"/>
 										</InputField>
 									</ChildItems>
 									<Events>
@@ -837,82 +1066,82 @@
 									</Events>
 								</Table>
 							</ChildItems>
+						</UsualGroup>							</ChildItems>
 						</UsualGroup>
-						<UsualGroup name="ГруппаЯщикиОператоров" id="1931">
+					</ChildItems>
+				</Page>
+
+				<Page name="СтраницаСБИС" id="4395">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>СБИС</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="СтраницаСБИСРасширеннаяПодсказка" id="4396"/>
+					<ChildItems>
+<CommandBar name="СБИСКоманднаяПанельОбщихНастроек" id="4397">
+							<ExtendedTooltip name="СБИСКоманднаяПанельОбщихНастроекРасширеннаяПодсказка" id="4398"/>
+							<ChildItems>
+<Button name="СБИСЗаписатьИЗакрыть" id="4399">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ЗаписатьИЗакрыть</CommandName>
+									<ExtendedTooltip name="СБИСЗаписатьИЗакрытьРасширеннаяПодсказка" id="4400"/>
+								</Button>
+<Button name="СБИСКнопкаЗаписатьНастройки" id="4401">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ЗаписатьНастройки</CommandName>
+									<ExtendedTooltip name="СБИСКнопкаЗаписатьНастройкиРасширеннаяПодсказка" id="4402"/>
+								</Button>
+<Button name="СБИССброситьНастройкиПоУмолчанию" id="4403">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.СброситьНастройкиПоУмолчанию</CommandName>
+									<ExtendedTooltip name="СБИССброситьНастройкиПоУмолчаниюРасширеннаяПодсказка" id="4404"/>
+								</Button>
+</ChildItems>
+						</CommandBar>
+<UsualGroup name="ПанельПрокруткиСБИС" id="4405">
+						<Height>5</Height>
+						<VerticalStretch>true</VerticalStretch>
+						<Group>Vertical</Group>
+						<Behavior>Auto</Behavior>
+						<Representation>None</Representation>
+						<ShowTitle>false</ShowTitle>
+						<ScrollOnCompress>true</ScrollOnCompress>
+						<ExtendedTooltip name="ПанельПрокруткиСБИСРасширеннаяПодсказка" id="4406"/>
+						<ChildItems>
+						<UsualGroup name="ГруппаЯщикиСБИС" id="4407">
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Входящие из СБИС и Диадока</v8:content>
+									<v8:content>Ящики СБИС</v8:content>
 								</v8:item>
 							</Title>
 							<Group>Vertical</Group>
 							<Representation>WeakSeparation</Representation>
 							<ShowTitle>true</ShowTitle>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Ящики, из которых «Входящие» Центра ЭДО забирают УПД и УКД кроме Платформы ЭДО. Для СБИС и Диадока (API) — вход по логину и паролю пользователя оператора; для Диадока (API) нужен еще ключ разработчика. Для «Диадок (веб)» в колонке «Логин» укажите идентификатор ящика Диадока (GUID из адреса кабинета), пароль не нужен: XML выгружает внешний скрипт в каталог веб-выгрузки. Пароли хранятся в базе в открытом виде: используйте отдельного пользователя оператора только с правом чтения входящих.</v8:content>
-								</v8:item>
-							</ToolTip>
-							<ExtendedTooltip name="ГруппаЯщикиОператоровРасширеннаяПодсказка" id="1932"/>
+							<ExtendedTooltip name="ГруппаЯщикиСБИСРасширеннаяПодсказка" id="4408"/>
 							<ChildItems>
-								<InputField name="КлючРазработчикаДиадок" id="3069">
-									<DataPath>КлючРазработчикаДиадок</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Ключ разработчика API Диадока</v8:content>
-										</v8:item>
-									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Ключ клиента API Контур.Диадок (ddauth_api_client_id), выдает Контур. Нужен для входящих из ящиков Диадока; логин и пароль пользователя Диадока задаются в таблице ящиков.</v8:content>
-										</v8:item>
-									</ToolTip>
-									<AutoMaxWidth>false</AutoMaxWidth>
-									<HorizontalStretch>true</HorizontalStretch>
-									<PasswordMode>true</PasswordMode>
-									<ContextMenu name="КлючРазработчикаДиадокКонтекстноеМеню" id="3070"/>
-									<ExtendedTooltip name="КлючРазработчикаДиадокРасширеннаяПодсказка" id="3071"/>
-								</InputField>
-								<InputField name="КаталогСпулаДиадокВеб" id="3073">
-									<DataPath>КаталогСпулаДиадокВеб</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Папка веб-выгрузки Диадока</v8:content>
-										</v8:item>
-									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Папка на сервере 1С, куда внешний скрипт складывает документы из веб-кабинета Диадока. Из нее Центр читает входящие оператора «Диадок (веб)».</v8:content>
-										</v8:item>
-									</ToolTip>
-									<AutoMaxWidth>false</AutoMaxWidth>
-									<HorizontalStretch>true</HorizontalStretch>
-									<ContextMenu name="КаталогСпулаДиадокВебКонтекстноеМеню" id="3074"/>
-									<ExtendedTooltip name="КаталогСпулаДиадокВебРасширеннаяПодсказка" id="3075"/>
-								</InputField>
-								<Table name="ЯщикиОператоров" id="1933">
+
+<Table name="ЯщикиСБИС" id="4409">
 									<Height>4</Height>
-									<DataPath>ЯщикиОператоров</DataPath>
+									<DataPath>ЯщикиСБИС</DataPath>
 									<RowFilter xsi:nil="true"/>
-									<ContextMenu name="ЯщикиОператоровКонтекстноеМеню" id="1934"/>
-									<AutoCommandBar name="ЯщикиОператоровКоманднаяПанель" id="1935">
+									<ContextMenu name="ЯщикиСБИСКонтекстноеМеню" id="4410"/>
+									<AutoCommandBar name="ЯщикиСБИСКоманднаяПанель" id="4411">
 										<ChildItems>
-											<Button name="ПроверитьЯщикОператора" id="1936">
+											<Button name="ПроверитьЯщикСБИС" id="4412">
 												<Type>CommandBarButton</Type>
-												<CommandName>Form.Command.ПроверитьЯщикОператора</CommandName>
-												<ExtendedTooltip name="ПроверитьЯщикОператораРасширеннаяПодсказка" id="1937"/>
+												<CommandName>Form.Command.ПроверитьЯщикСБИС</CommandName>
+												<ExtendedTooltip name="ПроверитьЯщикСБИСРасширеннаяПодсказка" id="4413"/>
 											</Button>
 										</ChildItems>
 									</AutoCommandBar>
-									<ExtendedTooltip name="ЯщикиОператоровРасширеннаяПодсказка" id="1938"/>
+									<ExtendedTooltip name="ЯщикиСБИСРасширеннаяПодсказка" id="4414"/>
 									<ChildItems>
-										<CheckBoxField name="ЯщикиОператоровВключен" id="1939">
-											<DataPath>ЯщикиОператоров.Включен</DataPath>
+										<CheckBoxField name="ЯщикиСБИСВключен" id="4415">
+											<DataPath>ЯщикиСБИС.Включен</DataPath>
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -920,11 +1149,11 @@
 												</v8:item>
 											</Title>
 											<CheckBoxType>Auto</CheckBoxType>
-											<ContextMenu name="ЯщикиОператоровВключенКонтекстноеМеню" id="1940"/>
-											<ExtendedTooltip name="ЯщикиОператоровВключенРасширеннаяПодсказка" id="1941"/>
+											<ContextMenu name="ЯщикиСБИСВключенКонтекстноеМеню" id="4416"/>
+											<ExtendedTooltip name="ЯщикиСБИСВключенРасширеннаяПодсказка" id="4417"/>
 										</CheckBoxField>
-										<InputField name="ЯщикиОператоровОрганизация" id="1942">
-											<DataPath>ЯщикиОператоров.Организация</DataPath>
+										<InputField name="ЯщикиСБИСОрганизация" id="4418">
+											<DataPath>ЯщикиСБИС.Организация</DataPath>
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -932,11 +1161,11 @@
 												</v8:item>
 											</Title>
 											<Width>25</Width>
-											<ContextMenu name="ЯщикиОператоровОрганизацияКонтекстноеМеню" id="1943"/>
-											<ExtendedTooltip name="ЯщикиОператоровОрганизацияРасширеннаяПодсказка" id="1944"/>
+											<ContextMenu name="ЯщикиСБИСОрганизацияКонтекстноеМеню" id="4419"/>
+											<ExtendedTooltip name="ЯщикиСБИСОрганизацияРасширеннаяПодсказка" id="4420"/>
 										</InputField>
-										<InputField name="ЯщикиОператоровОператор" id="1945">
-											<DataPath>ЯщикиОператоров.Оператор</DataPath>
+										<InputField name="ЯщикиСБИСОператор" id="4421">
+											<DataPath>ЯщикиСБИС.Оператор</DataPath>
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -986,11 +1215,11 @@
 													</xr:Value>
 												</xr:Item>
 											</ChoiceList>
-											<ContextMenu name="ЯщикиОператоровОператорКонтекстноеМеню" id="1946"/>
-											<ExtendedTooltip name="ЯщикиОператоровОператорРасширеннаяПодсказка" id="1947"/>
+											<ContextMenu name="ЯщикиСБИСОператорКонтекстноеМеню" id="4422"/>
+											<ExtendedTooltip name="ЯщикиСБИСОператорРасширеннаяПодсказка" id="4423"/>
 										</InputField>
-										<InputField name="ЯщикиОператоровЛогин" id="1948">
-											<DataPath>ЯщикиОператоров.Логин</DataPath>
+										<InputField name="ЯщикиСБИСЛогин" id="4424">
+											<DataPath>ЯщикиСБИС.Логин</DataPath>
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -998,11 +1227,11 @@
 												</v8:item>
 											</Title>
 											<Width>20</Width>
-											<ContextMenu name="ЯщикиОператоровЛогинКонтекстноеМеню" id="1949"/>
-											<ExtendedTooltip name="ЯщикиОператоровЛогинРасширеннаяПодсказка" id="1950"/>
+											<ContextMenu name="ЯщикиСБИСЛогинКонтекстноеМеню" id="4425"/>
+											<ExtendedTooltip name="ЯщикиСБИСЛогинРасширеннаяПодсказка" id="4426"/>
 										</InputField>
-										<InputField name="ЯщикиОператоровНовыйПароль" id="1951">
-											<DataPath>ЯщикиОператоров.НовыйПароль</DataPath>
+										<InputField name="ЯщикиСБИСНовыйПароль" id="4427">
+											<DataPath>ЯщикиСБИС.НовыйПароль</DataPath>
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -1017,11 +1246,11 @@
 											</ToolTip>
 											<Width>15</Width>
 											<PasswordMode>true</PasswordMode>
-											<ContextMenu name="ЯщикиОператоровНовыйПарольКонтекстноеМеню" id="1952"/>
-											<ExtendedTooltip name="ЯщикиОператоровНовыйПарольРасширеннаяПодсказка" id="1953"/>
+											<ContextMenu name="ЯщикиСБИСНовыйПарольКонтекстноеМеню" id="4428"/>
+											<ExtendedTooltip name="ЯщикиСБИСНовыйПарольРасширеннаяПодсказка" id="4429"/>
 										</InputField>
-										<CheckBoxField name="ЯщикиОператоровПарольЗадан" id="1954">
-											<DataPath>ЯщикиОператоров.ПарольЗадан</DataPath>
+										<CheckBoxField name="ЯщикиСБИСПарольЗадан" id="4430">
+											<DataPath>ЯщикиСБИС.ПарольЗадан</DataPath>
 											<ReadOnly>true</ReadOnly>
 											<Title>
 												<v8:item>
@@ -1030,72 +1259,458 @@
 												</v8:item>
 											</Title>
 											<CheckBoxType>Auto</CheckBoxType>
-											<ContextMenu name="ЯщикиОператоровПарольЗаданКонтекстноеМеню" id="1955"/>
-											<ExtendedTooltip name="ЯщикиОператоровПарольЗаданРасширеннаяПодсказка" id="1956"/>
+											<ContextMenu name="ЯщикиСБИСПарольЗаданКонтекстноеМеню" id="4431"/>
+											<ExtendedTooltip name="ЯщикиСБИСПарольЗаданРасширеннаяПодсказка" id="4432"/>
 										</CheckBoxField>
 									</ChildItems>
 									<Events>
-										<Event name="OnStartEdit">ЯщикиОператоровПриНачалеРедактирования</Event>
+										<Event name="OnStartEdit">ЯщикиОператораПриНачалеРедактирования</Event>
 									</Events>
-								</Table>
-							</ChildItems>
+								</Table>							</ChildItems>
+						</UsualGroup>							</ChildItems>
 						</UsualGroup>
-						<UsualGroup name="ГруппаОператорыЭДО" id="1920">
+					</ChildItems>
+				</Page>
+
+				<Page name="СтраницаДиадокAPI" id="4472">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Диадок (API)</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="СтраницаДиадокAPIРасширеннаяПодсказка" id="4473"/>
+					<ChildItems>
+<CommandBar name="ДиадокAPIКоманднаяПанельОбщихНастроек" id="4474">
+							<ExtendedTooltip name="ДиадокAPIКоманднаяПанельОбщихНастроекРасширеннаяПодсказка" id="4475"/>
+							<ChildItems>
+<Button name="ДиадокAPIЗаписатьИЗакрыть" id="4476">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ЗаписатьИЗакрыть</CommandName>
+									<ExtendedTooltip name="ДиадокAPIЗаписатьИЗакрытьРасширеннаяПодсказка" id="4477"/>
+								</Button>
+<Button name="ДиадокAPIКнопкаЗаписатьНастройки" id="4478">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ЗаписатьНастройки</CommandName>
+									<ExtendedTooltip name="ДиадокAPIКнопкаЗаписатьНастройкиРасширеннаяПодсказка" id="4479"/>
+								</Button>
+<Button name="ДиадокAPIСброситьНастройкиПоУмолчанию" id="4480">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.СброситьНастройкиПоУмолчанию</CommandName>
+									<ExtendedTooltip name="ДиадокAPIСброситьНастройкиПоУмолчаниюРасширеннаяПодсказка" id="4481"/>
+								</Button>
+</ChildItems>
+						</CommandBar>
+<UsualGroup name="ПанельПрокруткиДиадокAPI" id="4482">
+						<Height>5</Height>
+						<VerticalStretch>true</VerticalStretch>
+						<Group>Vertical</Group>
+						<Behavior>Auto</Behavior>
+						<Representation>None</Representation>
+						<ShowTitle>false</ShowTitle>
+						<ScrollOnCompress>true</ScrollOnCompress>
+						<ExtendedTooltip name="ПанельПрокруткиДиадокAPIРасширеннаяПодсказка" id="4483"/>
+						<ChildItems>
+						<UsualGroup name="ГруппаЯщикиДиадокAPI" id="4484">
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Операторы ЭДО: акты сверки</v8:content>
+									<v8:content>Ящики Диадок (API)</v8:content>
 								</v8:item>
 							</Title>
 							<Group>Vertical</Group>
 							<Representation>WeakSeparation</Representation>
 							<ShowTitle>true</ShowTitle>
-							<ExtendedTooltip name="ГруппаОператорыЭДОРасширеннаяПодсказка" id="1921"/>
+							<ExtendedTooltip name="ГруппаЯщикиДиадокAPIРасширеннаяПодсказка" id="4485"/>
 							<ChildItems>
-								<InputField name="НастройкиОператоров" id="1922">
-									<DataPath>НастройкиОператоров</DataPath>
+<InputField name="КлючРазработчикаДиадок" id="4486">
+									<DataPath>КлючРазработчикаДиадок</DataPath>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Префикс; название; акт сверки</v8:content>
+											<v8:content>Ключ разработчика API Диадока</v8:content>
 										</v8:item>
 									</Title>
-									<TitleLocation>Top</TitleLocation>
 									<ToolTip>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Строка на оператора: префикс ящика получателя; название; способ отправки акта сверки - xml, pdf или запрещено. Оператор не из списка получает акт в xml. Флаг контрагента ЭДО_АктыСверкиВPDF отправляет ему акт в pdf, кроме запрещенных операторов.</v8:content>
+											<v8:content>Ключ клиента API Контур.Диадок (ddauth_api_client_id), выдает Контур. Нужен для входящих из ящиков Диадока; логин и пароль пользователя Диадока задаются в таблице ящиков.</v8:content>
 										</v8:item>
 									</ToolTip>
-									<MultiLine>true</MultiLine>
 									<AutoMaxWidth>false</AutoMaxWidth>
-									<Height>6</Height>
 									<HorizontalStretch>true</HorizontalStretch>
-									<ContextMenu name="НастройкиОператоровКонтекстноеМеню" id="1923"/>
-									<ExtendedTooltip name="НастройкиОператоровРасширеннаяПодсказка" id="1924"/>
+									<PasswordMode>true</PasswordMode>
+									<ContextMenu name="КлючРазработчикаДиадокКонтекстноеМеню" id="4487"/>
+									<ExtendedTooltip name="КлючРазработчикаДиадокРасширеннаяПодсказка" id="4488"/>
 								</InputField>
-							</ChildItems>
-						</UsualGroup>
-						<InputField name="СостояниеГотовности" id="1047">
-							<DataPath>СостояниеГотовности</DataPath>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Готовность к работе</v8:content>
-								</v8:item>
-							</Title>
-							<ReadOnly>true</ReadOnly>
-							<MultiLine>true</MultiLine>
-							<AutoMaxWidth>false</AutoMaxWidth>
-							<Height>6</Height>
-							<HorizontalStretch>true</HorizontalStretch>
-							<ContextMenu name="СостояниеГотовностиКонтекстноеМеню" id="1048"/>
-							<ExtendedTooltip name="СостояниеГотовностиРасширеннаяПодсказка" id="1049"/>
-						</InputField>
-							</ChildItems>
+<Table name="ЯщикиДиадокAPI" id="4489">
+									<Height>4</Height>
+									<DataPath>ЯщикиДиадокAPI</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ЯщикиДиадокAPIКонтекстноеМеню" id="4490"/>
+									<AutoCommandBar name="ЯщикиДиадокAPIКоманднаяПанель" id="4491">
+										<ChildItems>
+											<Button name="ПроверитьЯщикДиадокAPI" id="4492">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ПроверитьЯщикДиадокAPI</CommandName>
+												<ExtendedTooltip name="ПроверитьЯщикДиадокAPIРасширеннаяПодсказка" id="4493"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ЯщикиДиадокAPIРасширеннаяПодсказка" id="4494"/>
+									<ChildItems>
+										<CheckBoxField name="ЯщикиДиадокAPIВключен" id="4495">
+											<DataPath>ЯщикиДиадокAPI.Включен</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Включен</v8:content>
+												</v8:item>
+											</Title>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ЯщикиДиадокAPIВключенКонтекстноеМеню" id="4496"/>
+											<ExtendedTooltip name="ЯщикиДиадокAPIВключенРасширеннаяПодсказка" id="4497"/>
+										</CheckBoxField>
+										<InputField name="ЯщикиДиадокAPIОрганизация" id="4498">
+											<DataPath>ЯщикиДиадокAPI.Организация</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Организация</v8:content>
+												</v8:item>
+											</Title>
+											<Width>25</Width>
+											<ContextMenu name="ЯщикиДиадокAPIОрганизацияКонтекстноеМеню" id="4499"/>
+											<ExtendedTooltip name="ЯщикиДиадокAPIОрганизацияРасширеннаяПодсказка" id="4500"/>
+										</InputField>
+										<InputField name="ЯщикиДиадокAPIОператор" id="4501">
+											<DataPath>ЯщикиДиадокAPI.Оператор</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Оператор</v8:content>
+												</v8:item>
+											</Title>
+											<Width>10</Width>
+											<ListChoiceMode>true</ListChoiceMode>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>СБИС</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">sbis</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Диадок</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">diadoc</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Диадок (веб)</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">diadocweb</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="ЯщикиДиадокAPIОператорКонтекстноеМеню" id="4502"/>
+											<ExtendedTooltip name="ЯщикиДиадокAPIОператорРасширеннаяПодсказка" id="4503"/>
+										</InputField>
+										<InputField name="ЯщикиДиадокAPIЛогин" id="4504">
+											<DataPath>ЯщикиДиадокAPI.Логин</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Логин</v8:content>
+												</v8:item>
+											</Title>
+											<Width>20</Width>
+											<ContextMenu name="ЯщикиДиадокAPIЛогинКонтекстноеМеню" id="4505"/>
+											<ExtendedTooltip name="ЯщикиДиадокAPIЛогинРасширеннаяПодсказка" id="4506"/>
+										</InputField>
+										<InputField name="ЯщикиДиадокAPIНовыйПароль" id="4507">
+											<DataPath>ЯщикиДиадокAPI.НовыйПароль</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Новый пароль</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Заполняется только при смене пароля: записанный пароль форма не показывает. Пароль хранится в базе в открытом виде: используйте отдельного пользователя оператора только с правом чтения входящих.</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Width>15</Width>
+											<PasswordMode>true</PasswordMode>
+											<ContextMenu name="ЯщикиДиадокAPIНовыйПарольКонтекстноеМеню" id="4508"/>
+											<ExtendedTooltip name="ЯщикиДиадокAPIНовыйПарольРасширеннаяПодсказка" id="4509"/>
+										</InputField>
+										<CheckBoxField name="ЯщикиДиадокAPIПарольЗадан" id="4510">
+											<DataPath>ЯщикиДиадокAPI.ПарольЗадан</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Пароль задан</v8:content>
+												</v8:item>
+											</Title>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ЯщикиДиадокAPIПарольЗаданКонтекстноеМеню" id="4511"/>
+											<ExtendedTooltip name="ЯщикиДиадокAPIПарольЗаданРасширеннаяПодсказка" id="4512"/>
+										</CheckBoxField>
+									</ChildItems>
+									<Events>
+										<Event name="OnStartEdit">ЯщикиОператораПриНачалеРедактирования</Event>
+									</Events>
+								</Table>							</ChildItems>
+						</UsualGroup>							</ChildItems>
 						</UsualGroup>
 					</ChildItems>
 				</Page>
+
+				<Page name="СтраницаДиадокВеб" id="4552">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Диадок (веб)</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="СтраницаДиадокВебРасширеннаяПодсказка" id="4553"/>
+					<ChildItems>
+<CommandBar name="ДиадокВебКоманднаяПанельОбщихНастроек" id="4554">
+							<ExtendedTooltip name="ДиадокВебКоманднаяПанельОбщихНастроекРасширеннаяПодсказка" id="4555"/>
+							<ChildItems>
+<Button name="ДиадокВебЗаписатьИЗакрыть" id="4556">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ЗаписатьИЗакрыть</CommandName>
+									<ExtendedTooltip name="ДиадокВебЗаписатьИЗакрытьРасширеннаяПодсказка" id="4557"/>
+								</Button>
+<Button name="ДиадокВебКнопкаЗаписатьНастройки" id="4558">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ЗаписатьНастройки</CommandName>
+									<ExtendedTooltip name="ДиадокВебКнопкаЗаписатьНастройкиРасширеннаяПодсказка" id="4559"/>
+								</Button>
+<Button name="ДиадокВебСброситьНастройкиПоУмолчанию" id="4560">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.СброситьНастройкиПоУмолчанию</CommandName>
+									<ExtendedTooltip name="ДиадокВебСброситьНастройкиПоУмолчаниюРасширеннаяПодсказка" id="4561"/>
+								</Button>
+</ChildItems>
+						</CommandBar>
+<UsualGroup name="ПанельПрокруткиДиадокВеб" id="4562">
+						<Height>5</Height>
+						<VerticalStretch>true</VerticalStretch>
+						<Group>Vertical</Group>
+						<Behavior>Auto</Behavior>
+						<Representation>None</Representation>
+						<ShowTitle>false</ShowTitle>
+						<ScrollOnCompress>true</ScrollOnCompress>
+						<ExtendedTooltip name="ПанельПрокруткиДиадокВебРасширеннаяПодсказка" id="4563"/>
+						<ChildItems>
+						<UsualGroup name="ГруппаЯщикиДиадокВеб" id="4564">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ящики Диадок (веб)</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>WeakSeparation</Representation>
+							<ShowTitle>true</ShowTitle>
+							<ExtendedTooltip name="ГруппаЯщикиДиадокВебРасширеннаяПодсказка" id="4565"/>
+							<ChildItems>
+<InputField name="КаталогСпулаДиадокВеб" id="4566">
+									<DataPath>КаталогСпулаДиадокВеб</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Папка веб-выгрузки Диадока</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Папка на сервере 1С, куда внешний скрипт складывает документы из веб-кабинета Диадока. Из нее Центр читает входящие оператора «Диадок (веб)».</v8:content>
+										</v8:item>
+									</ToolTip>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<ContextMenu name="КаталогСпулаДиадокВебКонтекстноеМеню" id="4567"/>
+									<ExtendedTooltip name="КаталогСпулаДиадокВебРасширеннаяПодсказка" id="4568"/>
+								</InputField>
+<Table name="ЯщикиДиадокВеб" id="4569">
+									<Height>4</Height>
+									<DataPath>ЯщикиДиадокВеб</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ЯщикиДиадокВебКонтекстноеМеню" id="4570"/>
+									<AutoCommandBar name="ЯщикиДиадокВебКоманднаяПанель" id="4571">
+										<ChildItems>
+											<Button name="ПроверитьЯщикДиадокВеб" id="4572">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ПроверитьЯщикДиадокВеб</CommandName>
+												<ExtendedTooltip name="ПроверитьЯщикДиадокВебРасширеннаяПодсказка" id="4573"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ЯщикиДиадокВебРасширеннаяПодсказка" id="4574"/>
+									<ChildItems>
+										<CheckBoxField name="ЯщикиДиадокВебВключен" id="4575">
+											<DataPath>ЯщикиДиадокВеб.Включен</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Включен</v8:content>
+												</v8:item>
+											</Title>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ЯщикиДиадокВебВключенКонтекстноеМеню" id="4576"/>
+											<ExtendedTooltip name="ЯщикиДиадокВебВключенРасширеннаяПодсказка" id="4577"/>
+										</CheckBoxField>
+										<InputField name="ЯщикиДиадокВебОрганизация" id="4578">
+											<DataPath>ЯщикиДиадокВеб.Организация</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Организация</v8:content>
+												</v8:item>
+											</Title>
+											<Width>25</Width>
+											<ContextMenu name="ЯщикиДиадокВебОрганизацияКонтекстноеМеню" id="4579"/>
+											<ExtendedTooltip name="ЯщикиДиадокВебОрганизацияРасширеннаяПодсказка" id="4580"/>
+										</InputField>
+										<InputField name="ЯщикиДиадокВебОператор" id="4581">
+											<DataPath>ЯщикиДиадокВеб.Оператор</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Оператор</v8:content>
+												</v8:item>
+											</Title>
+											<Width>10</Width>
+											<ListChoiceMode>true</ListChoiceMode>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>СБИС</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">sbis</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Диадок</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">diadoc</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Диадок (веб)</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">diadocweb</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="ЯщикиДиадокВебОператорКонтекстноеМеню" id="4582"/>
+											<ExtendedTooltip name="ЯщикиДиадокВебОператорРасширеннаяПодсказка" id="4583"/>
+										</InputField>
+										<InputField name="ЯщикиДиадокВебЛогин" id="4584">
+											<DataPath>ЯщикиДиадокВеб.Логин</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Логин</v8:content>
+												</v8:item>
+											</Title>
+											<Width>20</Width>
+											<ContextMenu name="ЯщикиДиадокВебЛогинКонтекстноеМеню" id="4585"/>
+											<ExtendedTooltip name="ЯщикиДиадокВебЛогинРасширеннаяПодсказка" id="4586"/>
+										</InputField>
+										<InputField name="ЯщикиДиадокВебНовыйПароль" id="4587">
+											<DataPath>ЯщикиДиадокВеб.НовыйПароль</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Новый пароль</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Заполняется только при смене пароля: записанный пароль форма не показывает. Пароль хранится в базе в открытом виде: используйте отдельного пользователя оператора только с правом чтения входящих.</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Width>15</Width>
+											<PasswordMode>true</PasswordMode>
+											<ContextMenu name="ЯщикиДиадокВебНовыйПарольКонтекстноеМеню" id="4588"/>
+											<ExtendedTooltip name="ЯщикиДиадокВебНовыйПарольРасширеннаяПодсказка" id="4589"/>
+										</InputField>
+										<CheckBoxField name="ЯщикиДиадокВебПарольЗадан" id="4590">
+											<DataPath>ЯщикиДиадокВеб.ПарольЗадан</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Пароль задан</v8:content>
+												</v8:item>
+											</Title>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ЯщикиДиадокВебПарольЗаданКонтекстноеМеню" id="4591"/>
+											<ExtendedTooltip name="ЯщикиДиадокВебПарольЗаданРасширеннаяПодсказка" id="4592"/>
+										</CheckBoxField>
+									</ChildItems>
+									<Events>
+										<Event name="OnStartEdit">ЯщикиОператораПриНачалеРедактирования</Event>
+									</Events>
+								</Table>							</ChildItems>
+						</UsualGroup>							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+
 				<Page name="СтраницаНастройкиКонтрагентов" id="2107">
 					<Title>
 						<v8:item>
@@ -2013,97 +2628,7 @@
 				</Column>
 			</Columns>
 		</Attribute>
-		<Attribute name="ЯщикиОператоров" id="1957">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Ящики других операторов</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>v8:ValueTable</v8:Type>
-			</Type>
-			<Columns>
-				<Column name="Организация" id="1958">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Организация</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
-					</Type>
-				</Column>
-				<Column name="Оператор" id="1959">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Оператор</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>20</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
-					</Type>
-				</Column>
-				<Column name="Логин" id="1960">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Логин</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>100</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
-					</Type>
-				</Column>
-				<Column name="НовыйПароль" id="1961">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Новый пароль</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>200</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
-					</Type>
-				</Column>
-				<Column name="ПарольЗадан" id="1962">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Пароль задан</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:boolean</v8:Type>
-					</Type>
-				</Column>
-				<Column name="Включен" id="1963">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Включен</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:boolean</v8:Type>
-					</Type>
-				</Column>
-			</Columns>
-		</Attribute>
+		
 		<Attribute name="ДнейСтраховкиБезПометки" id="2004">
 			<Title>
 				<v8:item>
@@ -2354,7 +2879,280 @@
 				</v8:NumberQualifiers>
 			</Type>
 		</Attribute>
-	</Attributes>
+	<Attribute name="ЯщикиСБИС" id="4025">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ящики других операторов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Организация" id="4026">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Оператор" id="4027">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оператор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>20</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Логин" id="4028">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Логин</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="НовыйПароль" id="4029">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Новый пароль</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>200</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПарольЗадан" id="4030">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пароль задан</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Включен" id="4031">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Включен</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+<Attribute name="ЯщикиДиадокAPI" id="4057">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ящики других операторов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Организация" id="4058">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Оператор" id="4059">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оператор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>20</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Логин" id="4060">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Логин</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="НовыйПароль" id="4061">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Новый пароль</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>200</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПарольЗадан" id="4062">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пароль задан</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Включен" id="4063">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Включен</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+<Attribute name="ЯщикиДиадокВеб" id="4089">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ящики других операторов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Организация" id="4090">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Оператор" id="4091">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оператор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>20</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Логин" id="4092">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Логин</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="НовыйПароль" id="4093">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Новый пароль</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>200</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПарольЗадан" id="4094">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пароль задан</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Включен" id="4095">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Включен</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+</Attributes>
 	<Commands>
 		<Command name="Записать" id="122">
 			<Title>
@@ -2505,7 +3303,8 @@
 			</Title>
 			<Action>ПроверитьГотовностьУчетнойЗаписи</Action>
 		</Command>
-		<Command name="ПроверитьЯщикОператора" id="1964">
+		
+	<Command name="ПроверитьЯщикСБИС" id="4032">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -2518,7 +3317,37 @@
 					<v8:content>Войти в ящик текущей строки по записанным логину и паролю и посчитать входящие за 30 дней.</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Action>ПроверитьЯщикОператора</Action>
+			<Action>ПроверитьЯщикСБИС</Action>
 		</Command>
-	</Commands>
+<Command name="ПроверитьЯщикДиадокAPI" id="4064">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить вход</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Войти в ящик текущей строки по записанным логину и паролю и посчитать входящие за 30 дней.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверитьЯщикДиадокAPI</Action>
+		</Command>
+<Command name="ПроверитьЯщикДиадокВеб" id="4096">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить вход</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Войти в ящик текущей строки по записанным логину и паролю и посчитать входящие за 30 дней.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверитьЯщикДиадокВеб</Action>
+		</Command>
+</Commands>
 </Form>
